@@ -1,0 +1,43 @@
+.login,
+.register {
+  .btn{
+    .submit{
+      font-size: 16px;
+    }
+    .forget_password{
+      position: absolute;
+      right: 0;
+      font-size: 14px;
+      text-decoration: underline;
+    }
+  }
+  .to_register,
+  .to_login{
+    font-size: 1rem;
+    color: $accent;
+    text-decoration: underline;
+    font-weight: 700;
+    .q-icon{
+      font-size: 1rem;
+    }
+  }
+}
+
+.register {
+  width: 80%;
+  .male{
+    margin: 0;
+  }
+  @media (min-width:576px) {
+    max-width: 500px;
+  }
+
+}
+
+.login{
+  width: 400px;
+}
+
+.reset_password{
+  width: 400px;
+}

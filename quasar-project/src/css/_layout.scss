@@ -1,0 +1,59 @@
+// MainLayout
+.q-toolbar{
+  display: flex;
+  .top_logo{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    @media (min-width:992px) {
+      position: relative;
+      left: 65px;
+    }
+  }
+  .burger{
+    position: relative;
+    left: 0;
+    @media (min-width:990px) {
+      &{
+        display: none;
+      }
+    }
+  }
+  .nav_label {
+    display: none;
+    .q-tab__label{
+      font-size: 16px;
+      letter-spacing: 1px;
+      font-weight: 400;
+    }
+    @media (min-width:992px) {
+      &{
+        display: block;
+      }
+    }
+  }
+
+  .account_btn{
+    display: none;
+    .q-btn{
+      .q-icon{
+        padding: 0 1rem;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        // font-weight: 500;
+      }
+    }
+    @media (min-width:992px) {
+      &{
+        display: block;
+      }
+    }
+  }
+  .icon_only{
+    @media (min-width:992px) {
+      &{
+        display: none;
+      }
+    }
+  }
+}
