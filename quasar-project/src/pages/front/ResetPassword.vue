@@ -30,7 +30,7 @@
 <script setup>
 import { ref, reactive } from 'vue'
 import validator from 'validator'
-import { api } from '../boot/axios'
+import { api } from '../../boot/axios'
 import Swal from 'sweetalert2'
 import { useRouter } from 'vue-router'
 import { useQuasar } from 'quasar'

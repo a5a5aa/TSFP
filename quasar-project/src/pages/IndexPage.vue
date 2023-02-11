@@ -87,7 +87,7 @@
             round
             flat
             dense
-            :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
+            :icon="expanded1 ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
             @click="expanded1 = !expanded1"
           />
         </q-card-actions>

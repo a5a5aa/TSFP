@@ -1,0 +1,12 @@
+.container {
+  padding: 60px;
+  iframe{
+    width: 200%;
+    box-shadow: 3px 3px 10px grey;
+    @media (min-width:992px) {
+    & {
+      width: 100%;
+    }
+    }
+  }
+}

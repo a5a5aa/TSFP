@@ -2,7 +2,7 @@
   <q-page>
     <q-sectoin class="banner">
       <q-img
-          src="../assets/images/brand_top.avif"
+          src="../../assets/images/brand_top.avif"
           :ratio="16/9"
         />
     </q-sectoin>
@@ -14,17 +14,17 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsum cupiditate nihil ea totam labore, aut fuga facilis rerum ducimus.</p>
           <q-img
             width="200px"
-            src="../assets/images/about_1.jpg"></q-img>
+            src="../../assets/images/about_1.jpg"></q-img>
         </div>
         <div class="box2">
           <q-img
             width="70%"
-            src="../assets/images/about_3.jpg"></q-img>
+            src="../../assets/images/about_3.jpg"></q-img>
         </div>
         <div class="box3">
           <q-img
             width="100%"
-            src="../assets/images/about_2.jpg"></q-img>
+            src="../../assets/images/about_2.jpg"></q-img>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam doloremque quidem nesciunt optio laboriosam doloribus earum quam eaque quasi tenetur.</p>
           <q-btn outline rounded to="/lectures">查看近期活動</q-btn>
         </div>
@@ -40,7 +40,7 @@
             side="left"
           >
             <div>
-              <img src="../assets/images/coffee-rounded.png">
+              <img src="../../assets/images/coffee-rounded.png">
               <br>
               Lorem ipsum dolor sit ametLorem ipsum dolor sit amet
             </div>
@@ -52,7 +52,7 @@
             side="right"
           >
             <div>
-              <img src="../assets/images/coffee-rounded.png">
+              <img src="../../assets/images/coffee-rounded.png">
               <br>
               Lorem ipsum dolor sit ametLorem ipsum dolor sit amet
             </div>
@@ -64,7 +64,7 @@
             side="left"
           >
             <div>
-              <img src="../assets/images/coffee-rounded.png">
+              <img src="../../assets/images/coffee-rounded.png">
               <br>
               Lorem ipsum dolor sit ametLorem ipsum dolor sit amet
             </div>
@@ -76,7 +76,7 @@
             side="right"
           >
             <div>
-              <img src="../assets/images/coffee-rounded.png">
+              <img src="../../assets/images/coffee-rounded.png">
               <br>
               Lorem ipsum dolor sit ametLorem ipsum dolor sit amet
             </div>
@@ -89,7 +89,7 @@
     <q-section class="footer column flex-center text-center">
       <div class="logo row flex-center">
         <div class="row justify-evenly">
-          <img src="../assets/images/log＿方.png">
+          <img src="../../assets/images/log＿方.png">
           <q-icon name="fa-brands fa-instagram"></q-icon>
           <q-icon name="fa-brands fa-facebook"></q-icon>
           <q-icon name="fa-brands fa-twitter"></q-icon>

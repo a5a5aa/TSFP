@@ -1,14 +1,12 @@
 import { defineStore } from 'pinia'
 import { computed, ref } from 'vue'
 import { api, apiAuth } from '../boot/axios'
-import { useRouter } from 'vue-router'
 import Swal from 'sweetalert2'
 
 export const useUserStore = defineStore('user', () => {
   const token = ref('')
   const email = ref('')
   const role = ref(0)
-  const router = useRouter()
 
   const isLogin = computed(() => {
     return token.value.length > 0
@@ -17,7 +15,7 @@ export const useUserStore = defineStore('user', () => {
     return role.value === 1
   })
 
-  const login = async (form) => {
+  async function login (form) {
     try {
       const { data } = await api.post('/users/login', form)
       token.value = data.result.token
@@ -32,7 +30,7 @@ export const useUserStore = defineStore('user', () => {
         confirmButtonColor: '#2b2b2b'
         // allowOutsideClick: false
       })
-      router.push('/')
+      this.router.push('/')
     } catch (error) {
       Swal.fire({
         icon: 'error',
@@ -42,7 +40,7 @@ export const useUserStore = defineStore('user', () => {
     }
   }
 
-  const logout = async () => {
+  async function logout () {
     try {
       await apiAuth.delete('/users/logout')
       token.value = ''
@@ -53,7 +51,7 @@ export const useUserStore = defineStore('user', () => {
         title: '成功',
         text: '登出成功'
       })
-      router.push('/')
+      this.router.push('/')
     } catch (error) {
       Swal.fire({
         icon: 'error',

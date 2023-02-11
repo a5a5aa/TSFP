@@ -32,28 +32,48 @@
       }
     }
   }
+}
 
-  .account_btn{
-    display: none;
-    .q-btn{
-      .q-icon{
-        padding: 0 1rem;
-        font-size: 1rem;
-        letter-spacing: 1px;
-        // font-weight: 500;
-      }
-    }
-    @media (min-width:992px) {
-      &{
-        display: block;
-      }
+// burger側邊欄
+
+
+.q-drawer{
+  @media (min-width:990px) {
+    &{
+      display: none;
     }
   }
-  .icon_only{
-    @media (min-width:992px) {
-      &{
-        display: none;
-      }
+  .q-item{
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px $dark;
+  }
+  .sidebar{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .q-icon{
+      color: $accent;
     }
   }
+  // .sidebar{
+  //   z-index: 1000;
+  //   height: 100vh;
+  //   display: flex;
+  //   .title{
+  //     font-size: 14px;
+  //     font-weight: 500;
+  //   }
+  //   .q-btn{
+  //     font-weight: 400;
+  //     width: 100%;
+  //   }
+  // }
+}
+
+.q-menu{
+  background: $info;
+  color: white;
+  text-align: center;
+  padding: none;
 }

@@ -1,10 +1,10 @@
 <template>
 <q-page>
   <q-sectoin class="banner">
-      <q-img
-          src="../assets/images/brand_top.avif"
-          :ratio="21/4"
-        />
+    <q-img
+      src="../../assets/images/brand_top.avif"
+      :ratio="21/4"
+    />
   </q-sectoin>
   <q-section class="row flex-center q-gutter-md q-my-xl">
     <q-card class="my-card col-md-5" flat bordered>
@@ -156,7 +156,7 @@
   <q-section class="footer column flex-center text-center  q-my-xl">
     <div class="logo row flex-center">
       <div class="row justify-evenly">
-        <img src="../assets/images/log＿方.png">
+        <img src="../../assets/images/log＿方.png">
         <q-icon name="fa-brands fa-instagram"></q-icon>
         <q-icon name="fa-brands fa-facebook"></q-icon>
         <q-icon name="fa-brands fa-twitter"></q-icon>

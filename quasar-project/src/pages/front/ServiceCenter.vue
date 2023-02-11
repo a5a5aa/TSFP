@@ -2,7 +2,7 @@
   <q-page>
     <q-section class="banner">
       <q-img
-          src="../assets/images/brand_top.avif"
+          src="../../assets/images/brand_top.avif"
           :ratio="21/4"
         />
     </q-section>

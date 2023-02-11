@@ -17,7 +17,7 @@ const routes = [
       {
         path: 'login',
         name: 'login',
-        component: () => import('pages/LoginView.vue'),
+        component: () => import('src/pages/front/LoginView.vue'),
         meta: {
           title: 'Single Seat - 會員登入',
           login: false,
@@ -27,7 +27,7 @@ const routes = [
       {
         path: 'register',
         name: 'register',
-        component: () => import('pages/RegisterView.vue'),
+        component: () => import('src/pages/front/RegisterView.vue'),
         meta: {
           title: 'Single Seat - 新會員註冊',
           login: false,
@@ -37,7 +37,7 @@ const routes = [
       {
         path: 'reset',
         name: 'reset',
-        component: () => import('pages/ResetPassword.vue'),
+        component: () => import('src/pages/front/ResetPassword.vue'),
         meta: {
           title: 'Single Seat - 重設密碼',
           login: false,
@@ -71,7 +71,7 @@ const routes = [
       {
         path: '',
         name: 'about',
-        component: () => import('src/pages/AboutView.vue'),
+        component: () => import('src/pages/front/AboutView.vue'),
         meta: {
           title: 'Single Seat - 關於我們',
           login: false,
@@ -81,9 +81,9 @@ const routes = [
       {
         path: 'location',
         name: 'location',
-        component: () => import('pages/Location.vue'),
+        component: () => import('src/pages/front/LocationView.vue'),
         meta: {
-          title: 'Single Seat - 門市位址',
+          title: 'Single Seat - 門市資訊',
           login: false,
           admin: false
         }
@@ -97,7 +97,7 @@ const routes = [
       {
         path: '',
         name: 'lectures',
-        component: () => import('src/pages/LecturesView.vue'),
+        component: () => import('src/pages/front/LecturesView.vue'),
         meta: {
           title: 'Single Seat - 活動報名',
           login: false,
@@ -107,7 +107,7 @@ const routes = [
       {
         path: 'all',
         name: 'all',
-        component: () => import('src/pages/LecturesView.vue'),
+        component: () => import('src/pages/front/LecturesView.vue'),
         meta: {
           title: 'Single Seat - 所有活動',
           login: false,
@@ -123,7 +123,7 @@ const routes = [
       {
         path: '',
         name: 'menu',
-        component: () => import('src/pages/MenuView.vue'),
+        component: () => import('src/pages/front/MenuView.vue'),
         meta: {
           title: 'Single Seat - 餐飲介紹',
           login: false,
@@ -139,7 +139,7 @@ const routes = [
       {
         path: '',
         name: 'article',
-        component: () => import('src/pages/ArticleView.vue'),
+        component: () => import('src/pages/front/ArticleView.vue'),
         meta: {
           title: 'Single Seat - 專欄好文',
           login: false,
@@ -155,9 +155,9 @@ const routes = [
       {
         path: '',
         name: 'service',
-        component: () => import('src/pages/ServiceCenter.vue'),
+        component: () => import('src/pages/front/ServiceCenter.vue'),
         meta: {
-          title: 'Single Seat - 客服中心',
+          title: 'Single Seat - 客服資訊',
           login: false,
           admin: false
         }
@@ -165,7 +165,7 @@ const routes = [
       {
         path: 'contactus',
         name: 'contactus',
-        component: () => import('src/pages/ContactView.vue'),
+        component: () => import('src/pages/front/ContactView.vue'),
         meta: {
           title: 'Single Seat - 聯絡我們',
           login: false,
