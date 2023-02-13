@@ -122,10 +122,10 @@
       :breakpoint="990"
       bordered
       no-swipe-backdrop
-      class="bg-primary text-accent"
+      class="bg-primary text-accent sidebar"
     >
       <q-scroll-area class="fit flex justify-center">
-        <div class="sidebar">
+        <div class="sidebar2">
           <div>
             <div class="title q-px-xl text-center bg-black q-py-xs">關於我們</div>
             <div class="row">

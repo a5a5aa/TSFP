@@ -4,6 +4,7 @@ node_modules
 .prettierrc.json
 src/assets/images
 .env
+src/layouts/TemporaryView.vue
 
 # Quasar core related directories
 .quasar

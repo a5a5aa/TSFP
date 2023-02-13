@@ -36,8 +36,7 @@
 
 // burger側邊欄
 
-
-.q-drawer{
+.sidebar{
   @media (min-width:990px) {
     &{
       display: none;
@@ -47,7 +46,7 @@
     border-radius: 3px;
     box-shadow: 1px 1px 3px $dark;
   }
-  .sidebar{
+  .sidebar2{
     height: 100vh;
     display: flex;
     flex-direction: column;

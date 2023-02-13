@@ -188,6 +188,16 @@ const routes = [
           login: true,
           admin: true
         }
+      },
+      {
+        path: 'products',
+        name: 'admin-products',
+        component: () => import('../pages/admin/ProductsView.vue'),
+        meta: {
+          title: ' Single Seat - 商品管理 ',
+          login: true,
+          admin: true
+        }
       }
     ]
   },
