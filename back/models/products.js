@@ -10,6 +10,18 @@ const schema = new Schema({
     min: [0, '價格錯誤'],
     required: [true, '缺少價格']
   },
+  date: {
+    type: Date,
+    required: [true, '缺少日期']
+  },
+  starttime: {
+    type: String,
+    required: [true, '缺少開始時間']
+  },
+  endedtime: {
+    type: String,
+    required: [true, '缺少結束時間']
+  },
   description: {
     type: String,
     required: [true, '缺少說明']

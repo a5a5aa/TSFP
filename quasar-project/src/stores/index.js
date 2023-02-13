@@ -21,5 +21,6 @@ export default store((/* { ssrContext } */) => {
   // pinia.use(SomePiniaPlugin)
 
   pinia.use(persistedstate)
+
   return pinia
 })

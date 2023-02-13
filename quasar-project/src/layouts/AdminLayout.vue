@@ -13,7 +13,7 @@
             </q-btn>
           </div>
           <div class="q-mr-sm">
-            <q-btn class="q-pa-sm text-primary" variant="text" rounded text-accent to="/admin/products">
+            <q-btn class="q-pa-sm text-primary" variant="text" rounded text-accent>
             <q-icon name="fa-solid fa-bell" size="1.3rem"></q-icon>
             <q-tooltip class="bg-primary">通知</q-tooltip>
             </q-btn>
@@ -37,17 +37,15 @@
       >
         <q-scroll-area class="bg-primary text-white" style="height: calc(100% - 150px); margin-top: 150px; border-right: 1px solid #ddd">
           <q-list padding>
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple to="/admin">
               <q-item-section avatar>
                 <q-icon name="fa-solid fa-list" />
               </q-item-section>
-
               <q-item-section>
                 總覽
               </q-item-section>
             </q-item>
-
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple  to="/admin/products">
               <q-item-section avatar>
                 <q-icon name="fa-regular fa-file-lines" />
               </q-item-section>

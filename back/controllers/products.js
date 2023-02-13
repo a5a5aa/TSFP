@@ -2,9 +2,14 @@ import products from '../models/products.js'
 
 export const createProduct = async (req, res) => {
   try {
+    console.log(req.file)
+    console.log(req.body)
     const result = await products.create({
       name: req.body.name,
       price: req.body.price,
+      date: req.body.date,
+      starttime: req.body.starttime,
+      endedtime: req.body.endedtime,
       description: req.body.description,
       image: req.file?.path || '',
       sell: req.body.sell,
@@ -61,6 +66,9 @@ export const editProduct = async (req, res) => {
       name: req.body.name,
       price: req.body.price,
       description: req.body.description,
+      date: req.body.date,
+      starttime: req.body.starttime,
+      endedtime: req.body.endedtime,
       image: req.file?.path,
       sell: req.body.sell,
       category: req.body.category
