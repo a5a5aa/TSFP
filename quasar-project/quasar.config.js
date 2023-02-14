@@ -29,7 +29,7 @@ module.exports = configure(function (/* ctx */) {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     // https://v2.quasar.dev/quasar-cli/boot-files
-    boot: ['i18n', 'axios'],
+    boot: ['i18n', 'axios', 'swiper'],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#css
     css: ['app.scss'],
@@ -37,7 +37,7 @@ module.exports = configure(function (/* ctx */) {
     // https://github.com/quasarframework/quasar/tree/dev/extras
     extras: [
       // 'ionicons-v4',
-      // 'mdi-v5',
+      'mdi-v5',
       'fontawesome-v6',
       // 'eva-icons',
       // 'themify',
@@ -89,7 +89,7 @@ module.exports = configure(function (/* ctx */) {
         ]
       ],
       alias: {
-        '@': path.join(__dirname, './src')
+        '@': path.join(__dirname, './src'),
       }
     },
 
@@ -110,7 +110,7 @@ module.exports = configure(function (/* ctx */) {
       // (like functional components as one of the examples),
       // you can manually specify Quasar components/directives to be available everywhere:
       //
-      // components: [],
+      // components: ['QOverlay'],
       // directives: [],
 
       // Quasar plugins

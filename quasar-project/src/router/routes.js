@@ -105,6 +105,16 @@ const routes = [
         }
       },
       {
+        path: 'lectures/:id',
+        name: 'lecture',
+        component: () => import('src/pages/front/LecturesView.vue'),
+        meta: {
+          title: 'Single Seat - 活動',
+          login: false,
+          admin: false
+        }
+      },
+      {
         path: 'all',
         name: 'all',
         component: () => import('src/pages/front/LecturesView.vue'),

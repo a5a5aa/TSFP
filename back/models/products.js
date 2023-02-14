@@ -26,6 +26,10 @@ const schema = new Schema({
     type: String,
     required: [true, '缺少說明']
   },
+  keyWord: {
+    type: String,
+    required: [true, '缺少標籤']
+  },
   image: {
     type: String,
     required: [true, '缺少圖片']

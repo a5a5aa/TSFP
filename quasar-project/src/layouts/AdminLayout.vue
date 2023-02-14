@@ -1,9 +1,9 @@
 <template>
   <div>
-    <q-layout view="lHh Lpr lff" style="height: 300px" class="shadow-2">
+    <q-layout view="lHh Lpr lff" class="shadow-2">
       <q-header elevated class="bg-cyan-8">
         <q-toolbar class="bg-white">
-          <q-toolbar-title>Header</q-toolbar-title>
+          <q-space></q-space>
           <q-btn name="回管理首頁" label="回管理首頁" class="bg-info text-white" to="/admin">
           </q-btn>
           <div class="q-mr-sm">
@@ -82,7 +82,7 @@
             <q-avatar size="56px" class="q-mb-sm">
               <img src="https://cdn.quasar.dev/img/boy-avatar.png">
             </q-avatar>
-            <div class="text-weight-bold">管理員01</div>
+            <div class="text-weight-bold">管理員</div>
             <div>admin@singleseat.com</div>
           </div>
         </q-img>

@@ -1,62 +1,61 @@
 <template>
-<div>
-  <h5>活動管理</h5>
-  <div class="row">
-    <div class="col-12">
-      <q-btn class="bg-info text-white" @click="openDialog(-1)">新增活動</q-btn>
-    </div>
-    <div class="col-10 justify-center">
-      <q-table :rows="products" row-key="_id" :columns="columns">
+<q-page>
+  <div class="q-pa-xl row justify-center">
+    <div>
+      <h5>活動管理</h5>
+      <div class="text-right q-mb-md">
+        <q-btn icon="add" class="bg-warning text-white" @click="openDialog(-1)">新增活動</q-btn>
+      </div>
+      <q-table style="width:1024px;" :rows="products" row-key="_id" :columns="columns" class="text-center">
         <template v-slot:body-cell-image='props'>
           <q-td>
             <q-img :src="props.row.image" width="130px" height="100px"></q-img>
           </q-td>
         </template>
         <template v-slot:body-cell-status="props">
-          <q-td>
-            <q-btn @click="openDialog(props.row._id)">編輯</q-btn>
-            <q-btn @click="openDialog(props.row._id)">下架</q-btn>
+          <q-td class="text-warning">
+            <q-btn round icon="edit" class="bg-grey" @click="openDialog(props.row._id)"></q-btn>
           </q-td>
         </template>
       </q-table>
     </div>
+    <!-- 新增活動表單 -->
+    <q-dialog class="q-pa-md q-gutter-sm row" no-shake persistent v-model="form.dialog">
+      <q-card class="row q-pa-xl">
+        <q-form style="width:700px;" @submit.prevent="submit">
+          <q-card-title class="col-12">
+            <h5>{{ form._id.length > 0 ? '編輯活動' : '新增活動' }}</h5>
+          </q-card-title>
+          <q-card-section class="col-12 row justify-between">
+            <q-input  stack-label class="col-7" v-model="form.name" label="活動名稱" type="text" color="primary" :rules="[rules.required]"></q-input>
+            <q-select stack-label class="col-4" v-model="form.category" :options="categories" :rules="[rules.required]" label="分類"></q-select>
+            <q-input stack-label class="col-4" v-model="form.date"  label="活動日期" type="date" color="primary" :rules="[rules.required]"></q-input>
+            <q-input stack-label class="col-3" v-model="form.starttime" label="開始時間" type="time" color="primary" :rules="[rules.required]"></q-input>
+            <q-input stack-label class="col-3" v-model="form.endedtime" label="結束時間" type="time" color="primary" :rules="[rules.required]"></q-input>
+            <q-input stack-label class="col-3" v-model="form.price" label="報名費" type="number" prefix="$" color="primary" :rules="[rules.required, rules.price]"></q-input>
+            <q-input stack-label class="col-3" v-model="form.keyWord" label="關鍵字" type="text" color="primary" :rules="[rules.required]"></q-input>
+            <q-file
+              stack-label
+              class="col-4"
+              style="max-width: 300px"
+              v-model="form.image"
+              label="上傳圖片"
+              accept=".jpg, image/*"
+              @rejected="onRejected"
+            />
+            <q-input stack-label filled class="col-12 q-mt-lg" v-model="form.description" label="活動說明" type="textarea" auto-grow="auto-grow" :rules="[rules.required]"></q-input>
+            <q-checkbox stack-label class="col-12" v-model="form.sell" label="上架" color="primary" :rules="[rules.required]" @click="checkbox"></q-checkbox>
+          </q-card-section>
+          <q-card-actions class="q-mt-md">
+            <q-spacer></q-spacer>
+            <q-btn :disabled="form.loading" color="grey" @click="form.dialog = false">取消</q-btn>
+            <q-btn :disabled="form.loading" color="warning" type="submit">送出</q-btn>
+          </q-card-actions>
+        </q-form>
+      </q-card>
+    </q-dialog>
   </div>
-  <!-- 新增活動表單 -->
-  <q-dialog class="q-pa-md q-gutter-sm row" v-model="form.dialog">
-    <q-card class="row q-pa-xl">
-      <q-form style="width:700px;" @submit.prevent="submit">
-        <q-card-title class="col-12">
-          <h5>{{ form._id.length > 0 ? '編輯活動' : '新增活動' }}</h5>
-        </q-card-title>
-        <q-card-section class="col-12 row justify-between">
-          <q-input  stack-label class="col-7" v-model="form.name" label="活動名稱" type="text" color="primary" :rules="[rules.required]"></q-input>
-          <q-select stack-label class="col-4" v-model="form.category" :options="categories" :rules="[rules.required]" label="分類"></q-select>
-          <q-input stack-label class="col-4" v-model="form.date"  label="活動日期" type="date" color="primary" :rules="[rules.required]"></q-input>
-          <q-input stack-label class="col-3" v-model="form.starttime" label="開始時間" type="time" color="primary" :rules="[rules.required]"></q-input>
-          <q-input stack-label class="col-3" v-model="form.endedtime" label="結束時間" type="time" color="primary" :rules="[rules.required]"></q-input>
-          <q-input stack-label class="col-3" v-model="form.price" label="報名費" type="number" prefix="$" color="primary" :rules="[rules.required, rules.price]"></q-input>
-          <q-file
-            stack-label
-            class="col-12"
-            style="max-width: 300px"
-            v-model="form.image"
-            label="上傳圖片"
-            accept=".jpg, image/*"
-            @rejected="onRejected"
-            :rules="[rules.required]"
-          />
-          <q-input stack-label filled class="col-12 q-mt-lg" v-model="form.description" label="活動說明" type="textarea" auto-grow="auto-grow" :rules="[rules.required]"></q-input>
-          <q-checkbox stack-label class="col-12" v-model="form.sell" label="上架" color="primary" @click="checkbox"></q-checkbox>
-        </q-card-section>
-        <q-card-actions class="q-mt-md">
-          <q-spacer></q-spacer>
-          <q-btn :disabled="form.loading" color="grey" @click="form.dialog = false">取消</q-btn>
-          <q-btn :disabled="form.loading" color="warning" type="submit">送出</q-btn>
-        </q-card-actions>
-      </q-form>
-    </q-card>
-  </q-dialog>
-</div>
+</q-page>
 </template>
 
 <script setup>
@@ -78,7 +77,7 @@ const columns = [
   {
     name: 'image',
     required: true,
-    label: '圖片',
+    label: '封面',
     align: 'center',
     field: 'image'
   },
@@ -104,15 +103,22 @@ const columns = [
   {
     name: 'starttime',
     required: true,
-    label: '活動時間',
+    label: '開始時間',
     align: 'center',
     field: 'starttime',
     sortable: true,
     sort: (a, b) => parseInt(a, 10) - parseInt(b, 10)
   },
   {
+    name: 'category',
+    required: true,
+    label: '分類',
+    align: 'center',
+    field: 'category'
+  },
+  {
     name: 'status',
-    label: '狀態',
+    label: '編輯',
     align: 'center',
     required: true
   }
@@ -126,6 +132,7 @@ const form = reactive({
   starttime: '',
   endedtime: '',
   category: '',
+  keyWord: '',
   price: 0,
   description: '',
   image: undefined,
@@ -146,6 +153,7 @@ const openDialog = (_id) => {
     form.endedtime = ''
     form.price = 0
     form.description = ''
+    form.keyWord = ''
     form.image = undefined
     form.sell = false
     form.category = ''
@@ -160,6 +168,7 @@ const openDialog = (_id) => {
     form.endedtime = products[idx].endedtime
     form.price = products[idx].price
     form.description = products[idx].description
+    form.keyWord = products[idx].keyWord
     form.image = undefined
     form.sell = products[idx].sell
     form.category = products[idx].category
@@ -185,11 +194,12 @@ const submit = async () => {
   fd.append('category', form.category)
   fd.append('price', form.price)
   fd.append('description', form.description)
+  fd.append('keyWord', form.keyWord)
   fd.append('image', form.image)
   fd.append('sell', form.sell)
 
   try {
-    if (form._id.length === 0) {
+    if (form._id.length === 0 && form.sell !== false) {
       const { data } = await apiAuth.post('/products', fd)
       products.push(data.result)
       Swal.fire({
@@ -233,3 +243,9 @@ const submit = async () => {
 })()
 
 </script>
+
+<style>
+.swal2-container {
+  z-index: 10000;
+}
+</style>

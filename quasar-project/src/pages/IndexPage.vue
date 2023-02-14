@@ -60,7 +60,7 @@
       </q-card>
     </section>
     <!-- 4. 活動報名 -->
-    <section class="section04 row justify-center q-gutter-md">
+    <!-- <section class="section04 row justify-center q-gutter-md">
       <q-card class="my-card col-md-3" flat bordered>
         <q-img
           src="https://static.accupass.com/eventbanner/2301160847292126205270.jpg"
@@ -181,7 +181,22 @@
           </div>
         </q-slide-transition>
       </q-card>
-    </section>
+    </section> -->
+
+    <q-section class="q-pa-md">
+      <swiper
+        :pagination="{ clickable: true }"
+        :scrollbar="{ draggable: true }"
+        navigation
+        :modules="modules"
+        :slides-per-view="3"
+        :space-between="50"
+      >
+        <swiper-slide v-for="product in products" :key="product._id">
+          <ProductCard v-bind="product"></ProductCard>
+        </swiper-slide>
+      </swiper>
+    </q-section>
     <!-- 5. 形象照展示 -->
     <section class="section05 q-my-xl column flex-center">
       <div class="col-1">
@@ -227,17 +242,31 @@
   </q-page>
 </template>
 
-<script>
-import { ref } from 'vue'
+<script setup>
+import { reactive } from 'vue'
+import { api } from '../boot/axios'
+import Swal from 'sweetalert2'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 
-export default {
-  setup () {
-    return {
-      expanded1: ref(false),
-      expanded2: ref(false),
-      expanded3: ref(false),
-      lorem: '本次課程將邀請整聊師-謝琪琳帶大家學習如何讓空間做最有效的利用。 居家整聊室致力於透過「整聊」概念，讓台灣家庭都能擁有美好生活，全台灣300+整聊師幫助超過5000+家庭找回家的秩序。 讓懂你的整理收納專家，傾聽你理解你，幫助你找回家的歸屬感。'
-    }
+import ProductCard from '@/components/ProductCard.vue'
+
+const modules = [Navigation, Pagination, Scrollbar, A11y]
+const products = reactive([]);
+(async () => {
+  try {
+    const { data } = await api.get('/products')
+    products.push(...data.result)
+    console.log(products)
+  } catch (error) {
+    Swal.fire({
+      icon: 'error',
+      title: '失敗',
+      text: error?.response?.data?.message || '發生錯誤'
+    })
   }
-}
+})()
 </script>

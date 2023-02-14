@@ -11,12 +11,14 @@ export const createProduct = async (req, res) => {
       starttime: req.body.starttime,
       endedtime: req.body.endedtime,
       description: req.body.description,
+      keyWord: req.body.keyWord,
       image: req.file?.path || '',
       sell: req.body.sell,
       category: req.body.category
     })
     res.status(200).json({ success: true, message: '', result })
   } catch (error) {
+    console.log(error)
     if (error.name === 'ValidationError') {
       res.status(400).json({ success: false, message: error.errors[Object.keys(error.errors)[0]].message })
     } else {
@@ -66,6 +68,7 @@ export const editProduct = async (req, res) => {
       name: req.body.name,
       price: req.body.price,
       description: req.body.description,
+      keyWord: req.body.keyWord,
       date: req.body.date,
       starttime: req.body.starttime,
       endedtime: req.body.endedtime,
