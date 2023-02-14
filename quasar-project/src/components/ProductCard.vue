@@ -1,53 +1,35 @@
 <template>
-<q-card class="my-card items-start" style="width:350px;" flat bordered>
-  <q-img
-    cover
-    height="200px"
-    :src="image"
-  />
+<q-item :to="'/products/' + _id" dense dark target="_blank">
+  <q-card class="my-card items-start" style="width:350px;" flat bordered>
+    <q-img
+      cover
+      height="200px"
+      :src="image"
+    />
 
-  <q-card-section>
-    <div class="row  items-center">
-      <div class="text-white bg-accent q-pa-xs rounded-borders q-mr-sm" style="font-weight:500;">{{ category }}</div>
-      <div class="text-white bg-warning q-pa-xs rounded-borders" style="font-weight:500;" v-if="price === 0">免費</div>
-      <div class="text-secondary q-mt-sm q-mb-xs text-right q-ml-auto">{{ new Date(date).toLocaleDateString()}} &nbsp; {{ starttime }}</div>
-    </div>
-    <div class="text-h5 q-mt-sm q-mb-xs">{{ name }}</div>
-    <div class="text-grey">{{ keyWord }}</div>
-  </q-card-section>
-
-  <q-card-actions>
-    <!-- <q-btn flat round color="warning" icon="favorite" /> -->
-    <q-btn flat color="secondary" label="分享"/>
-    <q-btn flat color="warning" label="立即報名"  @click="editCart({_id, quantity: 1})" />
-
-  <q-space />
-
-  <q-btn
-    color="grey"
-    round
-    flat
-    dense
-    :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
-    @click="expanded = !expanded"
-  />
-  </q-card-actions>
-
-  <q-slide-transition>
-  <div v-show="expanded">
-    <q-separator />
-    <q-card-section class="text-subitle2">
-      {{ description }}
+    <q-card-section>
+      <div class="row  items-center" >
+        <div class="text-white bg-accent q-pa-xs rounded-borders q-mr-sm" style="font-weight:500;">{{ category }}</div>
+        <div class="text-white bg-warning q-pa-xs rounded-borders" style="font-weight:500;" v-if="price === 0">免費</div>
+        <div class="text-secondary q-mt-sm q-mb-xs text-right q-ml-auto">{{ new Date(date).toLocaleDateString()}} &nbsp; {{ starttime }}</div>
+      </div>
+      <div class="text-h5 q-mt-sm q-mb-xs text-primary" >{{ name }}</div>
+      <div class="text-grey">{{ keyWord }}</div>
     </q-card-section>
-  </div>
-  </q-slide-transition>
 
-</q-card>
+    <q-separator />
+    <q-card-actions vertical align="center"  >
+      <!-- <q-btn flat round color="warning" icon="favorite" /> -->
+      <!-- <q-btn flat color="secondary" label="分享"/> -->
+      <q-btn style="width:100%;" flat color="warning" label="立即報名"  @click="checkout()" />
+    <q-space />
+    </q-card-actions>
+  </q-card>
+</q-item>
 </template>
 
 <script setup>
 import { useUserStore } from '@/stores/user'
-import { ref } from 'vue'
 
 defineProps({
   /* eslint-disable */
@@ -93,13 +75,6 @@ defineProps({
   }
 })
 const user = useUserStore()
-const { editCart } = user
-const expanded = ref(false)
+const { checkout } = user
 
 </script>
-
-<style>
-.q-card{
-  cursor: pointer;
-}
-</style>

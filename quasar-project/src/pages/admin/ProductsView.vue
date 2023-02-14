@@ -9,7 +9,7 @@
       <q-table style="width:1024px;" :rows="products" row-key="_id" :columns="columns" class="text-center">
         <template v-slot:body-cell-image='props'>
           <q-td>
-            <q-img :src="props.row.image" width="130px" height="100px"></q-img>
+            <q-img :src="props.row.image" width="240px" height="135px"></q-img>
           </q-td>
         </template>
         <template v-slot:body-cell-status="props">

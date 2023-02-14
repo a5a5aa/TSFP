@@ -27,10 +27,10 @@
             </q-menu>
           </q-route-tab>
           <span>/</span>
-          <q-route-tab name="活動報名" label="活動報名 ▾" to="/lectures">
+          <q-route-tab name="活動報名" label="活動報名 ▾" to="/products">
             <q-menu :offset="[-1, 3]">
               <q-list>
-                <q-item clickable class="text-white bg-info" to="/lectures">
+                <q-item clickable class="text-white bg-info" to="/products">
                 <q-item-section style="font-size: 1rem;">所有活動</q-item-section>
                 </q-item>
                 <q-item clickable class="text-white bg-info">

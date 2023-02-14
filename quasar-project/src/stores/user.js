@@ -6,6 +6,7 @@ import Swal from 'sweetalert2'
 export const useUserStore = defineStore('user', () => {
   const token = ref('')
   const email = ref('')
+  const cart = ref(0)
   const role = ref(0)
 
   const isLogin = computed(() => {
@@ -73,8 +74,51 @@ export const useUserStore = defineStore('user', () => {
       logout()
     }
   }
+  async function editCart ({ _id, quantity }) {
+    if (token.value.length === 0) {
+      Swal.fire({
+        icon: 'error',
+        title: '失敗',
+        text: '請先登入'
+      })
+      this.router.push('/login')
+      return
+    }
+    try {
+      const { data } = await apiAuth.post('/users/cart', { p_id: _id, quantity: parseInt(quantity) })
+      cart.value = data.result
+      Swal.fire({
+        icon: 'success',
+        title: '成功',
+        text: '加入購物車成功'
+      })
+    } catch (error) {
+      Swal.fire({
+        icon: 'error',
+        title: '失敗',
+        text: error?.response?.data?.message || '發生錯誤'
+      })
+    }
+  }
+  async function checkout () {
+    try {
+      await apiAuth.post('/orders')
+      cart.value = 0
+      Swal.fire({
+        icon: 'success',
+        title: '成功',
+        text: '結帳成功'
+      })
+    } catch (error) {
+      Swal.fire({
+        icon: 'error',
+        title: '失敗',
+        text: error?.response?.data?.message || '發生錯誤'
+      })
+    }
+  }
   return {
-    token, email, role, login, logout, isLogin, isAdmin, getUser
+    token, email, role, cart, login, logout, isLogin, isAdmin, getUser, editCart, checkout
   }
 }, {
   persist: {

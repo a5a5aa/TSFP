@@ -91,12 +91,12 @@ const routes = [
     ]
   },
   {
-    path: '/lectures',
+    path: '/products',
     component: () => import('layouts/MainLayout.vue'),
     children: [
       {
         path: '',
-        name: 'lectures',
+        name: 'products',
         component: () => import('src/pages/front/LecturesView.vue'),
         meta: {
           title: 'Single Seat - 活動報名',
@@ -105,11 +105,11 @@ const routes = [
         }
       },
       {
-        path: 'lectures/:id',
-        name: 'lecture',
-        component: () => import('src/pages/front/LecturesView.vue'),
+        path: ':id',
+        name: 'product',
+        component: () => import('src/pages/front/EventView.vue'),
         meta: {
-          title: 'Single Seat - 活動',
+          title: 'Single Seat - 活動內容',
           login: false,
           admin: false
         }
