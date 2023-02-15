@@ -57,7 +57,17 @@ const routes = [
         component: () => import('pages/MyAccount.vue'),
         meta: {
           title: 'Single Seat - 會員中心',
-          login: false,
+          login: true,
+          admin: false
+        }
+      },
+      {
+        path: 'orders',
+        name: 'orders',
+        component: () => import('src/pages/front/OrderView.vue'),
+        meta: {
+          title: 'Single Seat - 我的訂單',
+          login: true,
           admin: false
         }
       }

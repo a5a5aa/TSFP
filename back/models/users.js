@@ -3,15 +3,15 @@ import validator from 'validator'
 import bcrypt from 'bcrypt'
 
 const cartSchema = new Schema({
-    p_id:{
-      type:ObjectId,
-      ref:'products',
-      required:[true,'缺少商品']
-    },
-    // quantity:{
-    //   type:Number,
-    //   required:[true,'缺少數量']
-    // }
+  p_id: {
+    type: ObjectId,
+    ref: 'products',
+    required: [true, '缺少商品']
+  }
+  // quantity:{
+  //   type:Number,
+  //   required:[true,'缺少數量']
+  // }
 })
 
 const schema = new Schema({
@@ -35,17 +35,20 @@ const schema = new Schema({
     unique: true,
     required: [true, '缺少手機號碼']
   },
-  tokens:{
-    type:[String],
+  tokens: {
+    type: [String],
     // 預設空陣列
-    default:[]
+    default: []
   },
-  role:{
-    type:Number,
+  role: {
+    type: Number,
     // 0 使用者 1 管理員
-    default:0
+    default: 0
+  },
+  event: {
+
   }
-},{versionKey:false})
+}, { versionKey: false })
 
 schema.pre('save', function (next) {
   const user = this

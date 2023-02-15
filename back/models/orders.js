@@ -1,12 +1,12 @@
 import { Schema, model, ObjectId } from 'mongoose'
 
-const orderSchema = new Schema({
-  p_id: {
-    type: ObjectId,
-    ref: 'products',
-    required: [true, '缺少商品']
-  }
-})
+// const orderSchema = new Schema({
+//   p_id: {
+//     type: ObjectId,
+//     ref: 'products',
+//     required: [true, '缺少商品']
+//   }
+// })
 
 const schema = new Schema({
   u_id: {
@@ -14,9 +14,10 @@ const schema = new Schema({
     ref: 'users',
     required: [true, '缺少使用者']
   },
-  products: {
-    type: [orderSchema],
-    default: []
+  p_id: {
+    type: ObjectId,
+    ref: 'products',
+    required: [true, '缺少活動']
   },
   date: {
     type: Date,

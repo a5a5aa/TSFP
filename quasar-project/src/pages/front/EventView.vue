@@ -12,7 +12,7 @@
         <p class="text-h6" v-if="product.price !== 0">活動費用：NT$ {{ product.price }}</p>
         <p class="text-h6" v-if="product.price === 0" >活動費用：免費</p>
         <q-form @submit.prevent="submitCart" class="q-my-xl">
-          <q-btn style="width:200px" type="submit" color="warning">立即報名</q-btn>
+          <q-btn style="width:200px" type="submit" color="warning" @click="onSignupBtnClick">立即報名</q-btn>
         </q-form>
       </div>
       <q-item class="bg-accent rounded-borders q-pa-md">
@@ -23,7 +23,7 @@
     <div class="col-12 col-md-5">
     <q-img :src="product.image" :ratio="16/9"></q-img>
     <q-scroll-area class="q-mt-lg scroll-area" style="height: 300px; width: 100%;">
-      <div class="q-mt-lg">{{ product.description }}</div>
+      <div class="q-mt-lg pre">{{ product.description }}</div>
     </q-scroll-area>
   </div>
   </div>
@@ -45,7 +45,7 @@ const route = useRoute()
 const router = useRouter()
 
 const user = useUserStore()
-const { editCart } = user
+const { editCart, signup } = user
 
 const valid = ref(false)
 const quantity = ref(0)
@@ -69,9 +69,16 @@ const submitCart = () => {
   editCart({ _id: product._id, quantity: quantity.value })
 }
 
+const onSignupBtnClick = async () => {
+  console.log(route.params.id)
+  await signup(route.params.id)
+  router.push('/products')
+}
+
 (async () => {
   try {
     const { data } = await api.get('/products/' + route.params.id)
+
     product._id = data.result._id
     product.name = data.result.name
     product.price = data.result.price
@@ -100,5 +107,14 @@ const submitCart = () => {
 <style lang="scss">
 p {
   font-size: 1rem;
+}
+
+// 換行
+.pre{
+  white-space: pre;
+}
+
+.swal2-container {
+  z-index: 10000;
 }
 </style>

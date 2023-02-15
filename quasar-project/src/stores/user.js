@@ -28,8 +28,8 @@ export const useUserStore = defineStore('user', () => {
         icon: 'success',
         text: '登入成功',
         iconColor: '#C5A768',
-        confirmButtonColor: '#2b2b2b'
-        // allowOutsideClick: false
+        confirmButtonColor: '#2b2b2b',
+        allowOutsideClick: false
       })
       this.router.push('/')
     } catch (error) {
@@ -100,14 +100,15 @@ export const useUserStore = defineStore('user', () => {
       })
     }
   }
-  async function checkout () {
+  async function signup (_id) {
     try {
-      await apiAuth.post('/orders')
-      cart.value = 0
+      console.log(_id)
+      await apiAuth.post('/orders/' + _id)
+      // cart.value = 0
       Swal.fire({
         icon: 'success',
         title: '成功',
-        text: '結帳成功'
+        text: '報名成功'
       })
     } catch (error) {
       Swal.fire({
@@ -118,7 +119,7 @@ export const useUserStore = defineStore('user', () => {
     }
   }
   return {
-    token, email, role, cart, login, logout, isLogin, isAdmin, getUser, editCart, checkout
+    token, email, role, cart, login, logout, isLogin, isAdmin, getUser, editCart, signup
   }
 }, {
   persist: {

@@ -6,7 +6,7 @@ import { createOrder, getMyOrders, getAllOrders } from '../controllers/orders.js
 const router = Router()
 
 // 建立訂單
-router.post('/', jwt, createOrder)
+router.post('/:id', jwt, createOrder)
 // 取自己的訂單
 router.get('/', jwt, getMyOrders)
 // 取所有人的訂單

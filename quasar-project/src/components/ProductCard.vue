@@ -21,7 +21,7 @@
     <q-card-actions vertical align="center"  >
       <!-- <q-btn flat round color="warning" icon="favorite" /> -->
       <!-- <q-btn flat color="secondary" label="分享"/> -->
-      <q-btn style="width:100%;" flat color="warning" label="立即報名"  @click="checkout()" />
+      <q-btn style="width:100%;" flat color="warning" label="瞭解詳情" :to="'/products/' + _id" />
     <q-space />
     </q-card-actions>
   </q-card>
@@ -29,7 +29,7 @@
 </template>
 
 <script setup>
-import { useUserStore } from '@/stores/user'
+// import { useUserStore } from '@/stores/user'
 
 defineProps({
   /* eslint-disable */
@@ -74,7 +74,7 @@ defineProps({
     default: ''
   }
 })
-const user = useUserStore()
-const { checkout } = user
+// const user = useUserStore()
+// const { signup } = user
 
 </script>

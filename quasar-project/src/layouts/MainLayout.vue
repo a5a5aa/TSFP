@@ -100,10 +100,10 @@
             <q-tooltip class="bg-info">管理</q-tooltip>
           </div>
           <div>
-            <q-btn class="q-pa-sm" v-if="isLogin && !isAdmin" to="/myaccount" variant="text" rounded text-accent>
+            <q-btn class="q-pa-sm" v-if="isLogin && !isAdmin" to="/myaccount/orders" variant="text" rounded text-accent>
               <q-icon name="fa-solid fa-user" size="1.3rem"></q-icon>
             </q-btn>
-            <q-tooltip class="bg-info">會員中心</q-tooltip>
+            <q-tooltip class="bg-info">會員專區</q-tooltip>
           </div>
           <div>
             <q-btn class="q-pa-sm" v-if="isLogin" variant="text" rounded text-accent @click="logout">
@@ -194,7 +194,7 @@
                 管理
               </q-item-section>
             </q-item>
-            <q-item clickable v-ripple to="/myaccount" v-if="isLogin && !isAdmin" class="text-center row flex-center">
+            <q-item clickable v-ripple to="/myaccount/orders" v-if="isLogin && !isAdmin" class="text-center row flex-center">
               <q-icon name="fa-solid fa-user" size="xs" class="col-2"/>
               <q-item-section class="text-accent col-6" flat>
                 我的會員
