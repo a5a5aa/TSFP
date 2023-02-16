@@ -21,8 +21,8 @@
           </q-input>
 
           <div class="col-sm-6">
-            <q-radio v-model="gender" val="male" label="先生" class="q-mr-md male"/>
-            <q-radio v-model="gender" val="female" label="小姐" />
+            <q-radio v-model="form.gender" val="M" label="先生" class="q-mr-md male"/>
+            <q-radio v-model="form.gender" val="F" label="女士" />
           </div>
         </div>
 
@@ -109,10 +109,10 @@ const valid = ref(false)
 const loading = ref(false)
 const $q = useQuasar()
 const timer = ref(0)
-const gender = ref('male')
 const form = reactive({
   name: '',
   nickname: '',
+  gender: 'male',
   email: '',
   phone: '',
   password: '',

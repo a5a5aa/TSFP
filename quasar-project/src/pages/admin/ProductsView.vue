@@ -77,7 +77,7 @@ const columns = [
   {
     name: 'image',
     required: true,
-    label: '封面',
+    label: '活動封面',
     align: 'center',
     field: 'image'
   },
@@ -114,7 +114,8 @@ const columns = [
     required: true,
     label: '分類',
     align: 'center',
-    field: 'category'
+    field: 'category',
+    sortable: true
   },
   {
     name: 'status',

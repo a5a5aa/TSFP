@@ -5,6 +5,8 @@ import jwt from 'jsonwebtoken'
 export const register = async (req, res) => {
   try {
     await users.create({
+      name: req.body.name,
+      gender: req.body.gender,
       email: req.body.email,
       nickname: req.body.nickname,
       password: req.body.password,
@@ -77,7 +79,9 @@ export const getUser = (req, res) => {
       message: '',
       result: {
         name: req.user.name,
+        gender: req.user.gender,
         email: req.user.email,
+        phone: req.user.phone,
         role: req.user.role
         // cart: req.user.cart.length
       }

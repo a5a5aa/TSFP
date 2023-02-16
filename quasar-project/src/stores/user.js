@@ -102,8 +102,8 @@ export const useUserStore = defineStore('user', () => {
   }
   async function signup (_id) {
     try {
-      console.log(_id)
-      await apiAuth.post('/orders/' + _id)
+      const { data } = await apiAuth.post('/orders/' + _id)
+      console.log(data.result)
       // cart.value = 0
       Swal.fire({
         icon: 'success',

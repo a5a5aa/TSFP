@@ -8,6 +8,11 @@
     row-key="name"
     :columns="columns"
     class="text-center">
+    <template v-slot:body-cell-image='props'>
+      <q-td>
+        <q-img :src="props.row.p_id.image" width="240px" height="135px"></q-img>
+      </q-td>
+    </template>
     </q-table>
   </div>
 </q-page>
@@ -22,18 +27,43 @@ const orders = reactive([])
 
 const columns = [
   {
-    name: 'p_id',
+    name: 'image',
     required: true,
-    label: '活動編號',
+    label: '活動封面',
+    align: 'center'
+  },
+  {
+    name: 'name',
+    required: true,
+    label: '活動名稱',
     align: 'center',
-    field: 'p_id'
+    field: row => row.p_id.name
+  },
+  {
+    name: 'date',
+    required: true,
+    label: '活動日期',
+    align: 'center',
+    field: row => row.p_id.date,
+    sortable: true,
+    sort: (a, b) => parseInt(a, 10) - parseInt(b, 10),
+    format: val => `${new Date(val).toLocaleDateString()}`
+  },
+  {
+    name: 'starttime',
+    required: true,
+    label: '開始時間',
+    align: 'center',
+    field: row => row.p_id.starttime,
+    sortable: true,
+    sort: (a, b) => parseInt(a, 10) - parseInt(b, 10)
   },
   {
     name: 'date',
     required: true,
     label: '報名日期',
     align: 'center',
-    field: 'date',
+    field: row => row.date,
     sortable: true,
     sort: (a, b) => parseInt(a, 10) - parseInt(b, 10),
     format: val => `${new Date(val).toLocaleDateString()}`
@@ -44,6 +74,7 @@ const columns = [
   try {
     const { data } = await apiAuth.get('/orders')
     orders.push(...data.result)
+    console.log(orders)
   } catch (error) {
     Swal.fire({
       icon: 'error',

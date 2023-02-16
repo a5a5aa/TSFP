@@ -2,19 +2,15 @@ import { Schema, model, ObjectId, Error } from 'mongoose'
 import validator from 'validator'
 import bcrypt from 'bcrypt'
 
-const cartSchema = new Schema({
-  p_id: {
-    type: ObjectId,
-    ref: 'products',
-    required: [true, '缺少商品']
-  }
-  // quantity:{
-  //   type:Number,
-  //   required:[true,'缺少數量']
-  // }
-})
-
 const schema = new Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  gender: {
+    type: String,
+    required: true
+  },
   email: {
     type: String,
     unique: true,
@@ -44,9 +40,6 @@ const schema = new Schema({
     type: Number,
     // 0 使用者 1 管理員
     default: 0
-  },
-  event: {
-
   }
 }, { versionKey: false })
 

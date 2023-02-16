@@ -64,7 +64,7 @@ const routes = [
       {
         path: 'orders',
         name: 'orders',
-        component: () => import('src/pages/front/OrderView.vue'),
+        component: () => import('src/pages/front/MyOrder.vue'),
         meta: {
           title: 'Single Seat - 我的訂單',
           login: true,
@@ -215,6 +215,26 @@ const routes = [
         component: () => import('../pages/admin/ProductsView.vue'),
         meta: {
           title: ' Single Seat - 商品管理 ',
+          login: true,
+          admin: true
+        }
+      },
+      {
+        path: 'allorders',
+        name: 'admin-allorders',
+        component: () => import('../pages/admin/AllOrders.vue'),
+        meta: {
+          title: ' Single Seat - 訂單管理 ',
+          login: true,
+          admin: true
+        }
+      },
+      {
+        path: 'eventorders',
+        name: 'admin-eventorders',
+        component: () => import('../pages/admin/EventOrders.vue'),
+        meta: {
+          title: ' Single Seat - 活動訂單管理 ',
           login: true,
           admin: true
         }

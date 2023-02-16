@@ -55,7 +55,7 @@
               </q-item-section>
             </q-item>
 
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple to="/admin/allorders">
               <q-item-section avatar>
                 <q-icon name="fa-regular fa-file-lines" />
               </q-item-section>
