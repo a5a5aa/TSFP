@@ -65,6 +65,16 @@
               </q-item-section>
             </q-item>
 
+            <q-item clickable v-ripple to="/admin/articles">
+              <q-item-section avatar>
+                <q-icon name="fa-solid fa-address-book" />
+              </q-item-section>
+
+              <q-item-section>
+                文章管理
+              </q-item-section>
+            </q-item>
+
             <q-item clickable v-ripple>
               <q-item-section avatar>
                 <q-icon name="fa-solid fa-address-book" />

@@ -41,6 +41,7 @@ const products = reactive([]);
   try {
     const { data } = await api.get('/products')
     products.push(...data.result)
+    products.reverse()
     console.log(products)
   } catch (error) {
     Swal.fire({

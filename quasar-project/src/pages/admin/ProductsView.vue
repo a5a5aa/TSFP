@@ -27,13 +27,13 @@
             <h5>{{ form._id.length > 0 ? '編輯活動' : '新增活動' }}</h5>
           </q-card-title>
           <q-card-section class="col-12 row justify-between">
-            <q-input  stack-label class="col-7" v-model="form.name" label="活動名稱" type="text" color="primary" :rules="[rules.required]"></q-input>
+            <q-input  stack-label class="col-7" v-model="form.name" label="活動名稱" type="text" color="primary" :rules="[ rules.length28, rules.required ]"></q-input>
             <q-select stack-label class="col-4" v-model="form.category" :options="categories" :rules="[rules.required]" label="分類"></q-select>
             <q-input stack-label class="col-4" v-model="form.date"  label="活動日期" type="date" color="primary" :rules="[rules.required]"></q-input>
             <q-input stack-label class="col-3" v-model="form.starttime" label="開始時間" type="time" color="primary" :rules="[rules.required]"></q-input>
             <q-input stack-label class="col-3" v-model="form.endedtime" label="結束時間" type="time" color="primary" :rules="[rules.required]"></q-input>
             <q-input stack-label class="col-3" v-model="form.price" label="報名費" type="number" prefix="$" color="primary" :rules="[rules.required, rules.price]"></q-input>
-            <q-input stack-label class="col-3" v-model="form.keyWord" label="關鍵字" type="text" color="primary" :rules="[rules.required]"></q-input>
+            <q-input stack-label class="col-3" v-model="form.keyWord" label="關鍵字" type="text" color="primary" :rules="[rules.length20, rules.required]"></q-input>
             <q-file
               stack-label
               class="col-4"
@@ -70,7 +70,14 @@ const rules = {
   },
   price (value) {
     return value >= 0 || '價格錯誤'
+  },
+  length28 (value) {
+    return value.length <= 28 || '不得超過28字'
+  },
+  length20 (value) {
+    return value.length <= 20 || '不得超過20字'
   }
+
 }
 
 const columns = [
@@ -234,6 +241,7 @@ const submit = async () => {
   try {
     const { data } = await api.get('/products')
     products.push(...data.result)
+    products.reverse()
   } catch (error) {
     Swal.fire({
       icon: 'error',

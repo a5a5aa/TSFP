@@ -6,154 +6,14 @@
       :ratio="21/4"
     />
   </q-sectoin>
-  <q-section class="row flex-center q-gutter-md q-my-xl">
-    <q-card class="my-card col-md-5" flat bordered>
-      <q-card-section horizontal>
-        <q-card-section class="q-pt-xs">
-          <span class="bg-warning text-overline text-white rounded-borders q-px-sm q-py-xs">品味</span>
-          <div class="text-h5 q-mt-sm q-mb-xs">獨立戒斷症候群：獨立不是一人生活就好，安心依賴，才能活得可愛！</div>
-          <div class="text-caption text-grey">
-            你也有「獨立戒斷症候群」嗎？習慣獨立的你，當他人說可以依賴自己時，反而手足無措⋯⋯其實有的時候，我們不必活得這麼堅強，也能好好過。
-          </div>
-        </q-card-section>
-
-        <q-card-section class="col-4 col-sm-3 flex flex-center">
-          <q-img
-            class="rounded-borders"
-            src="https://cdn.quasar.dev/img/parallax2.jpg"
-            :ratio="1/1"
-          />
-        </q-card-section>
-      </q-card-section>
-      <q-separator />
-      <q-card-actions align="right">
-        <q-btn flat round color="red" icon="favorite" />
-        <q-btn flat round color="primary" icon="share" />
-      </q-card-actions>
-    </q-card>
-    <q-card class="my-card col-md-5" flat bordered>
-      <q-card-section horizontal>
-        <q-card-section class="q-pt-xs">
-          <span class="bg-warning text-overline text-white rounded-borders q-px-sm q-py-xs">品味</span>
-          <div class="text-h5 q-mt-sm q-mb-xs">獨立戒斷症候群：獨立不是一人生活就好，安心依賴，才能活得可愛！</div>
-          <div class="text-caption text-grey">
-            你也有「獨立戒斷症候群」嗎？習慣獨立的你，當他人說可以依賴自己時，反而手足無措⋯⋯其實有的時候，我們不必活得這麼堅強，也能好好過。
-          </div>
-        </q-card-section>
-
-        <q-card-section class="col-4 col-sm-3 flex flex-center">
-          <q-img
-            class="rounded-borders"
-            src="https://cdn.quasar.dev/img/parallax2.jpg"
-            :ratio="1/1"
-          />
-        </q-card-section>
-      </q-card-section>
-      <q-separator />
-      <q-card-actions align="right">
-        <q-btn flat round color="red" icon="favorite" />
-        <q-btn flat round color="primary" icon="share" />
-      </q-card-actions>
-    </q-card>
-    <q-card class="my-card col-md-5" flat bordered>
-      <q-card-section horizontal>
-        <q-card-section class="q-pt-xs">
-          <span class="bg-warning text-overline text-white rounded-borders q-px-sm q-py-xs">品味</span>
-          <div class="text-h5 q-mt-sm q-mb-xs">獨立戒斷症候群：獨立不是一人生活就好，安心依賴，才能活得可愛！</div>
-          <div class="text-caption text-grey">
-            你也有「獨立戒斷症候群」嗎？習慣獨立的你，當他人說可以依賴自己時，反而手足無措⋯⋯其實有的時候，我們不必活得這麼堅強，也能好好過。
-          </div>
-        </q-card-section>
-
-        <q-card-section class="col-4 col-sm-3 flex flex-center">
-          <q-img
-            class="rounded-borders"
-            src="https://cdn.quasar.dev/img/parallax2.jpg"
-            :ratio="1/1"
-          />
-        </q-card-section>
-      </q-card-section>
-      <q-separator />
-      <q-card-actions align="right">
-        <q-btn flat round color="red" icon="favorite" />
-        <q-btn flat round color="primary" icon="share" />
-      </q-card-actions>
-    </q-card>
-    <q-card class="my-card col-md-5" flat bordered>
-      <q-card-section horizontal>
-        <q-card-section class="q-pt-xs">
-          <span class="bg-warning text-overline text-white rounded-borders q-px-sm q-py-xs">品味</span>
-          <div class="text-h5 q-mt-sm q-mb-xs">獨立戒斷症候群：獨立不是一人生活就好，安心依賴，才能活得可愛！</div>
-          <div class="text-caption text-grey">
-            你也有「獨立戒斷症候群」嗎？習慣獨立的你，當他人說可以依賴自己時，反而手足無措⋯⋯其實有的時候，我們不必活得這麼堅強，也能好好過。
-          </div>
-        </q-card-section>
-
-        <q-card-section class="col-4 col-sm-3 flex flex-center">
-          <q-img
-            class="rounded-borders"
-            src="https://cdn.quasar.dev/img/parallax2.jpg"
-            :ratio="1/1"
-          />
-        </q-card-section>
-      </q-card-section>
-      <q-separator />
-      <q-card-actions align="right">
-        <q-btn flat round color="red" icon="favorite" />
-        <q-btn flat round color="primary" icon="share" />
-      </q-card-actions>
-    </q-card>
-    <q-card class="my-card col-md-5" flat bordered>
-      <q-card-section horizontal>
-        <q-card-section class="q-pt-xs">
-          <span class="bg-warning text-overline text-white rounded-borders q-px-sm q-py-xs">品味</span>
-          <div class="text-h5 q-mt-sm q-mb-xs">獨立戒斷症候群：獨立不是一人生活就好，安心依賴，才能活得可愛！</div>
-          <div class="text-caption text-grey">
-            你也有「獨立戒斷症候群」嗎？習慣獨立的你，當他人說可以依賴自己時，反而手足無措⋯⋯其實有的時候，我們不必活得這麼堅強，也能好好過。
-          </div>
-        </q-card-section>
-
-        <q-card-section class="col-4 col-sm-3 flex flex-center">
-          <q-img
-            class="rounded-borders"
-            src="https://cdn.quasar.dev/img/parallax2.jpg"
-            :ratio="1/1"
-          />
-        </q-card-section>
-      </q-card-section>
-      <q-separator />
-      <q-card-actions align="right">
-        <q-btn flat round color="red" icon="favorite" />
-        <q-btn flat round color="primary" icon="share" />
-      </q-card-actions>
-    </q-card>
-    <q-card class="my-card col-md-5" flat bordered>
-      <q-card-section horizontal>
-        <q-card-section class="q-pt-xs">
-          <span class="bg-warning text-overline text-white rounded-borders q-px-sm q-py-xs">品味</span>
-          <div class="text-h5 q-mt-sm q-mb-xs">獨立戒斷症候群：獨立不是一人生活就好，安心依賴，才能活得可愛！</div>
-          <div class="text-caption text-grey">
-            你也有「獨立戒斷症候群」嗎？習慣獨立的你，當他人說可以依賴自己時，反而手足無措⋯⋯其實有的時候，我們不必活得這麼堅強，也能好好過。
-          </div>
-        </q-card-section>
-
-        <q-card-section class="col-4 col-sm-3 flex flex-center">
-          <q-img
-            class="rounded-borders"
-            src="https://cdn.quasar.dev/img/parallax2.jpg"
-            :ratio="1/1"
-          />
-        </q-card-section>
-      </q-card-section>
-      <q-separator />
-      <q-card-actions align="right">
-        <q-btn flat round color="red" icon="favorite" />
-        <q-btn flat round color="primary" icon="share" />
-      </q-card-actions>
-    </q-card>
+  <q-section class="row items-start justify-center q-gutter-md q-pa-xl" style="max-width:1920px;">
+    <div class="col-12"><h5>專欄好文</h5></div>
+    <div v-for="article in articles" :key="article._id">
+      <ArticleCard v-bind="article"></ArticleCard>
+    </div>
   </q-section>
-      <!-- 6. footer -->
-  <q-section class="footer column flex-center text-center  q-my-xl">
+  <!-- 6. footer -->
+  <q-section class="footer column flex-center text-center q-my-xl">
     <div class="logo row flex-center">
       <div class="row justify-evenly">
         <img src="../../assets/images/log＿方.png">
@@ -168,3 +28,27 @@
   </q-section>
 </q-page>
 </template>
+
+<script setup>
+import { reactive } from 'vue'
+import { api } from '../../boot/axios'
+import Swal from 'sweetalert2'
+import ArticleCard from '@/components/ArticleCard.vue'
+
+const articles = reactive([]);
+
+(async () => {
+  try {
+    const { data } = await api.get('/articles')
+    articles.push(...data.result)
+    // console.log(articles)
+    articles.reverse()
+  } catch (error) {
+    Swal.fire({
+      icon: 'error',
+      title: '失敗',
+      text: error?.response?.data?.message || '發生錯誤'
+    })
+  }
+})()
+</script>

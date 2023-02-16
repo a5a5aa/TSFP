@@ -6,6 +6,7 @@ import userRoute from './routes/users.js'
 import productRoute from './routes/products.js'
 import './passport/passport.js'
 import orderRoute from './routes/orders.js'
+import articleRoute from './routes/articles.js'
 
 mongoose.connect(process.env.DB_URL)
 mongoose.set('sanitizeFilter', true)
@@ -45,6 +46,7 @@ app.use((_, req, res, next) => {
 app.use('/users', userRoute)
 app.use('/products', productRoute)
 app.use('/orders', orderRoute)
+app.use('/articles', articleRoute)
 
 app.all('*', (req, res) => {
   res.status(404).json({ success: false, message: '找不到' })

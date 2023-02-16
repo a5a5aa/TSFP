@@ -153,12 +153,12 @@ const routes = [
     ]
   },
   {
-    path: '/article',
+    path: '/articles',
     component: () => import('layouts/MainLayout.vue'),
     children: [
       {
         path: '',
-        name: 'article',
+        name: 'articles',
         component: () => import('src/pages/front/ArticleView.vue'),
         meta: {
           title: 'Single Seat - 專欄好文',
@@ -235,6 +235,16 @@ const routes = [
         component: () => import('../pages/admin/EventOrders.vue'),
         meta: {
           title: ' Single Seat - 活動訂單管理 ',
+          login: true,
+          admin: true
+        }
+      },
+      {
+        path: 'articles',
+        name: 'admin-articles',
+        component: () => import('../pages/admin/ArticlesView.vue'),
+        meta: {
+          title: ' Single Seat - 文章管理 ',
           login: true,
           admin: true
         }

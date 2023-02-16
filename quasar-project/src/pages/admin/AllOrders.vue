@@ -91,6 +91,7 @@ const columns = [
     const { data } = await apiAuth.get('/orders/allorders')
     orders.push(...data.result)
     console.log(orders)
+    orders.reverse()
   } catch (error) {
     Swal.fire({
       icon: 'error',

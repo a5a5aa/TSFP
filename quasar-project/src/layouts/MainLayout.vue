@@ -53,7 +53,7 @@
             </q-menu>
           </q-route-tab>
           <span>/</span>
-          <q-route-tab name="專欄好文" label="專欄好文" to="/article"/>
+          <q-route-tab name="專欄好文" label="專欄好文" to="/articles"/>
           <span>/</span>
           <q-route-tab name="客服資訊" label="客服資訊 ▾" to="/service">
             <q-menu :offset="[-1, 3]">

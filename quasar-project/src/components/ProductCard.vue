@@ -11,7 +11,9 @@
       <div class="row  items-center" >
         <div class="text-white bg-accent q-pa-xs rounded-borders q-mr-sm" style="font-weight:500;">{{ category }}</div>
         <div class="text-white bg-warning q-pa-xs rounded-borders" style="font-weight:500;" v-if="price === 0">免費</div>
-        <div class="text-secondary q-mt-sm q-mb-xs text-right q-ml-auto">{{ new Date(date).toLocaleDateString()}} &nbsp; {{ starttime }}</div>
+        <div class="text-secondary q-mt-sm q-mb-xs text-right q-ml-auto">
+          <q-icon name="fa-regular fa-clock"></q-icon>
+          &nbsp;{{ new Date(date).toLocaleDateString()}} &nbsp; {{ starttime }}</div>
       </div>
       <div class="text-h5 q-mt-sm q-mb-xs text-primary" >{{ name }}</div>
       <div class="text-grey">{{ keyWord }}</div>
