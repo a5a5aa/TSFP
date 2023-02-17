@@ -11,7 +11,8 @@ export const register = async (req, res) => {
       nickname: req.body.nickname,
       password: req.body.password,
       passwordConfirm: req.body.passwordConfirm,
-      phone: req.body.phone
+      phone: req.body.phone,
+      date: req.body.date
     })
     res.status(200).json({ success: true, message: '' })
   } catch (error) {
@@ -82,9 +83,22 @@ export const getUser = (req, res) => {
         gender: req.user.gender,
         email: req.user.email,
         phone: req.user.phone,
-        role: req.user.role
-        // cart: req.user.cart.length
+        role: req.user.role,
+        date: req.user.date
       }
+    })
+  } catch (error) {
+    res.status(500).json({ success: false, message: '未知錯誤' })
+  }
+}
+
+export const getAllUsers = async (req, res) => {
+  try {
+    const result = await users.find({ role: 0 })
+    res.status(200).json({
+      success: true,
+      message: '',
+      result
     })
   } catch (error) {
     res.status(500).json({ success: false, message: '未知錯誤' })

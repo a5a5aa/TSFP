@@ -230,6 +230,16 @@ const routes = [
         }
       },
       {
+        path: 'allusers',
+        name: 'admin-userlist',
+        component: () => import('../pages/admin/UserList.vue'),
+        meta: {
+          title: ' Single Seat - 會員管理 ',
+          login: true,
+          admin: true
+        }
+      },
+      {
         path: 'eventorders',
         name: 'admin-eventorders',
         component: () => import('../pages/admin/EventOrders.vue'),

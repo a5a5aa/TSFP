@@ -75,7 +75,7 @@
               </q-item-section>
             </q-item>
 
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple to="/admin/allusers">
               <q-item-section avatar>
                 <q-icon name="fa-solid fa-address-book" />
               </q-item-section>

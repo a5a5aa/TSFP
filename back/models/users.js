@@ -36,6 +36,11 @@ const schema = new Schema({
     // 預設空陣列
     default: []
   },
+  date: {
+    type: Date,
+    default: () => Date.now() + 8 * 60 * 60 * 1000,
+    required: [true, '缺少日期']
+  },
   role: {
     type: Number,
     // 0 使用者 1 管理員

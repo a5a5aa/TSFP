@@ -7,7 +7,9 @@
     :rows="orders"
     row-key="name"
     :columns="columns"
-    class="text-center">
+    class="text-center"
+    >
+
     <template v-slot:body-cell-image='props'>
       <q-td>
         <q-img :src="props.row.p_id.image" width="120px" height="67.5px"></q-img>
@@ -22,9 +24,7 @@
 import { reactive } from 'vue'
 import { apiAuth } from '../../boot/axios'
 import Swal from 'sweetalert2'
-
 const orders = reactive([])
-
 const columns = [
   {
     name: 'date',
@@ -85,7 +85,6 @@ const columns = [
     field: row => row.u_id.phone
   }
 ];
-
 (async () => {
   try {
     const { data } = await apiAuth.get('/orders/allorders')

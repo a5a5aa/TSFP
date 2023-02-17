@@ -1,5 +1,5 @@
 <template>
-<q-card class="my-card col-md-5" style="width:400px;" flat bordered>
+<q-card class="my-card col-md-5" style="width:500px;" flat bordered>
   <q-card-section horizontal>
     <q-card-section class="q-py-md">
       <span class="bg-accent text-white rounded-borders q-px-sm q-py-xs">品味</span>

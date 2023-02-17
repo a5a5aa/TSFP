@@ -12,6 +12,7 @@ const schema = new Schema({
   },
   date: {
     type: Date,
+    default: () => Date.now() + 8 * 60 * 60 * 1000,
     required: [true, '缺少日期']
   },
   starttime: {
