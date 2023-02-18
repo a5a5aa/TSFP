@@ -30,6 +30,13 @@ const columns = [
     field: row => row.name
   },
   {
+    name: 'usernickname',
+    required: true,
+    label: '暱稱',
+    align: 'center',
+    field: row => row.nickname
+  },
+  {
     name: 'gender',
     required: true,
     label: '性別',

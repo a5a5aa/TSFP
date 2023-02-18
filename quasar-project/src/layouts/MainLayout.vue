@@ -91,23 +91,35 @@
             </q-btn>
             <q-tooltip class="bg-info">會員登入</q-tooltip>
           </div>
-          <div>
+          <!-- <div>
             <q-btn class="q-pa-sm" v-if="isLogin && isAdmin" to="/admin" variant="text" rounded text-accent>
             <q-icon name="fa-solid fa-user-gear" size="1.3rem"></q-icon>
             </q-btn>
             <q-tooltip class="bg-info">管理</q-tooltip>
-          </div>
+          </div> -->
           <div>
+            <q-btn class="q-pa-sm" v-if="isLogin && isAdmin" to="/admin" variant="text" rounded text-accent>
+              <q-icon name="fa-solid fa-user-gear" size="1.3rem"></q-icon>
+            </q-btn>
+            <q-tooltip class="bg-info">管理</q-tooltip>
+          </div>
+          <div class="q-mr-sm user_name">
+            <q-btn outline class="row flex-center" v-if="isLogin && !isAdmin" to="/myaccount/orders" variant="text" text-accent>
+              <span>嗨!&nbsp;&nbsp;{{ nickname }}</span>
+            </q-btn>
+            <q-tooltip class="bg-info">會員專區</q-tooltip>
+          </div>
+          <div class="user_noname">
             <q-btn class="q-pa-sm" v-if="isLogin && !isAdmin" to="/myaccount/orders" variant="text" rounded text-accent>
               <q-icon name="fa-solid fa-user" size="1.3rem"></q-icon>
             </q-btn>
             <q-tooltip class="bg-info">會員專區</q-tooltip>
           </div>
-          <div>
-            <q-btn class="q-pa-sm" v-if="isLogin" variant="text" rounded text-accent @click="logout">
-            <q-icon name="fa-solid fa-arrow-right-from-bracket" size="1.3rem"></q-icon>
-            <q-tooltip class="bg-info">登出</q-tooltip>
+          <div class="q-ml-xs">
+            <q-btn class="q-pa-sm" v-if="isLogin" @click="logout" variant="text" rounded text-accent>
+              <q-icon name="fa-solid fa-arrow-right-from-bracket" size="1.3rem"></q-icon>
             </q-btn>
+            <q-tooltip class="bg-info">登出</q-tooltip>
           </div>
         </q-tabs>
       </q-toolbar>
@@ -258,7 +270,7 @@ import { useUserStore } from 'src/stores/user'
 import { ref } from 'vue'
 
 const user = useUserStore()
-const { isLogin, isAdmin } = storeToRefs(user)
+const { isLogin, isAdmin, nickname } = storeToRefs(user)
 const { logout } = user
 const drawer = ref(false)
 

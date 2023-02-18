@@ -41,6 +41,7 @@ export const login = async (req, res) => {
       result: {
         token,
         name: req.user.name,
+        nickname: req.user.nickname,
         email: req.user.email,
         role: req.user.role
       }
@@ -80,6 +81,7 @@ export const getUser = (req, res) => {
       message: '',
       result: {
         name: req.user.name,
+        nickname: req.user.nickname,
         gender: req.user.gender,
         email: req.user.email,
         phone: req.user.phone,

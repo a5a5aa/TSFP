@@ -41,6 +41,22 @@
       }
     }
   }
+  .user_name{
+    display: none;
+    @media (min-width:992px) {
+      &{
+        display: block;
+      }
+    }
+  }
+  .user_noname{
+    display: blcok;
+    @media (min-width:992px) {
+      &{
+        display: none;
+      }
+    }
+  }
 }
 
 // burger側邊欄

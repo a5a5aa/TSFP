@@ -8,6 +8,7 @@ export const useUserStore = defineStore('user', () => {
   const email = ref('')
   const cart = ref(0)
   const role = ref(0)
+  const nickname = ref('')
 
   const isLogin = computed(() => {
     return token.value.length > 0
@@ -21,7 +22,9 @@ export const useUserStore = defineStore('user', () => {
       const { data } = await api.post('/users/login', form)
       token.value = data.result.token
       email.value = data.result.email
+      nickname.value = data.result.nickname
       role.value = data.result.role
+
       Swal.fire({
         // 其他 Swal 待修改成下面的樣式 by 2/9
         width: '18rem',
@@ -68,6 +71,7 @@ export const useUserStore = defineStore('user', () => {
     try {
       const { data } = await apiAuth.get('/users/me')
       email.value = data.result.email
+      nickname.value = data.result.nickname
       role.value = data.result.role
       // cart.value = data.result.cart
     } catch (error) {
@@ -119,7 +123,7 @@ export const useUserStore = defineStore('user', () => {
     }
   }
   return {
-    token, email, role, cart, login, logout, isLogin, isAdmin, getUser, editCart, signup
+    token, email, nickname, role, cart, login, logout, isLogin, isAdmin, getUser, editCart, signup
   }
 }, {
   persist: {

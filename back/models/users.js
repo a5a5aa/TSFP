@@ -7,6 +7,10 @@ const schema = new Schema({
     type: String,
     required: true
   },
+  nickname: {
+    type: String,
+    required: true
+  },
   gender: {
     type: String,
     required: true
