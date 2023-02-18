@@ -3,8 +3,8 @@
   <q-card-section horizontal>
     <q-card-section class="q-py-md">
       <span class="bg-accent text-white rounded-borders q-px-sm q-py-xs">品味</span>
-      <div class="text-h5 q-mt-sm q-mb-xs">{{ title }}</div>
-      <p class="text-h7 text-grey q-my-md">{{ shortDesc }}</p>
+      <div class="text-h5 q-mt-sm q-mb-xs text-overflow2">{{ title }}</div>
+      <p class="text-h7 text-grey q-my-md text-overflow2">{{ shortDesc }}</p>
     </q-card-section>
 
     <q-card-section class="col-4 col-sm-3 flex flex-center">
@@ -18,7 +18,7 @@
   </q-card-section>
   <q-separator />
   <q-card-actions>
-    <div class="text-grey q-mr-auto q-px-sm" >{{ keyWord }}</div>
+    <div class="text-grey q-mr-auto q-px-sm text-overflow1" >{{ keyWord }}</div>
     <q-btn flat round color="red" icon="favorite" />
     <q-btn flat round color="primary" icon="share" />
   </q-card-actions>

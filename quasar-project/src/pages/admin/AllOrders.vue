@@ -89,8 +89,8 @@ const columns = [
   try {
     const { data } = await apiAuth.get('/orders/allorders')
     orders.push(...data.result)
-    console.log(orders)
     orders.reverse()
+    console.log(orders)
   } catch (error) {
     Swal.fire({
       icon: 'error',

@@ -13,6 +13,34 @@ body {
   background: #F2EEEB;
 }
 
+.section_1{
+  padding: 50px 0;
+  max-width:1000px;
+  margin:auto;
+}
+
+.section_2{
+  margin:auto;
+}
+
+.section_3{
+  max-width:1000px;
+  margin:auto;
+}
+
+.section_4{
+  max-width:1000px;
+  margin:auto;
+}
+
+.card-scale{
+  scale: .98;
+  cursor: pointer;
+  &:hover{
+    scale: 1;
+  }
+}
+
 .title{
   h5{
     padding: 5px;
@@ -60,4 +88,32 @@ body {
 
 .swal2-container {
   z-index: 10000;
+}
+
+.text-overflow1 {
+  // 標題文字超過兩行時，超過的文字隱藏並顯示...
+  display: -webkit-box;
+  // 要使用 webkit-line-clamp 須將 display 轉成 -webkit-box
+  overflow: hidden;
+  // 使超出寬度的文字隱藏
+  // 超出寬度的文字須由上而下垂直排列才可執行 webkit-line-clamp
+  -webkit-box-orient: vertical;
+  // 限制中文字超過 1 行時
+  -webkit-line-clamp: 1;
+  // 有溢出文字時最後方加上省略號...
+  text-overflow: ellipsis;
+}
+
+.text-overflow2 {
+  // 標題文字超過兩行時，超過的文字隱藏並顯示...
+  display: -webkit-box;
+  // 要使用 webkit-line-clamp 須將 display 轉成 -webkit-box
+  overflow: hidden;
+  // 使超出寬度的文字隱藏
+  // 超出寬度的文字須由上而下垂直排列才可執行 webkit-line-clamp
+  -webkit-box-orient: vertical;
+  // 限制中文字超過 2 行時
+  -webkit-line-clamp: 2;
+  // 有溢出文字時最後方加上省略號...
+  text-overflow: ellipsis;
 }

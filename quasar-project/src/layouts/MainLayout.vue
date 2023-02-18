@@ -2,13 +2,11 @@
 <div>
   <q-layout view="1Hh lpr lFf" style="height: 400px">
     <q-header reveal elevated>
-      <q-toolbar class="text-accent bg-dark shadow-2  q-px-md q-pa-xs">
+      <q-toolbar class="text-accent bg-dark shadow-2 q-px-lg q-pa-xs">
           <q-btn class="burger" flat @click="drawer = !drawer" round dense icon="menu" />
-        <q-avatar class="top_logo" style="width:120px">
-          <a style="width:100%" href="/">
-            <img width="100%" src="../assets/images/logo＿橫.png">
+          <a style="width:170px" href="/" class="top_logo">
+            <img  style="width:100%" src="../assets/images/logo/logo_top.png">
           </a>
-        </q-avatar>
         <q-space />
         <q-tabs class="nav_label" shrink>
           <q-route-tab name="首頁" label="首頁" to="/">

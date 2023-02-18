@@ -9,14 +9,14 @@
   <q-section class="row items-start justify-center q-gutter-md q-pa-xl" style="max-width:1920px;">
     <div class="col-12"><h5>專欄好文</h5></div>
     <div v-for="article in articles" :key="article._id">
-      <ArticleCard v-bind="article"></ArticleCard>
+      <ArticleCard class="card-scale" v-bind="article"></ArticleCard>
     </div>
   </q-section>
   <!-- 6. footer -->
   <q-section class="footer column flex-center text-center q-my-xl">
     <div class="logo row flex-center">
       <div class="row justify-evenly">
-        <img src="../../assets/images/log＿方.png">
+        <img src="../../assets/images/logo/logo_1-1-text.png">
         <q-icon name="fa-brands fa-instagram"></q-icon>
         <q-icon name="fa-brands fa-facebook"></q-icon>
         <q-icon name="fa-brands fa-twitter"></q-icon>

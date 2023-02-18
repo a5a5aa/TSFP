@@ -188,14 +188,23 @@ const submit = async () => {
   fd.append('upload', form.upload)
 
   try {
-    if (form._id.length === 0 && form.upload !== false) {
-      const { data } = await apiAuth.post('/articles', fd)
-      articles.push(data.result)
-      Swal.fire({
-        icon: 'success',
-        title: '成功',
-        text: '發佈成功'
-      })
+    if (form._id.length === 0) {
+      if (form.upload !== false) {
+        const { data } = await apiAuth.post('/articles', fd)
+        articles.push(data.result)
+        Swal.fire({
+          icon: 'success',
+          title: '成功',
+          text: '發佈成功'
+        })
+        form.dialog = false
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: '失敗',
+          text: '請確認發佈'
+        })
+      }
     } else {
       const { data } = await apiAuth.patch('/articles/' + form._id, fd)
       console.log(data)
@@ -205,8 +214,8 @@ const submit = async () => {
         title: '成功',
         text: '編輯成功'
       })
+      form.dialog = false
     }
-    form.dialog = false
   } catch (error) {
     Swal.fire({
       icon: 'error',

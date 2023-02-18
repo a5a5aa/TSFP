@@ -25,7 +25,7 @@
     <q-scroll-area class="q-mt-lg scroll-area" style="height: 300px; width: 100%;">
       <div class="q-mt-lg pre">{{ product.description }}</div>
     </q-scroll-area>
-  </div>
+    </div>
   </div>
   <q-overlay v-if="!product.sell" persistent>
     <h5>已下架</h5>

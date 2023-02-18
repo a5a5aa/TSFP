@@ -4,38 +4,29 @@
 //   z-index:1000;
 // }
 
-.section02{
+
+// 1 - 服務簡介
+.home_section_1{
   flex-wrap: wrap;
-  padding: 3% 0;
-  margin: auto;
-  q-col{
-    width: 200px;
+  .col{
     border-radius: 0;
-    margin: 20px;
-    .q-card{
-      box-shadow: none;
-    }
-    q-div{
-      background: #000;
-      border-radius: 50%;
-    }
     .my-card{
+      box-shadow: none;
       background: none;
+      width: 200px;
+      img{
+        width: 60%;
+      }
+      .card-text{
+        padding: 0 40px;
+      }
     }
-    img{
-      width: 70%;
-    }
-  }
-  @media (min-width:1024px) {
-    width: 1024px;
-    flex-direction: row;
   }
 }
 
-
-.section03{
+// 2 - 品牌介紹
+.home_section_2{
   background: #BFB4AA;
-  margin: auto;
   .q-card{
     text-align: center;
     background: none;
@@ -49,6 +40,7 @@
   @media (min-width:1024px) {
     position: relative;
     height: 300px;
+    margin-bottom: 100px;
     .q-card{
       margin: auto;
       width: 100%;
@@ -63,32 +55,47 @@
   }
 }
 
-.section04{
-  padding: 10% 0 5% 0;
-  margin: auto;
-  .q-card{
-    width: 350px;
+// 3 - 活動報名
+.home_section_3{
+  display: none;
+  @media (min-width:768px) {
+  display: block;
+  padding: 20px 10px;
+  q-card{
+    width: 500px;
   }
-  .classification{
-    display: inline;
-    // background: #D9644A;
-    background: $warning;
-    border-radius: 3px;
-    padding: 2px 4px;
-    font-size: .5rem;
-    color: white;
-    line-height: 1rem;
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #636363;
+  }
+  // .q-item--dense {
+  //   padding: 0;
+  // }
+  // .q-item{
+  //   padding: 0;
+  // }
   }
 }
 
-.section05{
-  padding: 0 3%;
+.phone_carousel{
+  padding: 50px 10px;
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #636363;
+  }
+  @media (min-width:768px) {
+    display: none;
+  }
+}
+
+// 4 - 照片展示區
+.home_section_4{
+  padding: 80px 10px 50px 10px;
   .col-1{
     width: 100%;
     .q-img{
       width: 100%;
       margin: 1% 0;
-      scale: .97;
       .mask{
         background: rgba(0,0,0,.5);
         width: 100%;
@@ -98,24 +105,20 @@
         color: $accent;
       }
       &:hover{
-        scale: 1;
         .mask{
           display: flex;
         }
       }
     }
   }
+  .photo_box {
+    padding: 5px 10px;
+  }
   @media (min-width:1024px) {
-    padding: 5% 0;
     margin: auto;
     flex-direction: row;
-    // padding: 5%;
     .col-1{
       width: calc(100% / 3);
-      padding: 2px;
     }
-    // .photo_box{
-    //   width: calc( 100% / 3 );
-    // }
   }
 }

@@ -27,13 +27,13 @@
             <h5>{{ form._id.length > 0 ? '編輯活動' : '新增活動' }}</h5>
           </q-card-title>
           <q-card-section class="col-12 row justify-between">
-            <q-input  stack-label class="col-7" v-model="form.name" label="活動名稱" type="text" color="primary" :rules="[ rules.length28, rules.required ]"></q-input>
+            <q-input  stack-label class="col-7" v-model="form.name" label="活動名稱" type="text" color="primary" :rules="[rules.required ]"></q-input>
             <q-select stack-label class="col-4" v-model="form.category" :options="categories" :rules="[rules.required]" label="分類"></q-select>
             <q-input stack-label class="col-4" v-model="form.date"  label="活動日期" type="date" color="primary" :rules="[rules.required]"></q-input>
             <q-input stack-label class="col-3" v-model="form.starttime" label="開始時間" type="time" color="primary" :rules="[rules.required]"></q-input>
             <q-input stack-label class="col-3" v-model="form.endedtime" label="結束時間" type="time" color="primary" :rules="[rules.required]"></q-input>
-            <q-input stack-label class="col-3" v-model="form.price" label="報名費" type="number" prefix="$" color="primary" :rules="[rules.required, rules.price]"></q-input>
-            <q-input stack-label class="col-3" v-model="form.keyWord" label="關鍵字" type="text" color="primary" :rules="[rules.length20, rules.required]"></q-input>
+            <q-input stack-label class="col-3" v-model="form.price" label="報名費" type="text" prefix="$" color="primary" :rules="[rules.required, rules.price]"></q-input>
+            <q-input stack-label class="col-3" v-model="form.keyWord" label="關鍵字" type="text" color="primary" :rules="[rules.required]"></q-input>
             <q-file
               stack-label
               class="col-4"
@@ -70,14 +70,7 @@ const rules = {
   },
   price (value) {
     return value >= 0 || '價格錯誤'
-  },
-  length28 (value) {
-    return value.length <= 28 || '不得超過28字'
-  },
-  length20 (value) {
-    return value.length <= 20 || '不得超過20字'
   }
-
 }
 
 const columns = [
@@ -117,6 +110,14 @@ const columns = [
     sort: (a, b) => parseInt(a, 10) - parseInt(b, 10)
   },
   {
+    name: 'price',
+    required: true,
+    label: '活動費用',
+    align: 'center',
+    field: 'price',
+    sortable: true
+  },
+  {
     name: 'category',
     required: true,
     label: '分類',
@@ -141,7 +142,7 @@ const form = reactive({
   endedtime: '',
   category: '',
   keyWord: '',
-  price: 0,
+  price: '',
   description: '',
   image: undefined,
   sell: false,
@@ -159,7 +160,7 @@ const openDialog = (_id) => {
     form.date = ''
     form.starttime = ''
     form.endedtime = ''
-    form.price = 0
+    form.price = ''
     form.description = ''
     form.keyWord = ''
     form.image = undefined
@@ -207,25 +208,33 @@ const submit = async () => {
   fd.append('sell', form.sell)
 
   try {
-    if (form._id.length === 0 && form.sell !== false) {
-      const { data } = await apiAuth.post('/products', fd)
-      products.push(data.result)
-      Swal.fire({
-        icon: 'success',
-        title: '成功',
-        text: '新增成功'
-      })
+    if (form._id.length === 0) {
+      if (form.sell !== false) {
+        const { data } = await apiAuth.post('/products', fd)
+        products.push(data.result)
+        Swal.fire({
+          icon: 'success',
+          title: '成功',
+          text: '新增成功'
+        })
+        form.dialog = false
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: '失敗',
+          text: '請確認上架'
+        })
+      }
     } else {
       const { data } = await apiAuth.patch('/products/' + form._id, fd)
-      console.log(data)
       products[form.idx] = data.result
       Swal.fire({
         icon: 'success',
         title: '成功',
         text: '編輯成功'
       })
+      form.dialog = false
     }
-    form.dialog = false
   } catch (error) {
     Swal.fire({
       icon: 'error',

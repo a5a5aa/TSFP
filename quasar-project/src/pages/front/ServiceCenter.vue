@@ -36,7 +36,7 @@
             <div v-show="expanded">
               <q-separator />
               <q-card-section class="text-subitle">
-                {{ lorem }}
+                本次課程將邀請整聊師-謝琪琳帶大家學習如何讓空間做最有效的利用。 居家整聊室致力於透過「整聊」概念，讓台灣家庭都能擁有美好生活，全台灣300+整聊師幫助超過5000+家庭找回家的秩序。 讓懂你的整理收納專家，傾聽你理解你，幫助你找回家的歸屬感。
               </q-card-section>
             </div>
           </q-slide-transition>
@@ -57,16 +57,16 @@
               round
               flat
               dense
-              :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
-              @click="expanded = !expanded"
+              :icon="expanded2 ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
+              @click="expanded2 = !expanded2"
             />
           </q-card-actions>
 
           <q-slide-transition>
-            <div v-show="expanded">
+            <div v-show="expanded2">
               <q-separator />
               <q-card-section class="text-subitle">
-                {{ lorem }}
+                本次課程將邀請整聊師-謝琪琳帶大家學習如何讓空間做最有效的利用。 居家整聊室致力於透過「整聊」概念，讓台灣家庭都能擁有美好生活，全台灣300+整聊師幫助超過5000+家庭找回家的秩序。 讓懂你的整理收納專家，傾聽你理解你，幫助你找回家的歸屬感。
               </q-card-section>
             </div>
           </q-slide-transition>
@@ -76,15 +76,9 @@
   </q-page>
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue'
 
-export default {
-  setup () {
-    return {
-      expanded: ref(false),
-      lorem: '本次課程將邀請整聊師-謝琪琳帶大家學習如何讓空間做最有效的利用。 居家整聊室致力於透過「整聊」概念，讓台灣家庭都能擁有美好生活，全台灣300+整聊師幫助超過5000+家庭找回家的秩序。 讓懂你的整理收納專家，傾聽你理解你，幫助你找回家的歸屬感。'
-    }
-  }
-}
+const expanded = ref(false)
+const expanded2 = ref(false)
 </script>

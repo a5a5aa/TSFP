@@ -1,31 +1,28 @@
 <template>
-<q-item :to="'/products/' + _id" dense dark target="_blank">
+<q-item :to="'/products/' + _id" dense dark target="_blank" class="justify-center">
   <q-card class="my-card items-start" style="width:350px;" flat bordered>
     <q-img
-      cover
-      height="200px"
+      contain
       :src="image"
+      :ratio="16/9"
     />
 
     <q-card-section>
-      <div class="row  items-center" >
+      <div class="row items-center" >
         <div class="text-white bg-accent q-pa-xs rounded-borders q-mr-sm" style="font-weight:500;">{{ category }}</div>
         <div class="text-white bg-warning q-pa-xs rounded-borders" style="font-weight:500;" v-if="price === 0">免費</div>
         <div class="text-secondary q-mt-sm q-mb-xs text-right q-ml-auto">
           <q-icon name="fa-regular fa-clock"></q-icon>
           &nbsp;{{ new Date(date).toLocaleDateString()}} &nbsp; {{ starttime }}</div>
       </div>
-      <div class="text-h5 q-mt-sm q-mb-xs text-primary" >{{ name }}</div>
-      <div class="text-grey">{{ keyWord }}</div>
+      <div class="text-h6 q-mt-sm q-mb-xs text-primary text-overflow2" >{{ name }}</div>
+      <div class="q-mt-sm q-mb-xs text-grey text-overflow2" >{{ description }}</div>
     </q-card-section>
-
     <q-separator />
-    <q-card-actions vertical align="center"  >
-      <!-- <q-btn flat round color="warning" icon="favorite" /> -->
-      <!-- <q-btn flat color="secondary" label="分享"/> -->
-      <q-btn style="width:100%;" flat color="warning" label="瞭解詳情" :to="'/products/' + _id" />
-    <q-space />
-    </q-card-actions>
+
+    <q-card-section>
+      <div class="text-grey text-overflow1">{{ keyWord }}</div>
+    </q-card-section>
   </q-card>
 </q-item>
 </template>

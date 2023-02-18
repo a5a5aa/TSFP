@@ -89,7 +89,7 @@
     <q-section class="footer column flex-center text-center">
       <div class="logo row flex-center">
         <div class="row justify-evenly">
-          <img src="../../assets/images/log＿方.png">
+          <img src="../../assets/images/logo/logo_1-1-text.png">
           <q-icon name="fa-brands fa-instagram"></q-icon>
           <q-icon name="fa-brands fa-facebook"></q-icon>
           <q-icon name="fa-brands fa-twitter"></q-icon>

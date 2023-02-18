@@ -1,15 +1,24 @@
 // MainLayout
 .q-toolbar{
   display: flex;
-  .top_logo{
+  .top_logo {
+    text-align: center;
     position: absolute;
     left: 50%;
     transform: translate(-50%,0);
     @media (min-width:992px) {
-      position: relative;
-      left: 65px;
+    left: 10%;
     }
   }
+  // .top_logo{
+  //   position: absolute;
+  //   left: 50%;
+  //   transform: translate(-50%,0);
+  //   @media (min-width:992px) {
+  //     position: relative;
+  //     left: 65px;
+  //   }
+  // }
   .burger{
     position: relative;
     left: 0;
