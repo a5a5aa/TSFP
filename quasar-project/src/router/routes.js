@@ -9,7 +9,7 @@ const routes = [
         name: 'home',
         component: () => import('pages/IndexPage.vue'),
         meta: {
-          title: 'Single Seat - 靜思空間',
+          title: 'MAUNA COFFEE 茂納咖啡',
           login: false,
           admin: false
         }
@@ -19,7 +19,7 @@ const routes = [
         name: 'login',
         component: () => import('src/pages/front/LoginView.vue'),
         meta: {
-          title: 'Single Seat - 會員登入',
+          title: 'MAUNA COFFEE - 會員登入',
           login: false,
           admin: false
         }
@@ -29,7 +29,7 @@ const routes = [
         name: 'register',
         component: () => import('src/pages/front/RegisterView.vue'),
         meta: {
-          title: 'Single Seat - 新會員註冊',
+          title: 'MAUNA COFFEE - 新會員註冊',
           login: false,
           admin: false
         }
@@ -39,7 +39,7 @@ const routes = [
         name: 'reset',
         component: () => import('src/pages/front/ResetPassword.vue'),
         meta: {
-          title: 'Single Seat - 重設密碼',
+          title: 'MAUNA COFFEE - 重設密碼',
           login: false,
           admin: false
         }
@@ -56,7 +56,7 @@ const routes = [
         name: 'myaccount',
         component: () => import('pages/MyAccount.vue'),
         meta: {
-          title: 'Single Seat - 會員中心',
+          title: 'MAUNA COFFEE - 會員中心',
           login: true,
           admin: false
         }
@@ -66,7 +66,7 @@ const routes = [
         name: 'orders',
         component: () => import('src/pages/front/MyOrder.vue'),
         meta: {
-          title: 'Single Seat - 我的訂單',
+          title: 'MAUNA COFFEE - 我的訂單',
           login: true,
           admin: false
         }
@@ -83,7 +83,7 @@ const routes = [
         name: 'about',
         component: () => import('src/pages/front/AboutView.vue'),
         meta: {
-          title: 'Single Seat - 關於我們',
+          title: 'MAUNA COFFEE - 關於我們',
           login: false,
           admin: false
         }
@@ -93,7 +93,7 @@ const routes = [
         name: 'location',
         component: () => import('src/pages/front/LocationView.vue'),
         meta: {
-          title: 'Single Seat - 門市資訊',
+          title: 'MAUNA COFFEE - 門市資訊',
           login: false,
           admin: false
         }
@@ -109,7 +109,7 @@ const routes = [
         name: 'products',
         component: () => import('src/pages/front/LecturesView.vue'),
         meta: {
-          title: 'Single Seat - 活動報名',
+          title: 'MAUNA COFFEE - 活動報名',
           login: false,
           admin: false
         }
@@ -119,7 +119,7 @@ const routes = [
         name: 'product',
         component: () => import('src/pages/front/EventView.vue'),
         meta: {
-          title: 'Single Seat - 活動內容',
+          title: 'MAUNA COFFEE - 活動內容',
           login: false,
           admin: false
         }
@@ -129,7 +129,7 @@ const routes = [
         name: 'all',
         component: () => import('src/pages/front/LecturesView.vue'),
         meta: {
-          title: 'Single Seat - 所有活動',
+          title: 'MAUNA COFFEE - 所有活動',
           login: false,
           admin: false
         }
@@ -145,7 +145,7 @@ const routes = [
         name: 'menu',
         component: () => import('src/pages/front/MenuView.vue'),
         meta: {
-          title: 'Single Seat - 餐飲介紹',
+          title: 'MAUNA COFFEE - 餐飲介紹',
           login: false,
           admin: false
         }
@@ -161,7 +161,7 @@ const routes = [
         name: 'articles',
         component: () => import('src/pages/front/ArticleView.vue'),
         meta: {
-          title: 'Single Seat - 專欄好文',
+          title: 'MAUNA COFFEE - 專欄好文',
           login: false,
           admin: false
         }
@@ -177,7 +177,7 @@ const routes = [
         name: 'service',
         component: () => import('src/pages/front/ServiceCenter.vue'),
         meta: {
-          title: 'Single Seat - 客服資訊',
+          title: 'MAUNA COFFEE - 客服資訊',
           login: false,
           admin: false
         }
@@ -187,7 +187,7 @@ const routes = [
         name: 'contactus',
         component: () => import('src/pages/front/ContactView.vue'),
         meta: {
-          title: 'Single Seat - 聯絡我們',
+          title: 'MAUNA COFFEE - 聯絡我們',
           login: false,
           admin: false
         }
@@ -204,7 +204,7 @@ const routes = [
         name: 'admin-home',
         component: () => import('../pages/admin/HomeView.vue'),
         meta: {
-          title: ' Single Seat - 管理 ',
+          title: ' MAUNA COFFEE - 管理 ',
           login: true,
           admin: true
         }
@@ -214,7 +214,7 @@ const routes = [
         name: 'admin-products',
         component: () => import('../pages/admin/ProductsView.vue'),
         meta: {
-          title: ' Single Seat - 商品管理 ',
+          title: ' MAUNA COFFEE - 商品管理 ',
           login: true,
           admin: true
         }
@@ -224,7 +224,7 @@ const routes = [
         name: 'admin-allorders',
         component: () => import('../pages/admin/AllOrders.vue'),
         meta: {
-          title: ' Single Seat - 訂單管理 ',
+          title: ' MAUNA COFFEE - 訂單管理 ',
           login: true,
           admin: true
         }
@@ -234,7 +234,7 @@ const routes = [
         name: 'admin-userlist',
         component: () => import('../pages/admin/UserList.vue'),
         meta: {
-          title: ' Single Seat - 會員管理 ',
+          title: ' MAUNA COFFEE - 會員管理 ',
           login: true,
           admin: true
         }
@@ -244,7 +244,7 @@ const routes = [
         name: 'admin-eventorders',
         component: () => import('../pages/admin/EventOrders.vue'),
         meta: {
-          title: ' Single Seat - 活動訂單管理 ',
+          title: ' MAUNA COFFEE - 活動訂單管理 ',
           login: true,
           admin: true
         }
@@ -254,7 +254,7 @@ const routes = [
         name: 'admin-articles',
         component: () => import('../pages/admin/ArticlesView.vue'),
         meta: {
-          title: ' Single Seat - 文章管理 ',
+          title: ' MAUNA COFFEE - 文章管理 ',
           login: true,
           admin: true
         }
@@ -274,7 +274,7 @@ const routes = [
     name: '/404',
     redirect: '/404',
     meta: {
-      title: ' Single Seat - 404 ',
+      title: ' MAUNA COFFEE - 404 ',
       login: false,
       admin: false
     }

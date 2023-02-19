@@ -25,7 +25,7 @@
             </q-menu>
           </q-route-tab>
           <span>/</span>
-          <q-route-tab name="活動報名" label="活動報名 ▾" to="/products">
+          <q-route-tab name="講座活動" label="講座活動 ▾" to="/products">
             <q-menu :offset="[-1, 3]">
               <q-list>
                 <q-item clickable class="text-white bg-info" to="/products">
@@ -69,21 +69,6 @@
           &nbsp;
           &nbsp;
         </q-tabs>
-        <!-- <q-tabs class="account_btn">
-          <q-btn v-if="!isLogin" to="/login" outline text-accent>
-          <q-icon name="fa-solid fa-user" size="1rem">&nbsp;登入</q-icon>
-          </q-btn>
-          <q-btn v-if="isLogin && isAdmin" to="/admin" variant="text" outline text-accent>
-            <q-icon name="fa-solid fa-user-gear" size="1rem">&nbsp;管理</q-icon>
-          </q-btn>
-          <q-btn v-if="isLogin && !isAdmin" to="/myaccount" variant="text" outline text-accent class="myaccount-btn">
-            <q-icon name="fa-solid fa-user" size="1rem">&nbsp;我的會員</q-icon>
-          </q-btn>
-          &nbsp;&nbsp;
-          <q-btn v-if="isLogin" variant="text" outline text-accent @click="logout">
-          <q-icon name="fa-solid fa-arrow-right-from-bracket" size="1rem">&nbsp;登出</q-icon>
-          </q-btn>
-        </q-tabs> -->
         <q-tabs class="icon_only">
           <div>
             <q-btn class="q-pa-sm" v-if="!isLogin" to="/login" rounded text-accent>
@@ -150,7 +135,7 @@
                 </q-item-section>
               </q-item>
             </div>
-            <div class="title q-px-xl text-center bg-black q-py-xs">活動報名</div>
+            <div class="title q-px-xl text-center bg-black q-py-xs">講座活動</div>
             <div class="row">
               <q-item clickable v-ripple to="/lectures" class="col-6 text-center">
                 <q-item-section class="text-accent" flat>
