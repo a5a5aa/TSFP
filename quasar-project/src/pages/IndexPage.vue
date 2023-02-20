@@ -60,7 +60,7 @@
   </section>
   <!-- section_3 - 活動報名 carousel -->
   <section class="section_3 home_section_3">
-    <h5 class="text-center q-mb-xl">精選活動</h5>
+    <h5 class="text-center q-mb-xl">精選活動 Featured Events</h5>
     <swiper
       :scrollbar="{ draggable: true }"
       navigation
@@ -83,7 +83,7 @@
   </section>
   <!-- section_3 - 手機版 活動報名 carousel -->
   <section class="phone_carousel" >
-    <h5 class="text-center q-mb-xl">精選活動</h5>
+    <h5 class="q-mb-xl field-title">精選活動</h5>
     <swiper
       navigation
       :modules="modules"
@@ -153,7 +153,7 @@
       </div>
     </div>
     <div class="subscribe column justify-center col-3" style="max-width: 300px;">
-      <p>訂閱電子報即時掌握最新消息</p>
+      <p>訂閱電子報即時掌握活動消息</p>
       <q-input v-model="text" placeholder="your Email" type="email" bg-color="black" color="accent" :input-style="{ color: '#E1BF77' }">
         <template v-slot:prepend>
           <q-icon name="mail" class="q-px-sm"/>

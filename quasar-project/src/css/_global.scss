@@ -20,6 +20,7 @@ body {
 }
 
 .section_2{
+  max-width: 1000px;
   margin:auto;
 }
 
@@ -49,6 +50,23 @@ body {
     display: inline;
     border-top: 1px solid $primary;
   }
+}
+
+.banner2{
+  .q-img {
+    height: 200px;
+  }
+  @media (min-width:768px) {
+    .q-img {
+      height: 400px;
+    }
+
+  }
+}
+
+.field-title{
+  color: $primary;
+  text-align: center;
 }
 
 .footer{

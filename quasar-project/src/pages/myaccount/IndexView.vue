@@ -1,13 +1,37 @@
 <template>
-<q-page>
-  <div>
-    <h5>活動報名</h5>
+<q-page class="row justify-center" style="max-width: 1920px; margin:auto;">
+  <div class="item_bar q-pt-md col-4" style="width: 200px">
+    <q-list bordered separator class="shadow-1">
+      <q-item clickable v-ripple>
+        <q-item-section>
+          報名查詢
+          <q-item-label>Activity query</q-item-label>
+        </q-item-section>
+      </q-item>
+
+      <q-item clickable v-ripple>
+        <q-item-section>
+          基本資料
+          <q-item-label>Basic information</q-item-label>
+        </q-item-section>
+      </q-item>
+      <q-item clickable v-ripple>
+        <q-item-section>
+          客服中心
+          <q-item-label>Service center</q-item-label>
+        </q-item-section>
+      </q-item>
+    </q-list>
+  </div>
+
+  <div class="col-8 q-pa-xl row justify-center">
+    <h5 class="q-mb-lg col-12">報名查詢</h5>
     <q-table
-    style="width:1024px;"
+    style="max-width:90%;"
     :rows="orders"
     row-key="name"
     :columns="columns"
-    class="text-center">
+    class="text-center col-12">
     <template v-slot:body-cell-image='props'>
       <q-td>
         <q-img :src="props.row.p_id.image" width="240px" height="135px"></q-img>
@@ -85,9 +109,3 @@ const columns = [
   }
 })()
 </script>
-
-<style>
-.swal2-container {
-  z-index: 10000;
-}
-</style>

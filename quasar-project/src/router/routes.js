@@ -54,7 +54,7 @@ const routes = [
       {
         path: '',
         name: 'myaccount',
-        component: () => import('pages/MyAccount.vue'),
+        component: () => import('pages/myaccount/IndexView.vue'),
         meta: {
           title: 'MAUNA COFFEE - 會員中心',
           login: true,
@@ -64,7 +64,7 @@ const routes = [
       {
         path: 'orders',
         name: 'orders',
-        component: () => import('src/pages/front/MyOrder.vue'),
+        component: () => import('src/pages/myaccount/MyOrder.vue'),
         meta: {
           title: 'MAUNA COFFEE - 我的訂單',
           login: true,

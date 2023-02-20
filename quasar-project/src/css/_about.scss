@@ -1,33 +1,26 @@
-.section02{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.about_secion_1{
   margin-bottom: 50px;
 
-  p{
-    margin: 20px 0;
-  }
-
-  .box1{
+  .card1{
     width: 450px;
     margin: 50px 20px;
   }
 
-  .box2{
+  .card2{
     position: absolute;
     top: 39%;
     left: 20%;
     z-index: 1000;
     width: 200px;
   }
-  .box3 {
+  .card3 {
     width: 300px;
     position: relative;
     right: 0;
     margin-left: 120px;
   }
 
-  @media (min-width:1024px) {
+  @media (min-width:768px) {
     position: relative;
     margin-top: 30px;
     margin-bottom: 50px;
@@ -36,7 +29,7 @@
       left: -80px;
       margin-bottom: 10px;
     }
-    .box2{
+    .card2{
       width: 300px;
       position: absolute;
       top: 80%;
@@ -45,7 +38,7 @@
       margin: 0 5px;
     }
 
-    .box3{
+    .card3{
       margin: 0 5px;
       q-btn{
         border-radius: 50%;

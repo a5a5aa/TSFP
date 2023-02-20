@@ -7,26 +7,26 @@
         />
     </q-sectoin>
 
-    <q-scetion class="section02">
-        <div class="box1">
+    <q-scetion class="section_1 about_secion_1 row flex-center">
+        <div class="card1">
           <h4>我是標題1我是標題1</h4>
           <h5>我是標題1我是標題1我是標題1</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsum cupiditate nihil ea totam labore, aut fuga facilis rerum ducimus.</p>
+          <p class="q-my-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsum cupiditate nihil ea totam labore, aut fuga facilis rerum ducimus.</p>
           <q-img
             width="200px"
             src="../../assets/images/about_1.jpg"></q-img>
         </div>
-        <div class="box2">
+        <div class="card2">
           <q-img
             width="70%"
             src="../../assets/images/about_3.jpg"></q-img>
         </div>
-        <div class="box3">
+        <div class="card3">
           <q-img
             width="100%"
             src="../../assets/images/about_2.jpg"></q-img>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam doloremque quidem nesciunt optio laboriosam doloribus earum quam eaque quasi tenetur.</p>
-          <q-btn outline rounded to="/lectures">查看近期活動</q-btn>
+          <p class="q-my-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam doloremque quidem nesciunt optio laboriosam doloribus earum quam eaque quasi tenetur.</p>
+          <q-btn outline rounded to="/products">查看近期講座</q-btn>
         </div>
     </q-scetion>
 

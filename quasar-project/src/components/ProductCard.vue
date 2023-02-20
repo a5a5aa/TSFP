@@ -28,7 +28,6 @@
 </template>
 
 <script setup>
-// import { useUserStore } from '@/stores/user'
 
 defineProps({
   /* eslint-disable */

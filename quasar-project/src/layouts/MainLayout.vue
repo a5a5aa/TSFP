@@ -89,7 +89,7 @@
             <q-tooltip class="bg-info">管理</q-tooltip>
           </div>
           <div class="q-mr-sm user_name">
-            <q-btn outline class="row flex-center" v-if="isLogin && !isAdmin" to="/myaccount/orders" variant="text" text-accent>
+            <q-btn outline class="row flex-center" v-if="isLogin && !isAdmin" to="/myaccount" variant="text" text-accent>
               <span>嗨!&nbsp;&nbsp;{{ nickname }}</span>
             </q-btn>
             <q-tooltip class="bg-info">會員專區</q-tooltip>
@@ -189,7 +189,7 @@
                 管理
               </q-item-section>
             </q-item>
-            <q-item clickable v-ripple to="/myaccount/orders" v-if="isLogin && !isAdmin" class="text-center row flex-center">
+            <q-item clickable v-ripple to="/myaccount" v-if="isLogin && !isAdmin" class="text-center row flex-center">
               <q-icon name="fa-solid fa-user" size="xs" class="col-2"/>
               <q-item-section class="text-accent col-6" flat>
                 我的會員
