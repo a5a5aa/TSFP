@@ -1,45 +1,22 @@
 <template>
-<q-page class="row justify-center" style="max-width: 1920px; margin:auto;">
-  <div class="item_bar q-pt-md col-4" style="width: 200px">
-    <q-list bordered separator class="shadow-1">
-      <q-item clickable v-ripple>
-        <q-item-section>
-          報名查詢
-          <q-item-label>Activity query</q-item-label>
-        </q-item-section>
-      </q-item>
-
-      <q-item clickable v-ripple>
-        <q-item-section>
-          基本資料
-          <q-item-label>Basic information</q-item-label>
-        </q-item-section>
-      </q-item>
-      <q-item clickable v-ripple>
-        <q-item-section>
-          客服中心
-          <q-item-label>Service center</q-item-label>
-        </q-item-section>
-      </q-item>
-    </q-list>
-  </div>
-
-  <div class="col-8 q-pa-xl row justify-center">
-    <h5 class="q-mb-lg col-12">報名查詢</h5>
-    <q-table
-    style="max-width:90%;"
-    :rows="orders"
-    row-key="name"
-    :columns="columns"
-    class="text-center col-12">
-    <template v-slot:body-cell-image='props'>
-      <q-td>
-        <q-img :src="props.row.p_id.image" width="240px" height="135px"></q-img>
-      </q-td>
-    </template>
-    </q-table>
-  </div>
-</q-page>
+  <q-page>
+    <div>
+      <h5 class="q-mb-lg col-12">
+      <q-icon name="fa-solid fa-magnifying-glass" size="1.5rem" class="q-mr-sm"></q-icon>報名查詢</h5>
+      <q-table
+        :rows="orders"
+        row-key="name"
+        :columns="columns"
+        style="min-width: 768px;"
+        class="text-center">
+        <template v-slot:body-cell-image='props'>
+          <q-td>
+            <q-img :src="props.row.p_id.image" width="240px" height="135px"></q-img>
+          </q-td>
+        </template>
+      </q-table>
+    </div>
+  </q-page>
 </template>
 
 <script setup>
@@ -50,6 +27,16 @@ import Swal from 'sweetalert2'
 const orders = reactive([])
 
 const columns = [
+  {
+    name: 'date',
+    required: true,
+    label: '報名日期',
+    align: 'center',
+    field: row => row.date,
+    sortable: true,
+    sort: (a, b) => parseInt(a, 10) - parseInt(b, 10),
+    format: val => `${new Date(val).toLocaleDateString()}`
+  },
   {
     name: 'image',
     required: true,
@@ -81,16 +68,6 @@ const columns = [
     field: row => row.p_id.starttime,
     sortable: true,
     sort: (a, b) => parseInt(a, 10) - parseInt(b, 10)
-  },
-  {
-    name: 'date',
-    required: true,
-    label: '報名日期',
-    align: 'center',
-    field: row => row.date,
-    sortable: true,
-    sort: (a, b) => parseInt(a, 10) - parseInt(b, 10),
-    format: val => `${new Date(val).toLocaleDateString()}`
   }
 ];
 

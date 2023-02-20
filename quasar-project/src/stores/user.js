@@ -26,20 +26,21 @@ export const useUserStore = defineStore('user', () => {
       role.value = data.result.role
 
       Swal.fire({
-        // 其他 Swal 待修改成下面的樣式 by 2/9
         width: '18rem',
         icon: 'success',
         text: '登入成功',
         iconColor: '#C5A768',
-        confirmButtonColor: '#2b2b2b',
-        allowOutsideClick: false
+        confirmButtonColor: '#2b2b2b'
       })
       this.router.push('/')
     } catch (error) {
       Swal.fire({
+        width: '18rem',
         icon: 'error',
-        title: '失敗',
-        text: error?.response?.data.message || '發生錯誤'
+        text: error?.response?.data.message || '發生錯誤',
+        iconColor: '#C5A768',
+        confirmButtonColor: '#2b2b2b',
+        allowOutsideClick: false
       })
     }
   }
@@ -51,16 +52,22 @@ export const useUserStore = defineStore('user', () => {
       email.value = ''
       role.value = 0
       Swal.fire({
+        // 其他 Swal 待修改成下面的樣式 by 2/9
+        width: '18rem',
         icon: 'success',
-        title: '成功',
-        text: '登出成功'
+        text: '登出成功',
+        iconColor: '#C5A768',
+        confirmButtonColor: '#2b2b2b'
       })
       this.router.push('/')
     } catch (error) {
       Swal.fire({
+        width: '18rem',
         icon: 'error',
-        title: '失敗',
-        text: error?.response?.data.message || '發生錯誤'
+        text: error?.response?.data.message || '發生錯誤',
+        iconColor: '#C5A768',
+        confirmButtonColor: '#2b2b2b',
+        allowOutsideClick: false
       })
     }
   }
@@ -78,52 +85,32 @@ export const useUserStore = defineStore('user', () => {
       logout()
     }
   }
-  async function editCart ({ _id, quantity }) {
-    if (token.value.length === 0) {
-      Swal.fire({
-        icon: 'error',
-        title: '失敗',
-        text: '請先登入'
-      })
-      this.router.push('/login')
-      return
-    }
-    try {
-      const { data } = await apiAuth.post('/users/cart', { p_id: _id, quantity: parseInt(quantity) })
-      cart.value = data.result
-      Swal.fire({
-        icon: 'success',
-        title: '成功',
-        text: '加入購物車成功'
-      })
-    } catch (error) {
-      Swal.fire({
-        icon: 'error',
-        title: '失敗',
-        text: error?.response?.data?.message || '發生錯誤'
-      })
-    }
-  }
   async function signup (_id) {
     try {
       const { data } = await apiAuth.post('/orders/' + _id)
       console.log(data.result)
-      // cart.value = 0
       Swal.fire({
+        // 其他 Swal 待修改成下面的樣式 by 2/9
+        width: '18rem',
         icon: 'success',
-        title: '成功',
-        text: '報名成功'
+        text: '報名成功',
+        iconColor: '#C5A768',
+        confirmButtonColor: '#2b2b2b',
+        allowOutsideClick: false
       })
     } catch (error) {
       Swal.fire({
+        width: '18rem',
         icon: 'error',
-        title: '失敗',
-        text: error?.response?.data?.message || '發生錯誤'
+        text: error?.response?.data.message || '發生錯誤',
+        iconColor: '#C5A768',
+        confirmButtonColor: '#2b2b2b',
+        allowOutsideClick: false
       })
     }
   }
   return {
-    token, email, nickname, role, cart, login, logout, isLogin, isAdmin, getUser, editCart, signup
+    token, email, nickname, role, cart, login, logout, isLogin, isAdmin, getUser, signup
   }
 }, {
   persist: {

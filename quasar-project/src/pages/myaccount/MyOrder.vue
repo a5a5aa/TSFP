@@ -1,30 +1,11 @@
 <template>
 <q-page>
-  <div class="q-pa-md" style="max-width: 350px">
-    <q-list bordered separator>
-      <q-item clickable v-ripple>
-        <q-item-section>報名查詢</q-item-section>
-      </q-item>
-
-      <q-item clickable v-ripple>
-        <q-item-section>
-          <q-item-label>Item with caption</q-item-label>
-          <q-item-label caption>Caption</q-item-label>
-        </q-item-section>
-      </q-item>
-
-      <q-item clickable v-ripple>
-        <q-item-section>
-          <q-item-label overline>OVERLINE</q-item-label>
-          <q-item-label>Item with caption</q-item-label>
-        </q-item-section>
-      </q-item>
-    </q-list>
-  </div>
-  <div class=section_1>
-    <h5>活動報名</h5>
+  <div>
+    <h5 class="q-mb-lg col-12">
+    <q-icon name="fa-solid fa-magnifying-glass" size="1.5rem" class="q-mr-sm"></q-icon>
+    報名查詢</h5>
     <q-table
-    style="width:1024px;"
+    style="min-width: 768px;"
     :rows="orders"
     row-key="name"
     :columns="columns"

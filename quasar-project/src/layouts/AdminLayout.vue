@@ -4,7 +4,7 @@
       <q-header elevated class="bg-cyan-8">
         <q-toolbar class="bg-white">
           <q-space></q-space>
-          <q-btn name="回管理首頁" label="回管理首頁" class="bg-info text-white" to="/admin">
+          <q-btn name="回管理首頁" label="回管理首頁" class="bg-info text-white q-mr-lg" to="/admin">
           </q-btn>
           <div class="q-mr-sm">
             <q-btn class="q-pa-sm text-primary" variant="text" rounded text-accent to="/">
@@ -35,26 +35,16 @@
         show-if-above
         no-swipe-close
       >
-        <q-scroll-area class="bg-primary text-white" style="height: calc(100% - 150px); margin-top: 150px; border-right: 1px solid #ddd">
-          <q-list padding>
-            <q-item clickable v-ripple to="/admin">
-              <q-item-section avatar>
-                <q-icon name="fa-solid fa-list" />
-              </q-item-section>
-              <q-item-section>
-                總覽
-              </q-item-section>
-            </q-item>
-            <q-item clickable v-ripple  to="/admin/products">
+        <q-scroll-area class="bg-primary" style="height: calc(100% - 200px); margin-top: 200px; border-right: 1px solid #ddd">
+          <q-list padding class="q-pt-xl text-accent">
+            <q-item v-ripple  to="/admin/products">
               <q-item-section avatar>
                 <q-icon name="fa-regular fa-file-lines" />
               </q-item-section>
-
               <q-item-section>
                 活動管理
               </q-item-section>
             </q-item>
-
             <q-item clickable v-ripple to="/admin/allorders">
               <q-item-section avatar>
                 <q-icon name="fa-regular fa-file-lines" />
@@ -87,13 +77,10 @@
           </q-list>
         </q-scroll-area>
 
-        <q-img class="absolute-top" src="../assets/images/photo_3.avif" style="height: 150px">
+        <q-img class="absolute-top" src="../assets/images/about_1.jpg" style="height: 200px">
           <div class="absolute-bottom bg-transparent">
-            <q-avatar size="56px" class="q-mb-sm">
-              <img src="https://cdn.quasar.dev/img/boy-avatar.png">
-            </q-avatar>
-            <div class="text-weight-bold">管理員</div>
-            <div>admin@singleseat.com</div>
+            <div class="text-weight-bold">管理員01</div>
+            <div>admin@maunacoffee.com</div>
           </div>
         </q-img>
       </q-drawer>
@@ -121,5 +108,9 @@ body {
 }
 .q-btn:before{
   box-shadow: none;
+}
+
+.q-item.q-router-link--active{
+  background: #E1BF77;
 }
 </style>

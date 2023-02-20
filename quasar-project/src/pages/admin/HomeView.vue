@@ -23,9 +23,12 @@ const products = reactive([]);
     products.push(...data.result)
   } catch (error) {
     Swal.fire({
+      width: '18rem',
       icon: 'error',
-      title: '失敗',
-      text: error?.response?.data?.message || '發生錯誤'
+      text: error?.response?.data.message || '發生錯誤',
+      iconColor: '#C5A768',
+      confirmButtonColor: '#2b2b2b',
+      allowOutsideClick: false
     })
   }
 })()

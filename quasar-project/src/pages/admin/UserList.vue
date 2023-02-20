@@ -77,9 +77,11 @@ const columns = [
     users.reverse()
   } catch (error) {
     Swal.fire({
+      width: '18rem',
       icon: 'error',
-      title: '失敗',
       text: '取得資料失敗',
+      iconColor: '#C5A768',
+      confirmButtonColor: '#2b2b2b',
       allowOutsideClick: false
     })
   }

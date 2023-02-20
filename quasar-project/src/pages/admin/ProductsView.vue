@@ -213,33 +213,45 @@ const submit = async () => {
         const { data } = await apiAuth.post('/products', fd)
         products.push(data.result)
         Swal.fire({
+          width: '18rem',
           icon: 'success',
-          title: '成功',
-          text: '新增成功'
+          text: '新增成功',
+          iconColor: '#C5A768',
+          confirmButtonColor: '#2b2b2b',
+          allowOutsideClick: false
         })
         form.dialog = false
       } else {
         Swal.fire({
+          width: '18rem',
           icon: 'error',
-          title: '失敗',
-          text: '請確認上架'
+          text: '請確認上架',
+          iconColor: '#C5A768',
+          confirmButtonColor: '#2b2b2b',
+          allowOutsideClick: false
         })
       }
     } else {
       const { data } = await apiAuth.patch('/products/' + form._id, fd)
       products[form.idx] = data.result
       Swal.fire({
+        width: '18rem',
         icon: 'success',
-        title: '成功',
-        text: '編輯成功'
+        text: '編輯成功',
+        iconColor: '#C5A768',
+        confirmButtonColor: '#2b2b2b',
+        allowOutsideClick: false
       })
       form.dialog = false
     }
   } catch (error) {
     Swal.fire({
+      width: '18rem',
       icon: 'error',
-      title: '失敗',
-      text: error?.response?.data?.message || '發生錯誤'
+      text: error?.response?.data.message || '發生錯誤',
+      iconColor: '#C5A768',
+      confirmButtonColor: '#2b2b2b',
+      allowOutsideClick: false
     })
   }
 
@@ -253,9 +265,12 @@ const submit = async () => {
     products.reverse()
   } catch (error) {
     Swal.fire({
+      width: '18rem',
       icon: 'error',
-      title: '失敗',
-      text: error?.response?.data?.message || '發生錯誤'
+      text: error?.response?.data.message || '發生錯誤',
+      iconColor: '#C5A768',
+      confirmButtonColor: '#2b2b2b',
+      allowOutsideClick: false
     })
   }
 })()

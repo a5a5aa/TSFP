@@ -49,7 +49,7 @@ const routes = [
 
   {
     path: '/myaccount',
-    component: () => import('layouts/MainLayout.vue'),
+    component: () => import('layouts/AccountLayout.vue'),
     children: [
       {
         path: '',
