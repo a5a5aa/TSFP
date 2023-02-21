@@ -4,9 +4,9 @@
     <q-header reveal elevated>
       <q-toolbar class="text-accent bg-dark shadow-2 q-px-lg q-pa-xs">
           <q-btn class="burger" flat @click="drawer = !drawer" round dense icon="menu" />
-          <a style="width:170px" href="/" class="top_logo">
+          <router-link style="width:170px" to="/" class="top_logo">
             <img  style="width:100%" src="../assets/images/logo/logo_top.png">
-          </a>
+          </router-link>
         <q-space />
         <q-tabs class="nav_label" shrink>
           <q-route-tab name="首頁" label="首頁" to="/">
