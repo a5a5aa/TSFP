@@ -70,6 +70,16 @@ const routes = [
           login: true,
           admin: false
         }
+      },
+      {
+        path: 'persional-info',
+        name: 'persional-info',
+        component: () => import('src/pages/myaccount/BasicInfo.vue'),
+        meta: {
+          title: 'MAUNA COFFEE - 基本資料',
+          login: true,
+          admin: false
+        }
       }
     ]
   },
@@ -199,16 +209,6 @@ const routes = [
     path: '/admin',
     component: () => import('../layouts/AdminLayout.vue'),
     children: [
-      {
-        path: '',
-        name: 'admin-home',
-        component: () => import('../pages/admin/HomeView.vue'),
-        meta: {
-          title: ' MAUNA COFFEE - 管理 ',
-          login: true,
-          admin: true
-        }
-      },
       {
         path: 'products',
         name: 'admin-products',

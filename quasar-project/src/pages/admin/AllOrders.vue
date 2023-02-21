@@ -1,30 +1,35 @@
 <template>
 <q-page>
-  <div>
+  <div class="q-pa-md q-gutter-sm row justify-between">
     <h5>訂單管理</h5>
+    <q-input dense ref="filterRef" filled v-model="filter" label="請輸入訂單編號或電子信箱" style="width: 300px;">
+      <template v-slot:prepend>
+        <q-icon name="search" />
+      </template>
+      <template v-slot:append>
+        <q-icon v-if="filter !== ''" name="clear" class="cursor-pointer" @click="resetFilter" />
+      </template>
+    </q-input>
     <q-table
+    :filter="filter"
     style="width:95%"
     :rows="orders"
     row-key="name"
     :columns="columns"
     class="text-center"
     >
-
-    <template v-slot:body-cell-image='props'>
-      <q-td>
-        <q-img :src="props.row.p_id.image" width="120px" height="67.5px"></q-img>
-      </q-td>
-    </template>
     </q-table>
   </div>
 </q-page>
 </template>
 
 <script setup>
-import { reactive } from 'vue'
+import { reactive, ref } from 'vue'
 import { apiAuth } from '../../boot/axios'
 import Swal from 'sweetalert2'
 const orders = reactive([])
+const filter = ref('')
+const filterRef = ref('')
 const columns = [
   {
     name: 'date',
@@ -42,19 +47,6 @@ const columns = [
     label: '訂單編號',
     align: 'center',
     field: row => row._id
-  },
-  {
-    name: 'image',
-    required: true,
-    label: '活動封面',
-    align: 'center'
-  },
-  {
-    name: 'name',
-    required: true,
-    label: '活動名稱',
-    align: 'center',
-    field: row => row.p_id.name
   },
   {
     name: 'username',
@@ -83,8 +75,20 @@ const columns = [
     label: '聯絡電話',
     align: 'center',
     field: row => row.u_id.phone
+  },
+  {
+    name: 'name',
+    required: true,
+    label: '活動名稱',
+    align: 'center',
+    field: row => row.p_id.name
   }
-];
+]
+const resetFilter = () => {
+  filter.value = ''
+  filterRef.value.focus()
+};
+
 (async () => {
   try {
     const { data } = await apiAuth.get('/orders/allorders')

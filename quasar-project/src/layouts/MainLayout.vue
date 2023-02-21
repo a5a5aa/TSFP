@@ -83,13 +83,13 @@
             <q-tooltip class="bg-info">管理</q-tooltip>
           </div> -->
           <div>
-            <q-btn class="q-pa-sm" v-if="isLogin && isAdmin" to="/admin" variant="text" rounded text-accent>
+            <q-btn class="q-pa-sm" v-if="isLogin && isAdmin" to="/admin/products" variant="text" rounded text-accent>
               <q-icon name="fa-solid fa-user-gear" size="1.3rem"></q-icon>
             </q-btn>
             <q-tooltip class="bg-info">管理</q-tooltip>
           </div>
           <div class="q-mr-sm user_name">
-            <q-btn outline class="row flex-center" v-if="isLogin && !isAdmin" to="/myaccount" variant="text" text-accent>
+            <q-btn outline dense class="row flex-center q-px-md" v-if="isLogin && !isAdmin" to="/myaccount" variant="text" text-accent>
               <span>嗨!&nbsp;&nbsp;{{ nickname }}</span>
             </q-btn>
             <q-tooltip class="bg-info">會員專區</q-tooltip>
@@ -183,7 +183,7 @@
                 </q-item-section>
               </q-item>
             </div>
-            <q-item clickable v-ripple to="/admin" v-if="isLogin && isAdmin" class="text-center row flex-center">
+            <q-item clickable v-ripple to="/admin/products" v-if="isLogin && isAdmin" class="text-center row flex-center">
               <q-icon name="fa-solid fa-user-gear" size="xs" class="col-2"/>
               <q-item-section class="col-4" flat>
                 管理
@@ -210,33 +210,6 @@
           </div>
         </div>
       </q-scroll-area>
-    <!-- <q-scroll-area class="fit">
-      <div class=" sidebar q-pa-xs">
-        <div>
-          <div class="title q-px-xl text-center bg-black q-py-xs">關於我們</div>
-          <q-btn class="q-px-xl" to="/about">品牌故事</q-btn>
-          <q-btn class="q-px-xl" to="/about/location">門市資訊</q-btn>
-          <div class="title q-px-xl text-center bg-black q-py-xs">活動報名</div>
-          <q-btn class="q-px-xl" to="/lectures">所有活動</q-btn>
-          <q-btn class="q-px-xl">報名查詢</q-btn>
-          <div class="title q-px-xl text-center bg-black q-py-xs">餐飲介紹</div>
-          <q-btn class="q-px-xl" to="/menu">餐飲介紹</q-btn>
-          <q-btn class="q-px-xl">MENU</q-btn>
-          <div class="title q-px-xl text-center bg-black q-py-xs">專欄好文</div>
-          <q-btn class="q-px-xl" to="/lecture">專欄好文</q-btn>
-          <div class="title q-px-xl text-center bg-black q-py-xs">客服資訊</div>
-          <q-btn class="q-px-xl" to="/service">常見問題</q-btn>
-          <q-btn class="q-px-xl" to="/service/contactus">聯絡我們</q-btn>
-          <div class="title q-px-xl text-center bg-black q-py-xs" v-if="!isLogin">會員管理</div>
-          <q-btn class="q-px-xl" v-if="!isLogin" to="/login">會員登入</q-btn>
-          <q-btn class="q-px-xl" v-if="!isLogin" to="/register">會員註冊</q-btn>
-        </div>
-        <div>
-          <q-btn class="q-px-xl" v-if="isLogin" @click="logout">會員登出</q-btn>
-          <q-btn class="q-px-xl" to="/">回首頁</q-btn>
-        </div>
-      </div>
-    </q-scroll-area> -->
     </q-drawer>
     <q-page-container>
       <router-view />

@@ -89,7 +89,7 @@
             <q-tooltip class="bg-info">管理</q-tooltip>
           </div>
           <div class="q-mr-sm user_name">
-            <q-btn outline class="row flex-center" v-if="isLogin && !isAdmin" to="/myaccount" variant="text" text-accent>
+            <q-btn outline dense class="row flex-center q-px-md" v-if="isLogin && !isAdmin" to="/myaccount" variant="text" text-accent>
               <span>嗨!&nbsp;&nbsp;{{ nickname }}</span>
             </q-btn>
             <q-tooltip class="bg-info">會員專區</q-tooltip>
@@ -117,8 +117,8 @@
     </q-sectoin>
     <div class="item_bar q-ml-xl">
       <!-- <h5 class="q-mb-lg text-center">會員管理</h5> -->
-      <q-list bordered separator class="shadow-2 bg-white">
-        <q-item class="row flex-center q-pa-lg bg-positive">
+      <q-list bordered separator class="shadow-2 bg-white account-sidebar">
+        <q-item class="row flex-center q-pa-lg bg-primary">
           <q-item-section class="column flex-center">
             <q-avatar size="86px" class="q-mb-md">
               <img src="https://cdn.quasar.dev/img/boy-avatar.png">
@@ -128,21 +128,21 @@
           </q-item-section>
         </q-item>
         <q-item clickable v-ripple to="/myaccount/orders" class="row flex-center">
-          <q-icon name="fa-solid fa-magnifying-glass" size="1.2rem" class="q-mr-md"></q-icon>
+          <q-icon name="fa-solid fa-clipboard-list" size="1.2rem" class="q-mr-md"></q-icon>
           <q-item-section>
             報名查詢
             <q-item-label>Activity query</q-item-label>
           </q-item-section>
         </q-item>
 
-        <q-item clickable v-ripple to="/myaccount/persional-information" class="row flex-center">
+        <q-item clickable v-ripple to="/myaccount/persional-info" class="row flex-center">
           <q-icon name="fa-solid fa-address-book" size="1.3rem" class="q-mr-md"></q-icon>
           <q-item-section>
             基本資料
-            <q-item-label>Basic profile</q-item-label>
+            <q-item-label>Basic information</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable v-ripple to="/myaccount/persional-information" class="row flex-center">
+        <q-item clickable v-ripple class="row flex-center">
           <q-icon name="fa-solid fa-comment-dots" size="1.2rem" class="q-mr-md"></q-icon>
           <q-item-section>
             客服中心

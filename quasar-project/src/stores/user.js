@@ -6,9 +6,11 @@ import Swal from 'sweetalert2'
 export const useUserStore = defineStore('user', () => {
   const token = ref('')
   const email = ref('')
-  const cart = ref(0)
   const role = ref(0)
   const nickname = ref('')
+  const name = ref('')
+  const phone = ref('')
+  const gender = ref('')
 
   const isLogin = computed(() => {
     return token.value.length > 0
@@ -22,7 +24,10 @@ export const useUserStore = defineStore('user', () => {
       const { data } = await api.post('/users/login', form)
       token.value = data.result.token
       email.value = data.result.email
+      name.value = data.result.name
       nickname.value = data.result.nickname
+      phone.value = data.result.phone
+      gender.value = data.result.gender
       role.value = data.result.role
 
       Swal.fire({
@@ -50,6 +55,10 @@ export const useUserStore = defineStore('user', () => {
       await apiAuth.delete('/users/logout')
       token.value = ''
       email.value = ''
+      name.value = ''
+      nickname.value = ''
+      phone.value = ''
+      gender.value = ''
       role.value = 0
       Swal.fire({
         // 其他 Swal 待修改成下面的樣式 by 2/9
@@ -78,7 +87,10 @@ export const useUserStore = defineStore('user', () => {
     try {
       const { data } = await apiAuth.get('/users/me')
       email.value = data.result.email
+      name.value = data.result.name
       nickname.value = data.result.nickname
+      phone.value = data.result.phone
+      gender.value = data.result.gender
       role.value = data.result.role
       // cart.value = data.result.cart
     } catch (error) {
@@ -110,7 +122,7 @@ export const useUserStore = defineStore('user', () => {
     }
   }
   return {
-    token, email, nickname, role, cart, login, logout, isLogin, isAdmin, getUser, signup
+    token, email, nickname, name, phone, gender, role, login, logout, isLogin, isAdmin, getUser, signup
   }
 }, {
   persist: {

@@ -2,7 +2,7 @@
   <q-page>
     <div>
       <h5 class="q-mb-lg col-12">
-      <q-icon name="fa-solid fa-magnifying-glass" size="1.5rem" class="q-mr-sm"></q-icon>報名查詢</h5>
+      <q-icon name="fa-solid fa-clipboard-list" size="1.5rem" class="q-mr-sm"></q-icon>報名查詢</h5>
       <q-table
         :rows="orders"
         row-key="name"

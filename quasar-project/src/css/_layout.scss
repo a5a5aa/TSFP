@@ -1,3 +1,39 @@
+// burger側邊欄
+
+.sidebar{
+  @media (min-width:990px) {
+    &{
+      display: none;
+    }
+  }
+  .q-item{
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px $dark;
+  }
+  .sidebar2{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .q-icon{
+      color: $accent;
+    }
+  }
+  // .sidebar{
+  //   z-index: 1000;
+  //   height: 100vh;
+  //   display: flex;
+  //   .title{
+  //     font-size: 14px;
+  //     font-weight: 500;
+  //   }
+  //   .q-btn{
+  //     font-weight: 400;
+  //     width: 100%;
+  //   }
+  // }
+}
+
 // MainLayout
 .q-toolbar{
   display: flex;
@@ -59,52 +95,29 @@
   }
 }
 
-// burger側邊欄
-
-.sidebar{
-  @media (min-width:990px) {
-    &{
-      display: none;
-    }
+// admin-layout
+.admin-sidebar {
+  .q-item.q-router-link--active{
+  background: #E1BF77;
   }
-  .q-item{
-    border-radius: 3px;
-    box-shadow: 1px 1px 3px $dark;
-  }
-  .sidebar2{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    .q-icon{
-      color: $accent;
-    }
-  }
-  // .sidebar{
-  //   z-index: 1000;
-  //   height: 100vh;
-  //   display: flex;
-  //   .title{
-  //     font-size: 14px;
-  //     font-weight: 500;
-  //   }
-  //   .q-btn{
-  //     font-weight: 400;
-  //     width: 100%;
-  //   }
-  // }
 }
 
-.q-menu{
-  background: $info;
-  color: white;
-  text-align: center;
-  padding: none;
+.admin-toolbar {
+  .q-btn:before{
+  box-shadow: none;
+  }
 }
 
+// account-layout
 .item_bar{
   float: left;
   width: 250px;
   position: relative;
   top: 50px;
+}
+
+.account-sidebar {
+  .q-item.q-router-link--active{
+    background: $light;
+    }
 }

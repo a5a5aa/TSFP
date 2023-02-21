@@ -1,7 +1,7 @@
 <template>
 <q-page>
   <div>
-    <h5>會員管理</h5>
+    <h5>會員帳戶</h5>
     <q-table
     style="width:95%"
     :rows="users"
