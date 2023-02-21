@@ -8,7 +8,7 @@
     </q-sectoin>
     <section class="section_1 cloumn flex-center text-center q-pa-xl">
       <h6 class="row flex-center field-title q-mb-lg">如有任何問題歡迎來信，或瀏覽&nbsp;
-        <q-btn outline>
+        <q-btn outline dense class="q-pr-sm" to="/service">
         <q-icon name="fa-regular fa-circle-question" size="1.2rem" class="q-mx-xs"></q-icon>
         常見問題
         </q-btn>

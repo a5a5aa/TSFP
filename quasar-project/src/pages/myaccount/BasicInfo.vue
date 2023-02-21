@@ -27,7 +27,7 @@
           <q-card-actions class="q-mt-md">
             <q-spacer></q-spacer>
             <q-btn :disabled="form.loading" color="grey" @click="form.dialog = false">取消</q-btn>
-            <q-btn :disabled="form.loading" color="warning" type="submit">確認</q-btn>
+            <q-btn :disabled="form.loading" color="warning" type="submit">儲存</q-btn>
           </q-card-actions>
         </q-form>
       </q-card>

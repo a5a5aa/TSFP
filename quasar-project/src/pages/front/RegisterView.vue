@@ -32,7 +32,7 @@
             v-model="form.nickname"
             label="暱稱 *"
             lazy-rules
-            :rules="[ rules.required, rules.required ]"
+            :rules="[ rules.required ]"
           >
             <template v-slot:prepend>
               <q-icon name="fa-brands fa-odnoklassniki" />
@@ -86,7 +86,7 @@
         </q-input>
 
         <div class="btn row flex-center">
-          <q-btn class="submit col-4" label="加入會員" type="submit" color="primary" @click="showLoading"/>
+          <q-btn dense class="submit col-4 bg-primary text-white" label="加入會員" type="submit" @click="showLoading"/>
         </div>
         <q-btn class="to_register" label="已有帳號？&nbsp;立即登入&nbsp;" to="/login" flat >
         <q-icon name="fa-solid fa-circle-arrow-right"></q-icon></q-btn>
