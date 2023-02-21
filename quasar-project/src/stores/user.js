@@ -19,6 +19,10 @@ export const useUserStore = defineStore('user', () => {
     return role.value === 1
   })
 
+  const avatar = computed(() => {
+    return `https://source.boringavatars.com/bauhaus/256/${email.value}?colors=2B2B2B,BFB4AA,B99555,E1BF77,636363`
+  })
+
   async function login (form) {
     try {
       const { data } = await api.post('/users/login', form)
@@ -37,7 +41,11 @@ export const useUserStore = defineStore('user', () => {
         iconColor: '#C5A768',
         confirmButtonColor: '#2b2b2b'
       })
-      this.router.push('/')
+      if (role.value === 1) {
+        this.router.push('/admin/products')
+      } else {
+        this.router.push('/')
+      }
     } catch (error) {
       Swal.fire({
         width: '18rem',
@@ -122,7 +130,7 @@ export const useUserStore = defineStore('user', () => {
     }
   }
   return {
-    token, email, nickname, name, phone, gender, role, login, logout, isLogin, isAdmin, getUser, signup
+    token, email, nickname, name, phone, gender, role, login, logout, isLogin, isAdmin, getUser, signup, avatar
   }
 }, {
   persist: {

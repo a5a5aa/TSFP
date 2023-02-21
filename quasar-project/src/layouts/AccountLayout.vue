@@ -121,7 +121,7 @@
         <q-item class="row flex-center q-pa-lg bg-primary">
           <q-item-section class="column flex-center">
             <q-avatar size="86px" class="q-mb-md">
-              <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+              <img :src="avatar">
             </q-avatar>
             <q-item-label class="text-h6 text-white q-mb-sm">{{ nickname }}</q-item-label>
             <q-item-label class="text-h7 text-white">{{ email }}</q-item-label>
@@ -297,7 +297,7 @@ import { useUserStore } from 'src/stores/user'
 import { ref } from 'vue'
 
 const user = useUserStore()
-const { isLogin, isAdmin, nickname, email } = storeToRefs(user)
+const { isLogin, isAdmin, nickname, email, avatar } = storeToRefs(user)
 const { logout } = user
 const drawer = ref(false)
 
