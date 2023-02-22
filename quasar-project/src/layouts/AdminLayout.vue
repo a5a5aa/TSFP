@@ -2,18 +2,18 @@
   <div>
     <q-layout view="lHh Lpr lff" class="shadow-2">
       <q-header elevated class="bg-cyan-8">
-        <q-toolbar class="bg-white admin-toolbar">
+        <q-toolbar class="bg-white admin-toolbar q-py-sm q-px-lg">
           <q-space></q-space>
           <q-btn dense icon="home" name="回官網" label="回官網" class="bg-info text-white q-mr-md q-px-md" to="/">
           </q-btn>
           <div class="q-mr-sm">
-            <q-btn class="q-pa-sm text-primary" variant="text" rounded text-accent>
+            <q-btn class="q-pa-sm text-primary" variant="text" rounded text-accent flat>
             <q-icon name="fa-solid fa-bell" size="1.3rem"></q-icon>
             <q-tooltip class="bg-primary">通知</q-tooltip>
             </q-btn>
           </div>
           <div>
-            <q-btn class="q-pa-sm text-primary" variant="text" rounded text-accent @click="logout">
+            <q-btn class="q-pa-sm text-primary" variant="text" rounded text-accent flat @click="logout">
             <q-icon name="fa-solid fa-arrow-right-from-bracket" size="1.3rem"></q-icon>
             <q-tooltip class="bg-primary">登出</q-tooltip>
             </q-btn>
