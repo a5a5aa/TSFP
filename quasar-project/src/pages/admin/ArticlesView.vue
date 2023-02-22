@@ -1,24 +1,25 @@
 <template>
 <q-page>
-  <div class="q-pa-xl row justify-center">
-    <div class="table">
-      <h5>文章管理</h5>
-      <div class="text-right q-mb-md">
-        <q-btn icon="add" class="bg-warning text-white" @click="openDialog(-1)">新增文章</q-btn>
-      </div>
-      <q-table style="width:1024px;" :rows="articles" row-key="_id" :columns="columns" class="text-center">
-        <template v-slot:body-cell-image='props'>
-          <q-td>
-            <q-img :src="props.row.image" width="240px" height="135px"></q-img>
-          </q-td>
-        </template>
-        <template v-slot:body-cell-status="props">
-          <q-td class="text-warning">
-            <q-btn round icon="edit" class="bg-grey" @click="openDialog(props.row._id)"></q-btn>
-          </q-td>
-        </template>
-      </q-table>
-    </div>
+  <div class="q-px-lg q-py-xl row justify-between" style="width: 100%">
+    <h5 class="col-8">文章管理</h5>
+    <q-btn icon="add" class="bg-warning text-white text-right q-mb-md" @click="openDialog(-1)">新增文章</q-btn>
+    <q-table
+    :rows="articles"
+    row-key="_id"
+    :columns="columns"
+    class="text-center col-12">
+      <template v-slot:body-cell-image='props'>
+        <q-td>
+          <q-img :src="props.row.image" width="160px" height="90px"></q-img>
+        </q-td>
+      </template>
+
+      <template v-slot:body-cell-status="props">
+        <q-td class="text-warning">
+          <q-btn round icon="edit" flat @click="openDialog(props.row._id)"></q-btn>
+        </q-td>
+      </template>
+    </q-table>
     <!-- 新增文章表單 -->
     <q-dialog class="q-pa-md q-gutter-sm row" no-shake persistent v-model="form.dialog">
       <q-card class="row q-pa-xl">
@@ -101,13 +102,13 @@ const columns = [
     align: 'center',
     field: 'shortDesc'
   },
-  // {
-  //   name: 'articleText',
-  //   required: true,
-  //   label: '文章內容',
-  //   align: 'center',
-  //   field: 'articleText'
-  // },
+  {
+    name: 'articleText',
+    required: true,
+    label: '文章內容',
+    align: 'center',
+    field: 'articleText'
+  },
   {
     name: 'category',
     required: true,
@@ -258,8 +259,21 @@ const submit = async () => {
 
 </script>
 
-<style>
-.swal2-container {
-  z-index: 10000;
+<style lang="scss">
+
+.q-table{
+  td:nth-child(3),
+  td:nth-child(4) {
+    max-width: 300px;
+    overflow: scroll;
+    padding: 0 30px;
+  }
+  td:nth-child(5) {
+    max-width: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0 30px;
+  }
 }
 </style>

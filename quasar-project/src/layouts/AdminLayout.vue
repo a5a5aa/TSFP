@@ -31,31 +31,6 @@
       >
         <q-scroll-area class="bg-primary" style="height: calc(100% - 200px); margin-top: 200px; border-right: 1px solid #ddd">
           <q-list padding class="admin-sidebar q-pt-xl text-accent">
-            <!-- <q-item to="/admin/products" class="q-px-lg row flex-center">
-              <q-icon name="fa-brands fa-codepen" size="1.4rem" class="q-mr-md" />
-              <p>
-                活動管理
-              </p>
-            </q-item>
-            <q-item to="/admin/allorders" class="q-px-lg row flex-center">
-              <q-icon name="fa-solid fa-clipboard-list" size="1.4rem" class="q-pr-md" />
-              <p>
-                報名管理
-              </p>
-            </q-item>
-            <q-item to="/admin/articles" class="q-px-lg row flex-center">
-              <q-icon name="fa-solid fa-book-bookmark" size="1.3rem" class="q-mr-md" />
-              <p>
-                文章管理
-              </p>
-            </q-item>
-            <q-item to="/admin/allusers" class="q-px-lg row flex-center">
-              <q-icon name="fa-solid fa-user-pen" size="1.2rem" class="q-mr-md" />
-              <p>
-                會員管理
-              </p>
-            </q-item> -->
-
             <q-item clickable to="/admin/products">
               <q-item-section avatar>
                 <q-icon name="fa-brands fa-codepen" class="q-px-sm" size="1.4rem" />
@@ -111,7 +86,7 @@
         </q-img>
       </q-drawer>
 
-      <q-page-container>
+      <q-page-container style=" width:calc(100% - 48px);margin:auto;">
         <router-view />
       </q-page-container>
     </q-layout>

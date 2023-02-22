@@ -150,9 +150,11 @@ const register = async () => {
     await showLoading()
     await setTimeout(() => {
       Swal.fire({
+        width: '18rem',
         icon: 'success',
-        title: '成功',
-        text: '註冊成功'
+        text: '註冊成功',
+        iconColor: '#C5A768',
+        confirmButtonColor: '#2b2b2b'
       })
       router.push('/login')
     }, 2000)
@@ -160,9 +162,11 @@ const register = async () => {
     showLoading()
     setTimeout(() => {
       Swal.fire({
+        width: '18rem',
         icon: 'error',
-        title: '失敗',
-        text: error?.response?.data?.message || '發生錯誤'
+        text: error?.response?.data?.message || '發生錯誤',
+        iconColor: '#C5A768',
+        confirmButtonColor: '#2b2b2b'
       })
     }, 2000)
   }
@@ -176,11 +180,4 @@ const showLoading = () => {
     timer.value = 0
   }, 2000)
 }
-
-// function onBeforeUnmount () {
-//   if (timer !== 0) {
-//     clearTimeout(timer)
-//     $q.loading.hide()
-//   }
-// }
 </script>

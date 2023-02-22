@@ -75,9 +75,12 @@ const resetPassword = async () => {
     await showLoading()
     await setTimeout(() => {
       Swal.fire({
+        width: '18rem',
         icon: 'success',
         title: '密碼重設信件已發送',
-        text: '請至信箱點擊驗證信件重設密碼'
+        text: '請至信箱點擊驗證信件重設密碼',
+        iconColor: '#C5A768',
+        confirmButtonColor: '#2b2b2b'
       })
       router.push('/')
     }, 2000)
@@ -85,9 +88,11 @@ const resetPassword = async () => {
     showLoading()
     setTimeout(() => {
       Swal.fire({
+        width: '18rem',
         icon: 'error',
-        title: '失敗',
-        text: error?.response?.data?.message || '發生錯誤'
+        text: error?.response?.data?.message || '發生錯誤',
+        iconColor: '#C5A768',
+        confirmButtonColor: '#2b2b2b'
       })
     }, 2000)
   }

@@ -1,7 +1,7 @@
 <template>
 <q-page>
-  <div class="q-pa-md q-gutter-sm row justify-between">
-    <h5>訂單管理</h5>
+  <div class="q-px-lg q-py-xl row justify-between" style="width: 100%">
+    <h5 class="col-8">訂單管理</h5>
     <q-input dense ref="filterRef" filled v-model="filter" label="請輸入訂單編號或電子信箱" style="width: 300px;">
       <template v-slot:prepend>
         <q-icon name="search" />
@@ -12,11 +12,10 @@
     </q-input>
     <q-table
     :filter="filter"
-    style="width:95%"
     :rows="orders"
     row-key="name"
     :columns="columns"
-    class="text-center"
+    class="text-center col-12 q-mt-md"
     >
     </q-table>
   </div>

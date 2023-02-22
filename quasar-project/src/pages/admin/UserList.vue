@@ -1,13 +1,12 @@
 <template>
 <q-page>
-  <div>
-    <h5>會員帳戶</h5>
+  <div class="q-px-lg q-py-xl row justify-between" style="width: 100%">
+    <h5 class="col-6">會員帳戶</h5>
     <q-table
-    style="width:95%"
     :rows="users"
     row-key="name"
     :columns="columns"
-    class="text-center"
+    class="text-center col-12 q-mt-md"
     >
     </q-table>
   </div>
@@ -87,9 +86,3 @@ const columns = [
   }
 })()
 </script>
-
-<style>
-.swal2-container {
-  z-index: 10000;
-}
-</style>
