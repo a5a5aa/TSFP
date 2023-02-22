@@ -91,20 +91,20 @@
       <div class="row">
         <div class="row col-6">
           <p class="col-12">網站導覽</p>
-          <a class="col-6" href="/">回首頁</a>
-          <a class="col-6" href="/menu">餐飲介紹</a>
-          <a class="col-6" href="/about">品牌故事</a>
-          <a class="col-6" href="/about/location">線上MENU</a>
-          <a class="col-6" href="/products">所有活動</a>
-          <a class="col-6" href="/about/location">門市位址</a>
-          <a class="col-6" href="/articles">專欄好文</a>
+          <router-link class="col-6" to="/">回首頁</router-link>
+          <router-link class="col-6" to="/menu">餐飲介紹</router-link>
+          <router-link class="col-6" to="/about">品牌故事</router-link>
+          <router-link class="col-6" to="/about/location">線上MENU</router-link>
+          <router-link class="col-6" to="/products">所有活動</router-link>
+          <router-link class="col-6" to="/about/location">門市位址</router-link>
+          <router-link class="col-6" to="/articles">專欄好文</router-link>
         </div>
         <div class="col-6 q-pl-md">
           <p>支援服務</p>
-          <a href="/myaccount/myevents">報名查詢</a>
-          <a href="/servicce">常見問題</a>
-          <a href="/service/contactus">聯絡我們</a>
-          <a href="/privacy-policy">隱私權政策</a>
+          <router-link to="/myaccount/orders">報名查詢</router-link>
+          <router-link to="/servicce">常見問題</router-link>
+          <router-link to="/service/contactus">聯絡我們</router-link>
+          <router-link to="/privacy-policy">隱私權政策</router-link>
         </div>
       </div>
     </div>
@@ -117,7 +117,7 @@
       </div>
     </div>
     <div class="subscribe column justify-center col-3" style="max-width: 300px;">
-      <p>訂閱電子報即時掌握最新消息</p>
+      <p>訂閱電子報即時掌握活動消息</p>
       <q-input v-model="text" placeholder="your Email" type="email" bg-color="black" color="accent" :input-style="{ color: '#E1BF77' }">
         <template v-slot:prepend>
           <q-icon name="mail" class="q-px-sm"/>

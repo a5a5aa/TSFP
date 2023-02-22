@@ -3,7 +3,6 @@
     <div class="register text-center q-pa-xl bg-white rounded-borders shadow-5 q-my-xl ">
       <h5>會員註冊</h5>
       <q-form
-        ref="valid"
         @submit.prevent="register"
         class="q-gutter-md q-mt-md"
         >
@@ -105,7 +104,6 @@ import { useQuasar } from 'quasar'
 
 const router = useRouter()
 
-const valid = ref(false)
 const loading = ref(false)
 const $q = useQuasar()
 const timer = ref(0)
@@ -141,7 +139,6 @@ const rules = {
 }
 
 const register = async () => {
-  if (!valid.value) return
   loading.value = true
   try {
     console.log(form)

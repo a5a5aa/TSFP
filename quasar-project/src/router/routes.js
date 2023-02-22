@@ -52,16 +52,6 @@ const routes = [
     component: () => import('layouts/AccountLayout.vue'),
     children: [
       {
-        path: '',
-        name: 'myaccount',
-        component: () => import('pages/myaccount/IndexView.vue'),
-        meta: {
-          title: 'MAUNA COFFEE - 會員中心',
-          login: true,
-          admin: false
-        }
-      },
-      {
         path: 'orders',
         name: 'orders',
         component: () => import('src/pages/myaccount/MyOrder.vue'),

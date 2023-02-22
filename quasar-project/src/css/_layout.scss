@@ -35,17 +35,33 @@
 }
 
 // MainLayout
-.q-toolbar{
-  display: flex;
-  .top_logo {
-    text-align: center;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%,0);
-    @media (min-width:992px) {
-    left: 10%;
+
+.topbar_container{
+  max-width: 1200px;
+  @media (min-width:992px) {
+    & {
+      justify-content: space-between;
+      display: flex;
+      margin: auto;
     }
   }
+  .topbar_logo::before{
+    content: "";
+    width: 100px;
+  }
+
+}
+.q-toolbar{
+  display: flex;
+  // .topbar_logo {
+    // text-align: center;
+    // position: absolute;
+    // left: 50%;
+    // transform: translate(-50%,0);
+    // @media (min-width:992px) {
+    // left: 10%;
+    // }
+  // }
   // .top_logo{
   //   position: absolute;
   //   left: 50%;
@@ -64,11 +80,12 @@
       }
     }
   }
-  .nav_label {
+  .topbar_nav {
+    text-align: right;
     display: none;
     .q-tab__label{
-      font-size: 16px;
-      letter-spacing: 1px;
+      font-size: 1rem;
+      letter-spacing: .5px;
       font-weight: 400;
     }
     @media (min-width:992px) {

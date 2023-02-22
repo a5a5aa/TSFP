@@ -1,8 +1,8 @@
 <template>
 <q-page>
   <div class="q-px-lg q-py-xl row justify-between" style="width: 100%">
-    <div class="row justify-between">
-      <h5>活動管理</h5>
+    <!-- <div class="row justify-between"> -->
+      <h5 class="col-6">活動管理</h5>
       <q-btn icon="add" class="bg-warning text-white text-right q-mb-md" @click="openDialog(-1)">新增活動</q-btn>
       <q-table
       :rows="products"
@@ -20,7 +20,7 @@
           </q-td>
         </template>
       </q-table>
-    </div>
+    <!-- </div> -->
     <!-- 新增活動表單 -->
     <q-dialog class="q-pa-md q-gutter-sm row" no-shake persistent v-model="form.dialog">
       <q-card class="row q-pa-xl">
