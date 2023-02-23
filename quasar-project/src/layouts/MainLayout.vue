@@ -10,7 +10,8 @@
           <q-space />
           <q-btn flat label="首頁" class="dropdown text-accent" to="/"></q-btn>
           <span class="slash">/</span>
-          <q-btn flat label="關於我們 ▾" class="dropdown text-accent">
+          <q-btn flat label="關於我們 ▾" class="dropdown text-accent" style="cursor: text;" no-caps :ripple="false">
+            <!-- <q-icon name="fa-solid fa-caret-down" size="1rem"></q-icon> -->
             <q-list style="min-width: 100px" class="dropdown-content">
               <q-item clickable v-close-popup to="/about" class="text-white">
                 <q-item-section  style="font-size: 1rem;">品牌故事</q-item-section>
@@ -22,7 +23,7 @@
             </q-list>
           </q-btn>
           <span class="slash">/</span>
-          <q-btn flat label="講座活動 ▾" class="dropdown text-accent">
+          <q-btn flat label="講座活動 ▾" class="dropdown text-accent" style="cursor: text;" no-caps :ripple="false">
             <q-list style="min-width: 100px" class="dropdown-content">
               <q-item clickable v-close-popup to="/products" class="text-white" >
                 <q-item-section  style="font-size: 1rem;">所有活動</q-item-section>
@@ -38,7 +39,7 @@
           <span class="slash">/</span>
           <q-btn flat label="專欄好文" class="dropdown text-accent" to="/articles"></q-btn>
           <span class="slash">/</span>
-          <q-btn flat label="客服資訊 ▾" class="dropdown text-accent">
+          <q-btn flat label="客服資訊 ▾" class="dropdown text-accent" style="cursor: text;" no-caps :ripple="false">
             <q-list style="min-width: 100px" class="dropdown-content">
               <q-item clickable v-close-popup to="/service" class="text-white">
                 <q-item-section  style="font-size: 1rem;">常見問題</q-item-section>
