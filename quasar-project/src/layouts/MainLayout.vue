@@ -3,73 +3,53 @@
     <q-layout view="1Hh lpr lFf"  style="height: 400px">
       <q-header reveal elevated>
         <q-toolbar class="topbar text-accent bg-dark shadow-2 q-px-lg q-pa-xs">
-          <q-btn class="burger" flat @click="drawer = !drawer" round dense icon="menu" />
+          <q-btn class="burger" flat @click="drawer = !drawer" dense icon="menu" />
           <router-link style="width:170px" to="/" class="topbar_logo">
             <img  style="width:100%" src="../assets/images/logo/logo_top.png">
           </router-link>
           <q-space />
-          <q-tabs class="topbar_label" shrink>
-            <q-route-tab name="首頁" label="首頁" to="/">
-            </q-route-tab>
-            <span>/</span>
-            <q-route-tab name="關於我們" label="關於我們 ▾" to="/about">
-              <q-menu :offset="[-1, 3]">
-                <q-list>
-                  <q-item clickable class="text-white bg-info" to="/about">
-                  <q-item-section style="font-size: 1rem;">品牌故事</q-item-section>
-                  </q-item>
-                  <q-item clickable class="text-white bg-info" to="/about/location">
-                  <q-item-section style="font-size: 1rem;">門市資訊</q-item-section>
-                  </q-item>
-                </q-list>
-              </q-menu>
-            </q-route-tab>
-            <span>/</span>
-            <q-route-tab name="講座活動" label="講座活動 ▾" to="/products">
-              <q-menu :offset="[-1, 3]">
-                <q-list>
-                  <q-item clickable class="text-white bg-info" to="/products">
-                  <q-item-section style="font-size: 1rem;">所有活動</q-item-section>
-                  </q-item>
-                  <q-item clickable class="text-white bg-info">
-                  <q-item-section style="font-size: 1rem;">報名查詢</q-item-section>
-                  </q-item>
-                </q-list>
-              </q-menu>
-            </q-route-tab>
-            <span>/</span>
-            <q-route-tab name="餐飲介紹" label="餐飲介紹 ▾" to="/menu">
-              <q-menu :offset="[-1, 3]">
-                <q-list class="text-center">
-                  <q-item clickable class="text-white bg-info" to="/menu">
-                  <q-item-section style="font-size: 1rem;">餐飲介紹</q-item-section>
-                  </q-item>
-                  <q-item clickable class="text-white bg-info">
-                  <q-item-section style="font-size: 1rem;">MENU</q-item-section>
-                  </q-item>
-                </q-list>
-              </q-menu>
-            </q-route-tab>
-            <span>/</span>
-            <q-route-tab name="專欄好文" label="專欄好文" to="/articles"/>
-            <span>/</span>
-            <q-route-tab name="客服資訊" label="客服資訊 ▾" to="/service">
-              <q-menu :offset="[-1, 3]">
-                <q-list class="text-center">
-                  <q-item clickable class="text-white bg-info" to="/service">
-                  <q-item-section style="font-size: 1rem;">常見問題</q-item-section>
-                  </q-item>
-                  <q-item clickable class="text-white bg-info" to="/service/contactus">
-                  <q-item-section style="font-size: 1rem;">聯絡我們</q-item-section>
-                  </q-item>
-                </q-list>
-              </q-menu>
-            </q-route-tab>
-            &nbsp;
-            &nbsp;
-            &nbsp;
-          </q-tabs>
-          <q-tabs class="topbar_right">
+          <q-btn flat label="首頁" class="dropdown text-accent" to="/"></q-btn>
+          <span class="slash">/</span>
+          <q-btn flat label="關於我們 ▾" class="dropdown text-accent">
+            <q-list style="min-width: 100px" class="dropdown-content">
+              <q-item clickable v-close-popup to="/about" class="text-white">
+                <q-item-section  style="font-size: 1rem;">品牌故事</q-item-section>
+              </q-item>
+              <q-separator />
+              <q-item clickable v-close-popup to="/about/location" class="text-white">
+                <q-item-section style="font-size: 1rem;">門市資訊</q-item-section>
+              </q-item>
+            </q-list>
+          </q-btn>
+          <span class="slash">/</span>
+          <q-btn flat label="講座活動 ▾" class="dropdown text-accent">
+            <q-list style="min-width: 100px" class="dropdown-content">
+              <q-item clickable v-close-popup to="/products" class="text-white" >
+                <q-item-section  style="font-size: 1rem;">所有活動</q-item-section>
+              </q-item>
+              <q-separator />
+              <q-item clickable v-close-popup to="/myaccount/orders" class="text-white">
+                <q-item-section style="font-size: 1rem;">報名查詢</q-item-section>
+              </q-item>
+            </q-list>
+          </q-btn>
+          <span class="slash">/</span>
+          <q-btn flat label="餐飲介紹" class="dropdown text-accent" to="/menu"></q-btn>
+          <span class="slash">/</span>
+          <q-btn flat label="專欄好文" class="dropdown text-accent" to="/articles"></q-btn>
+          <span class="slash">/</span>
+          <q-btn flat label="客服資訊 ▾" class="dropdown text-accent">
+            <q-list style="min-width: 100px" class="dropdown-content">
+              <q-item clickable v-close-popup to="/service" class="text-white">
+                <q-item-section  style="font-size: 1rem;">常見問題</q-item-section>
+              </q-item>
+              <q-separator />
+              <q-item clickable v-close-popup to="/service/contactus" class="text-white">
+                <q-item-section style="font-size: 1rem;">聯絡我們</q-item-section>
+              </q-item>
+            </q-list>
+          </q-btn>
+          <q-tabs class="q-ml-lg">
             <div>
               <q-btn class="q-pa-sm" v-if="!isLogin" to="/login" rounded text-accent flat>
               <q-icon name="fa-solid fa-user" size="1.3rem"></q-icon>
@@ -82,8 +62,8 @@
               </q-btn>
               <q-tooltip class="bg-info">管理</q-tooltip>
             </div>
-            <div class="user_name q-mr-sm">
-              <q-btn outline dense class="row flex-center q-px-md" v-if="isLogin && !isAdmin" to="/myaccount/orders" variant="text" text-accent>
+            <div class="user_name">
+              <q-btn outline dense class="row flex-center q-px-md q-mr-sm" v-if="isLogin && !isAdmin" to="/myaccount/orders" variant="text" text-accent>
                 <span>嗨!&nbsp;&nbsp;{{ nickname }}</span>
               </q-btn>
               <q-tooltip class="bg-info">會員專區</q-tooltip>
@@ -141,7 +121,7 @@
                     所有活動
                   </q-item-section>
                 </q-item>
-                <q-item clickable v-ripple to="/about/location" class="col-6 text-center">
+                <q-item clickable v-ripple to="/myaccount/orders" class="col-6 text-center">
                   <q-item-section class="text-accent" flat>
                     報名查詢
                   </q-item-section>
@@ -231,9 +211,17 @@ const { isLogin, isAdmin, nickname } = storeToRefs(user)
 const { logout } = user
 const drawer = ref(false)
 
+// const tab1 = document.querySelector('#tab1')
+// const menu1 = document.querySelector('#menu1')
+
+// tab1.addEventListener('mouseover', function () {
+//   menu1.style.display = 'block'
+// })
+
 </script>
 
 <style>
 * {
   transition: none;
-}</style>
+}
+</style>

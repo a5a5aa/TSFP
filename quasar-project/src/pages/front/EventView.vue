@@ -11,7 +11,7 @@
         <p><q-icon name="fa-solid fa-location-dot" class="q-mr-xs"></q-icon>110台北市信義區信義路五段95號【Single Seat - 象山概念店】</p>
         <p class="text-h6" v-if="product.price !== 0">活動費用：NT$ {{ product.price }}</p>
         <p class="text-h6" v-if="product.price === 0" >活動費用：免費</p>
-        <q-form @submit.prevent="submitCart" class="q-my-xl">
+        <q-form class="q-my-xl">
           <q-btn style="width:200px" type="submit" color="warning" @click="onSignupBtnClick">立即報名</q-btn>
         </q-form>
       </div>
@@ -86,7 +86,7 @@
 </template>
 
 <script setup>
-import { reactive, ref } from 'vue'
+import { reactive } from 'vue'
 import { api } from '../../boot/axios'
 import { useRoute, useRouter } from 'vue-router'
 import { Swal } from 'sweetalert2'
@@ -96,10 +96,7 @@ const route = useRoute()
 const router = useRouter()
 
 const user = useUserStore()
-const { editCart, signup } = user
-
-const valid = ref(false)
-const quantity = ref(0)
+const { signup } = user
 
 const product = reactive({
   _id: '',
@@ -115,11 +112,6 @@ const product = reactive({
   keyWord: ''
 })
 
-const submitCart = () => {
-  if (!valid.value) return
-  editCart({ _id: product._id, quantity: quantity.value })
-}
-
 const onSignupBtnClick = async () => {
   console.log(route.params.id)
   await signup(route.params.id)
@@ -129,7 +121,6 @@ const onSignupBtnClick = async () => {
 (async () => {
   try {
     const { data } = await api.get('/products/' + route.params.id)
-
     product._id = data.result._id
     product.name = data.result.name
     product.price = data.result.price
@@ -142,13 +133,15 @@ const onSignupBtnClick = async () => {
     product.sell = data.result.sell
     product.category = data.result.category
 
-    document.title = 'Single Seat | ' + product.name
+    document.title = 'MAUNA COFFEE - ' + product.name
     // document.querySelector('meta[property="og:title"]').setAttribute('content', product.name)
   } catch (error) {
     Swal.fire({
+      width: '18rem',
       icon: 'error',
-      title: '失敗',
-      text: '取得商品失敗'
+      text: '取得商品失敗',
+      iconColor: '#C5A768',
+      confirmButtonColor: '#2b2b2b'
     })
     router.go(-1)
   }

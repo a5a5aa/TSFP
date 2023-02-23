@@ -44,7 +44,8 @@ export const useUserStore = defineStore('user', () => {
       if (role.value === 1) {
         this.router.push('/admin/products')
       } else {
-        this.router.push('/')
+        // this.router.push('/')
+        this.router.go(-1)
       }
     } catch (error) {
       Swal.fire({
