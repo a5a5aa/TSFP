@@ -12,7 +12,7 @@
     class="text-center">
     <template v-slot:body-cell-image='props'>
       <q-td>
-        <q-img :src="props.row.p_id.image" width="240px" height="135px"></q-img>
+        <q-img :src="props.row.p_id.image" width="160px" height="90px"></q-img>
       </q-td>
     </template>
     </q-table>
@@ -76,13 +76,15 @@ const columns = [
   try {
     const { data } = await apiAuth.get('/orders')
     orders.push(...data.result)
+    orders.reverse()
     console.log(orders)
   } catch (error) {
     Swal.fire({
+      width: '18rem',
       icon: 'error',
-      title: '失敗',
       text: '取得訂單失敗',
-      allowOutsideClick: false
+      iconColor: '#C5A768',
+      confirmButtonColor: '#2b2b2b'
     })
   }
 })()

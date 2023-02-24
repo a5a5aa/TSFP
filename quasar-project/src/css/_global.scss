@@ -13,6 +13,10 @@ body {
   background: #F2EEEB;
 }
 
+.swal2-container {
+  z-index: 10000;
+}
+
 .section_1{
   padding: 50px 0;
   max-width:1200px;
@@ -71,9 +75,6 @@ body {
   color: $accent;
   font-size: 3rem;
 }
-
-
-
 
 .field-title{
   color: $primary;
@@ -170,8 +171,4 @@ body {
   -webkit-line-clamp: 2;
   // 有溢出文字時最後方加上省略號...
   text-overflow: ellipsis;
-}
-
-.q-page {
-  background: white;
 }

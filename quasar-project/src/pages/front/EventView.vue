@@ -113,9 +113,8 @@ const product = reactive({
 })
 
 const onSignupBtnClick = async () => {
-  console.log(route.params.id)
+  // console.log(route.params.id)
   await signup(route.params.id)
-  router.push('/products')
 }
 
 (async () => {

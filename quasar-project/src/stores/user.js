@@ -119,7 +119,9 @@ export const useUserStore = defineStore('user', () => {
         confirmButtonColor: '#2b2b2b',
         allowOutsideClick: false
       })
+      this.router.push('/products')
     } catch (error) {
+      console.log(error)
       Swal.fire({
         width: '18rem',
         icon: 'error',

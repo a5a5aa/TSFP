@@ -145,9 +145,3 @@ const columns2 = [
   }
 })()
 </script>
-
-  <style>
-  .swal2-container {
-    z-index: 10000;
-  }
-  </style>

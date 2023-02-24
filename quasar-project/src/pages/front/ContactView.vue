@@ -114,16 +114,22 @@ const onSubmit = async () => {
   if (!valid.value) return
   try {
     await Swal.fire({
+      width: '18rem',
       icon: 'success',
-      title: '成功',
-      text: '信件已送出，我們將儘速為您處理！'
+      text: '信件已送出，我們將儘速為您處理！',
+      iconColor: '#C5A768',
+      confirmButtonColor: '#2b2b2b',
+      allowOutsideClick: false
     })
     router.push('/')
   } catch (error) {
     Swal.fire({
+      width: '18rem',
       icon: 'error',
-      title: '失敗',
-      text: error?.response?.data?.message || '發生錯誤，請再試一次！'
+      text: error?.response?.data?.message || '發生錯誤，請再試一次！',
+      iconColor: '#C5A768',
+      confirmButtonColor: '#2b2b2b',
+      allowOutsideClick: false
     })
   }
 }

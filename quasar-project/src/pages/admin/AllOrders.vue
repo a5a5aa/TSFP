@@ -106,9 +106,3 @@ const resetFilter = () => {
   }
 })()
 </script>
-
-  <style>
-  .swal2-container {
-    z-index: 10000;
-  }
-  </style>
