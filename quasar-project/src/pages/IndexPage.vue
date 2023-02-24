@@ -1,12 +1,18 @@
 <template>
 <q-page>
   <!-- banner -->
-  <sectoin class="banner q-mb-xl">
-    <img
+  <sectoin class="banner q-mb-xl row flex-center">
+    <video style="height:100vh;" src="../assets/video/咖啡素材2.mp4"  autoplay="true" muted loop >
+    </video>
+    <div class="bg-mask col-12 column flex-center">
+      <h3>MAUNA COFFEE</h3>
+      <q-btn rounded outline>瞭解更多</q-btn>
+    </div>
+    <!-- <img
       style="width:100%"
       src="https://images.pexels.com/photos/683039/pexels-photo-683039.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
       :ratio="16/9"
-    />
+    /> -->
   </sectoin>
   <!-- section_1 - 服務簡介 -->
   <section class="section_1 home_section_1 row justify-center q-px-xl">

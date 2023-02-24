@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <q-layout view="1Hh lpr lFf"  style="height: 400px">
-      <q-header reveal elevated>
-        <q-toolbar class="topbar text-accent bg-dark shadow-2 q-px-lg q-pa-xs">
+  <div class="bg-black">
+    <q-layout view="1Hh lpr lFf" >
+      <q-header reveal elevated class="bg-dark" >
+        <q-toolbar class="topbar text-accent shadow-2 q-px-lg q-pa-xs">
           <q-btn class="burger" flat @click="drawer = !drawer" dense icon="menu" />
           <router-link style="width:170px" to="/" class="topbar_logo">
             <img  style="width:100%" src="../assets/images/logo/logo_top.png">
@@ -10,7 +10,7 @@
           <q-space />
           <q-btn flat label="首頁" class="dropdown text-accent" to="/"></q-btn>
           <span class="slash">/</span>
-          <q-btn flat label="關於我們 ▾" class="dropdown text-accent" style="cursor: text;" no-caps :ripple="false">
+          <q-btn flat label="關於我們 ▾" class="dropdown text-accent" style="cursor: text;" no-caps v-ripple.stop>
             <!-- <q-icon name="fa-solid fa-caret-down" size="1rem"></q-icon> -->
             <q-list style="min-width: 100px" class="dropdown-content">
               <q-item clickable v-close-popup to="/about" class="text-white">
@@ -23,7 +23,7 @@
             </q-list>
           </q-btn>
           <span class="slash">/</span>
-          <q-btn flat label="講座活動 ▾" class="dropdown text-accent" style="cursor: text;" no-caps :ripple="false">
+          <q-btn flat label="講座活動 ▾" class="dropdown text-accent" style="cursor: text;" no-caps v-ripple.stop>
             <q-list style="min-width: 100px" class="dropdown-content">
               <q-item clickable v-close-popup to="/products" class="text-white" >
                 <q-item-section  style="font-size: 1rem;">所有活動</q-item-section>
@@ -39,7 +39,7 @@
           <span class="slash">/</span>
           <q-btn flat label="專欄好文" class="dropdown text-accent" to="/articles"></q-btn>
           <span class="slash">/</span>
-          <q-btn flat label="客服資訊 ▾" class="dropdown text-accent" style="cursor: text;" no-caps :ripple="false">
+          <q-btn flat label="客服資訊 ▾" class="dropdown text-accent" style="cursor: text;" no-caps v-ripple.stop>
             <q-list style="min-width: 100px" class="dropdown-content">
               <q-item clickable v-close-popup to="/service" class="text-white">
                 <q-item-section  style="font-size: 1rem;">常見問題</q-item-section>

@@ -59,6 +59,22 @@ body {
   }
 }
 
+.banner {
+  position: relative;
+  background: $dark;
+}
+.bg-mask{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+  color: $accent;
+  font-size: 3rem;
+}
+
+
+
+
 .field-title{
   color: $primary;
   text-align: center;
@@ -154,4 +170,8 @@ body {
   -webkit-line-clamp: 2;
   // 有溢出文字時最後方加上省略號...
   text-overflow: ellipsis;
+}
+
+.q-page {
+  background: white;
 }

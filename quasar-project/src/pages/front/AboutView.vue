@@ -2,9 +2,9 @@
   <q-page>
     <q-sectoin class="banner">
       <q-img
-          src="../../assets/images/brand_top.avif"
-          :ratio="16/9"
-        />
+        src="../../assets/images/brand_top.avif"
+        :ratio="16/9"
+      />
     </q-sectoin>
 
     <q-scetion class="section_1 about_secion_1 row flex-center">
