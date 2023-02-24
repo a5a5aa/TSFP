@@ -101,7 +101,7 @@
           <q-item-label class="text-h7 text-white">{{ email }}</q-item-label>
         </q-item-section>
       </q-item>
-      <q-item clickable v-ripple to="/myaccount/orders" class="row flex-center">
+      <q-item clickable v-ripple to="/myaccount/orders" class="row flex-center" v-if="!isAdmin">
         <q-icon name="fa-solid fa-clipboard-list" size="1.2rem" class="q-mr-md"></q-icon>
         <q-item-section>
           報名查詢
@@ -156,12 +156,12 @@
           </div>
           <div class="title q-px-xl text-center bg-black q-py-xs">講座活動</div>
           <div class="row">
-            <q-item clickable v-ripple to="/lectures" class="col-6 text-center">
+            <q-item clickable v-ripple to="/products" class="col-6 text-center">
               <q-item-section class="text-accent" flat>
                 所有活動
               </q-item-section>
             </q-item>
-            <q-item clickable v-ripple to="/myaccount/orders" class="col-6 text-center">
+            <q-item clickable v-ripple to="/myaccount/orders" class="col-6 text-center" v-if="!isAdmin">
               <q-item-section class="text-accent" flat>
                 報名查詢
               </q-item-section>
@@ -169,7 +169,7 @@
           </div>
           <div class="title q-px-xl text-center bg-black q-py-xs">專欄好文</div>
           <div class="row">
-            <q-item clickable v-ripple to="/article" class="col-12 text-center">
+            <q-item clickable v-ripple to="/articles" class="col-12 text-center">
               <q-item-section class="text-accent" flat>
                 專欄好文
               </q-item-section>

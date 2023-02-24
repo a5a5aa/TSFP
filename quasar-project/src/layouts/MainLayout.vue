@@ -29,7 +29,7 @@
                 <q-item-section  style="font-size: 1rem;">所有活動</q-item-section>
               </q-item>
               <q-separator />
-              <q-item clickable v-close-popup to="/myaccount/orders" class="text-white">
+              <q-item clickable v-close-popup v-if="!isAdmin" to="/myaccount/orders" class="text-white">
                 <q-item-section style="font-size: 1rem;">報名查詢</q-item-section>
               </q-item>
             </q-list>
@@ -117,12 +117,12 @@
               </div>
               <div class="title q-px-xl text-center bg-black q-py-xs">講座活動</div>
               <div class="row">
-                <q-item clickable v-ripple to="/lectures" class="col-6 text-center">
+                <q-item clickable v-ripple to="/products" class="col-6 text-center">
                   <q-item-section class="text-accent" flat>
                     所有活動
                   </q-item-section>
                 </q-item>
-                <q-item clickable v-ripple to="/myaccount/orders" class="col-6 text-center">
+                <q-item clickable v-ripple  to="/myaccount/orders" class="col-6 text-center" v-if="!isAdmin">
                   <q-item-section class="text-accent" flat>
                     報名查詢
                   </q-item-section>
@@ -130,7 +130,7 @@
               </div>
               <div class="title q-px-xl text-center bg-black q-py-xs">專欄好文</div>
               <div class="row">
-                <q-item clickable v-ripple to="/article" class="col-12 text-center">
+                <q-item clickable v-ripple to="/articles" class="col-12 text-center">
                   <q-item-section class="text-accent" flat>
                     專欄好文
                   </q-item-section>
