@@ -7,7 +7,24 @@
 
 // 1 - 服務簡介
 .home_section_1{
+  background: url(../assets//images/咖啡包.png) no-repeat;
+  background-position: 10% -1%;
+  // background-size: contain;
   flex-wrap: wrap;
+  justify-content: center;
+  .news {
+    // border-radius: 10px;
+    // color: white;
+    background: #fff;
+    opacity: .9;
+  }
+  @media (min-width:768px) {
+    & {
+      justify-content: right;
+      padding-right: 100px;
+    }
+
+  }
   .col{
     border-radius: 0;
     .my-card{

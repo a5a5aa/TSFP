@@ -5,7 +5,10 @@
         src="../../assets/images/brand_top.avif"
         :ratio="21/4"
       />
-      <div class="bg-mask col-12"></div>
+      <div class="bg-mask mask-text col-12 column flex-center">
+        <p class="col-2 text-h4">EVENTS</p>
+        <p class="col-2 text-h5">講座活動</p>
+      </div>
     </q-sectoin>
     <section class="section_1 row flex-center q-gutter-sm" style="max-width:1920px;">
       <h5 class="field-title q-mb-xl col-12">講座活動 Lectures & Events</h5>

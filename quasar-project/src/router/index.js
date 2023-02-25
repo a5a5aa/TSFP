@@ -41,6 +41,8 @@ export default route(function (/* { store, ssrContext } */) {
       next('/login')
     } else if (to.meta.admin && !user.isAdmin) {
       next('/')
+    } else if (to.meta.user && !user.isUser) {
+      next('/')
     } else {
       next()
     }

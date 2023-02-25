@@ -50,6 +50,12 @@ const routes = [
   {
     path: '/myaccount',
     component: () => import('layouts/AccountLayout.vue'),
+    meta: {
+      title: 'MAUNA COFFEE - 會員中心',
+      login: true,
+      admin: false,
+      user: true
+    },
     children: [
       {
         path: 'orders',
@@ -58,7 +64,8 @@ const routes = [
         meta: {
           title: 'MAUNA COFFEE - 我的訂單',
           login: true,
-          admin: false
+          admin: false,
+          user: true
         }
       },
       {
@@ -68,7 +75,8 @@ const routes = [
         meta: {
           title: 'MAUNA COFFEE - 基本資料',
           login: true,
-          admin: false
+          admin: false,
+          user: true
         }
       }
     ]
@@ -198,6 +206,12 @@ const routes = [
   {
     path: '/admin',
     component: () => import('../layouts/AdminLayout.vue'),
+    meta: {
+      title: ' MAUNA COFFEE - 管理員後台 ',
+      login: true,
+      admin: true,
+      user: false
+    },
     children: [
       {
         path: 'products',
@@ -206,7 +220,8 @@ const routes = [
         meta: {
           title: ' MAUNA COFFEE - 商品管理 ',
           login: true,
-          admin: true
+          admin: true,
+          user: false
         }
       },
       {
@@ -216,7 +231,8 @@ const routes = [
         meta: {
           title: ' MAUNA COFFEE - 訂單管理 ',
           login: true,
-          admin: true
+          admin: true,
+          user: false
         }
       },
       {
@@ -226,7 +242,8 @@ const routes = [
         meta: {
           title: ' MAUNA COFFEE - 會員管理 ',
           login: true,
-          admin: true
+          admin: true,
+          user: false
         }
       },
       {
@@ -236,7 +253,8 @@ const routes = [
         meta: {
           title: ' MAUNA COFFEE - 活動訂單管理 ',
           login: true,
-          admin: true
+          admin: true,
+          user: false
         }
       },
       {
@@ -246,7 +264,8 @@ const routes = [
         meta: {
           title: ' MAUNA COFFEE - 文章管理 ',
           login: true,
-          admin: true
+          admin: true,
+          user: false
         }
       }
     ]

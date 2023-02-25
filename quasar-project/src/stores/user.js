@@ -19,6 +19,10 @@ export const useUserStore = defineStore('user', () => {
     return role.value === 1
   })
 
+  const isUser = computed(() => {
+    return role.value === 0
+  })
+
   const avatar = computed(() => {
     return `https://source.boringavatars.com/bauhaus/256/${email.value}?colors=2B2B2B,BFB4AA,B99555,E1BF77,636363`
   })
@@ -133,7 +137,7 @@ export const useUserStore = defineStore('user', () => {
     }
   }
   return {
-    token, email, nickname, name, phone, gender, role, login, logout, isLogin, isAdmin, getUser, signup, avatar
+    token, email, nickname, name, phone, gender, role, login, logout, isLogin, isAdmin, isUser, getUser, signup, avatar
   }
 }, {
   persist: {

@@ -122,7 +122,7 @@
                     所有活動
                   </q-item-section>
                 </q-item>
-                <q-item clickable v-ripple  to="/myaccount/orders" class="col-6 text-center" v-if="!isAdmin">
+                <q-item clickable v-ripple  to="/myaccount/orders" class="col-6 text-center">
                   <q-item-section class="text-accent" flat>
                     報名查詢
                   </q-item-section>
