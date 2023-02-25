@@ -41,6 +41,25 @@
   }
 }
 
+.home_section_11{
+  flex-wrap: wrap;
+  justify-content: center;
+  .col{
+    border-radius: 0;
+    .my-card{
+      box-shadow: none;
+      background: none;
+      width: 200px;
+      img{
+        width: 60%;
+      }
+      .card-text{
+        padding: 0 40px;
+      }
+    }
+  }
+}
+
 // 2 - 品牌介紹
 .home_section_2{
   background: #BFB4AA;

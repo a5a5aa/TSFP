@@ -74,7 +74,12 @@ body {
   bottom: 0;
   background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
   color: $accent;
-  font-size: 3rem;
+  .index_title{
+    padding-left: 10%;
+    p {
+      font-size: 2rem
+    }
+  }
 }
 
 .mask-text{

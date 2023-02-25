@@ -2,19 +2,16 @@
 <q-page>
   <!-- banner -->
   <sectoin class="banner q-mb-xl row flex-center">
-    <video style="height:100vh; width:100vw; object-fit:cover;" src="../assets/video/專題_影片1.mp4"  autoplay="true" muted loop >
+    <video style="height:100vh; width:100vw; object-fit:cover;" src="../assets/video/專題_影片2.mp4"  autoplay="true" muted loop >
     </video>
-    <div class="bg-mask col-12 column flex-center">
-      <h3>MAUNA COFFEE</h3>
-      <q-btn rounded outline>瞭解更多</q-btn>
+    <div class="bg-mask col-12 row items-center">
+      <div class="index_title">
+        <p>享受片刻寧靜的美好<br>MAUNA COFFEE</p>
+        <q-btn rounded outline to="/about" class="q-mt-xl">瞭解更多</q-btn>
+      </div>
     </div>
-    <!-- <img
-      style="width:100%"
-      src="https://images.pexels.com/photos/683039/pexels-photo-683039.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-      :ratio="16/9"
-    /> -->
   </sectoin>
-  <!-- section_1 - 服務簡介 -->
+  <!-- section - 最新消息 -->
   <section class="section_1 home_section_1 row q-px-xl">
     <div class="news q-py-md col-10 col-md-6 shadow-2">
       <h5 class="text-center q-mb-sm">最新消息 NEWS</h5>
@@ -118,7 +115,7 @@
       </q-card>
     </div> -->
   </section>
-  <!-- section_2 - 品牌簡介 -->
+  <!-- section - 品牌簡介 -->
   <section class="home_section_2">
     <q-card class="my-card row flex-center q-mx-xl" style="max-width:1000px;">
       <img class="col-md-6" src="../assets/images/單人座.png">
@@ -128,10 +125,51 @@
       </q-card-section>
     </q-card>
   </section>
-  <!-- section_3 - 活動報名 carousel -->
+  <!-- section - 服務簡介 -->
+  <section class="section_1 home_section_11  row q-px-xl">
+    <div class="col col-12 col-sm-3 row justify-center">
+      <q-card class="my-card column items-center">
+        <img src="../assets/images/coffee-rounded.png">
+        <q-card-section>
+          <div class="text-h6">講座空間</div>
+          <div class="text-subtitle2">lecture space</div>
+        </q-card-section>
+        <q-card-section class="card-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, fugit quae maxime sed
+        </q-card-section>
+      </q-card>
+    </div>
+    <div class="col col-12 col-sm-3 row justify-center">
+      <q-card class="my-card column items-center">
+        <img src="../assets/images/coffee-rounded.png">
+        <q-card-section>
+          <div class="text-h6">單人用餐</div>
+          <div class="text-subtitle2">single seat</div>
+        </q-card-section>
+        <q-card-section class="card-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, fugit quae maxime sed
+        </q-card-section>
+      </q-card>
+    </div>
+    <div class="col col-12 col-sm-3 row justify-center">
+      <q-card class="my-card column items-center">
+        <img src="../assets/images/coffee-rounded.png">
+        <q-card-section>
+          <div class="text-h6">專欄分享</div>
+          <div class="text-subtitle2">great topic</div>
+        </q-card-section>
+
+        <q-card-section class="card-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, fugit quae maxime sed
+        </q-card-section>
+      </q-card>
+    </div>
+  </section>
+  <!-- section - 活動報名 carousel -->
   <section class="section_3 home_section_3">
     <h5 class="text-center q-mb-xl">精選活動 Featured Events</h5>
     <swiper
+      loop=true
       :scrollbar="{ draggable: true }"
       navigation
       :modules="modules"
@@ -151,7 +189,7 @@
       </swiper-slide>
     </swiper>
   </section>
-  <!-- section_3 - 手機版 活動報名 carousel -->
+  <!-- section - 手機版 活動報名 carousel -->
   <section class="phone_carousel" >
     <h5 class="q-mb-xl field-title">精選活動</h5>
     <swiper
@@ -163,7 +201,7 @@
       </swiper-slide>
     </swiper>
   </section>
-  <!-- section_4 - 形象照展示 -->
+  <!-- section - 形象照展示 -->
   <section class="section_4 home_section_4 q-my-xl column flex-center">
     <div class="col-1">
       <div class="photo_box">
@@ -242,7 +280,7 @@
     </div>
   </section>
   <section class="copyright row flex-center">
-    Copyright © 2023 Yu-zhen,Su. All rights reserved.
+    Copyright © 2023 Yu-zhen,Su. 泰山職訓局專題(僅供教學使用)
   </section>
 </q-page>
 </template>
