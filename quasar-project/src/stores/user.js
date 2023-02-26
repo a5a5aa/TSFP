@@ -27,6 +27,34 @@ export const useUserStore = defineStore('user', () => {
     return `https://source.boringavatars.com/bauhaus/256/${email.value}?colors=2B2B2B,BFB4AA,B99555,E1BF77,636363`
   })
 
+  const editInfo = async (form) => {
+    try {
+      const { data } = await apiAuth.patch('/users/persional-info', form)
+      name.value = data.result.name
+      nickname.value = data.result.nickname
+      email.value = data.result.email
+      phone.value = data.result.phone
+      Swal.fire({
+        width: '18rem',
+        icon: 'success',
+        text: '編輯成功',
+        iconColor: '#C5A768',
+        confirmButtonColor: '#2b2b2b',
+        allowOutsideClick: false
+      })
+      form.dialog = false
+    } catch (error) {
+      Swal.fire({
+        width: '18rem',
+        icon: 'error',
+        text: error?.response?.data.message || '發生錯誤',
+        iconColor: '#C5A768',
+        confirmButtonColor: '#2b2b2b',
+        allowOutsideClick: false
+      })
+    }
+  }
+
   async function login (form) {
     try {
       const { data } = await api.post('/users/login', form)
@@ -137,7 +165,7 @@ export const useUserStore = defineStore('user', () => {
     }
   }
   return {
-    token, email, nickname, name, phone, gender, role, login, logout, isLogin, isAdmin, isUser, getUser, signup, avatar
+    token, email, nickname, name, phone, gender, role, login, logout, isLogin, isAdmin, isUser, getUser, signup, avatar, editInfo
   }
 }, {
   persist: {

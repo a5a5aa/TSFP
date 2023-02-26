@@ -13,9 +13,15 @@ const routes = [
           login: false,
           admin: false
         }
-      },
+      }
+    ]
+  },
+  {
+    path: '/login',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
       {
-        path: 'login',
+        path: '',
         name: 'login',
         component: () => import('src/pages/front/LoginView.vue'),
         meta: {
@@ -23,19 +29,31 @@ const routes = [
           login: false,
           admin: false
         }
-      },
+      }
+    ]
+  },
+  {
+    path: '/register',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
       {
-        path: 'register',
+        path: '',
         name: 'register',
         component: () => import('src/pages/front/RegisterView.vue'),
         meta: {
-          title: 'MAUNA COFFEE - 新會員註冊',
+          title: 'MAUNA COFFEE - 會員註冊',
           login: false,
           admin: false
         }
-      },
+      }
+    ]
+  },
+  {
+    path: '/reset',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
       {
-        path: 'reset',
+        path: '',
         name: 'reset',
         component: () => import('src/pages/front/ResetPassword.vue'),
         meta: {
@@ -46,7 +64,6 @@ const routes = [
       }
     ]
   },
-
   {
     path: '/myaccount',
     component: () => import('layouts/AccountLayout.vue'),

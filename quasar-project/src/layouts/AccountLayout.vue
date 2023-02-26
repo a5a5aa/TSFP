@@ -83,11 +83,15 @@
       </q-tabs>
     </q-toolbar>
   </q-header>
-  <q-sectoin class="banner">
+  <q-sectoin class="banner row q-mt-xl">
     <q-img
-      src="../../src/assets/images/brand_top.avif"
-      :ratio="21/4"
+      src="../assets/images/banner_account.jpg"
+      style="max-height:35vh; width:100vw;"
     />
+    <div class="bg-mask mask-text col-12 column flex-center">
+      <p class="col-2 text-h3">MY ACCOUNT</p>
+      <p class="col-2 text-h5">會員中心</p>
+    </div>
   </q-sectoin>
   <div class="item_bar q-ml-xl">
     <!-- <h5 class="q-mb-lg text-center">會員管理</h5> -->

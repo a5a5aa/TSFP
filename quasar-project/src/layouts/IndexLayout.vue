@@ -218,30 +218,49 @@ const drawer = ref(false)
 // tab1.addEventListener('mouseover', function () {
 //   menu1.style.display = 'block'
 // })
+// onMounted(() => {
+//   const bgTrans = document.getElementById('bgTrans')
+//   window.addEventListener('scroll', () => {
+//     bgTrans.style.backgroundColor = 'transparent'
+//     if (document.documentElement.scrollTop >= 600) {
+//       bgTrans.style.backgroundColor = '#2b2b2b'
+//     }
+//   })
+//   // window.addEventListener('scroll', () => {
+//   //   bgTrans.style.background = 'transparent'
+//   //   if (document.documentElement.scrollTop >= 600) {
+//   //     bgTrans.style.background = '#2b2b2b'
+//   //   }
+//   // })
+//   // burger.addEventListener('click', () => {
+//   //   window.addEventListener('scroll', () => {
+//   //     if (document.documentElement.scrollTop >= 600) {
+//   //       bgTrans.style.background = '#2b2b2b'
+//   //     }
+//   //   })
+//   // })
+// })
 
 onMounted(() => {
+  let scrollArea = 0
+  const burger = document.querySelector('#burger2')
   const bgTrans = document.getElementById('bgTrans')
   window.addEventListener('scroll', () => {
-    bgTrans.style.backgroundColor = 'transparent'
+    scrollArea = document.documentElement.scrollTop
+    // console.log(scrollArea)
     if (document.documentElement.scrollTop >= 600) {
+      scrollArea = document.documentElement.scrollTop
+      bgTrans.style.backgroundColor = '#2b2b2b'
+    } else if (scrollArea < 600 && scrollArea !== 0) {
+      bgTrans.style.backgroundColor = 'transparent'
+    }
+  })
+  burger.addEventListener('click', (e) => {
+    if (scrollArea > 600) {
       bgTrans.style.backgroundColor = '#2b2b2b'
     }
   })
-  // window.addEventListener('scroll', () => {
-  //   bgTrans.style.background = 'transparent'
-  //   if (document.documentElement.scrollTop >= 600) {
-  //     bgTrans.style.background = '#2b2b2b'
-  //   }
-  // })
-  // burger.addEventListener('click', () => {
-  //   window.addEventListener('scroll', () => {
-  //     if (document.documentElement.scrollTop >= 600) {
-  //       bgTrans.style.background = '#2b2b2b'
-  //     }
-  //   })
-  // })
 })
-
 </script>
 
 <style>

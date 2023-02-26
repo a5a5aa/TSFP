@@ -1,6 +1,5 @@
 <template>
 <q-page>
-  <!-- banner -->
   <sectoin class="banner q-mb-xl row flex-center" style="position:relative; top:-50px">
     <video style="height:100vh; width:100vw; object-fit:cover;" src="../assets/video/專題_影片2.mp4"  autoplay="true" muted loop >
     </video>
@@ -300,6 +299,7 @@ import ProductCard from '@/components/ProductCard.vue'
 
 const modules = [Navigation, Pagination, Scrollbar, A11y, EffectCoverflow]
 const products = reactive([])
+
 const anchor = () => {
   const height = document.querySelector('.arrow_down').offsetTop + 700
   window.scroll({

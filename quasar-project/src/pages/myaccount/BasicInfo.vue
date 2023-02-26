@@ -39,6 +39,10 @@
 import { apiAuth } from '../../boot/axios'
 import { reactive } from 'vue'
 import Swal from 'sweetalert2'
+import { useUserStore } from 'src/stores/user'
+
+const user = useUserStore()
+const { editInfo } = user
 
 const form = reactive({
   name: '',
@@ -51,27 +55,7 @@ const form = reactive({
 
 const submit = async () => {
   form.loading = true
-  try {
-    await apiAuth.patch('/users/persional-info', form)
-    Swal.fire({
-      width: '18rem',
-      icon: 'success',
-      text: '編輯成功',
-      iconColor: '#C5A768',
-      confirmButtonColor: '#2b2b2b',
-      allowOutsideClick: false
-    })
-    form.dialog = false
-  } catch (error) {
-    Swal.fire({
-      width: '18rem',
-      icon: 'error',
-      text: error?.response?.data.message || '發生錯誤',
-      iconColor: '#C5A768',
-      confirmButtonColor: '#2b2b2b',
-      allowOutsideClick: false
-    })
-  }
+  await editInfo(form)
   form.loading = false
 }
 

@@ -1,33 +1,38 @@
 <template>
   <q-page>
-    <q-sectoin class="banner">
+    <q-sectoin class="banner row">
       <q-img
         src="../../assets/images/brand_top.avif"
-        :ratio="16/9"
+        style="max-height:35vh; width:100vw;"
       />
+      <div class="bg-mask mask-text col-12 column flex-center">
+        <p class="col-2 text-h3">ABOUT US</p>
+        <p class="col-2 text-h5">關於我們</p>
+      </div>
     </q-sectoin>
 
     <q-scetion class="section_1 about_secion_1 row flex-center">
-        <div class="card1">
-          <h4>我是標題1我是標題1</h4>
-          <h5>我是標題1我是標題1我是標題1</h5>
-          <p class="q-my-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsum cupiditate nihil ea totam labore, aut fuga facilis rerum ducimus.</p>
-          <q-img
-            width="200px"
-            src="../../assets/images/about_1.jpg"></q-img>
-        </div>
-        <div class="card2">
-          <q-img
-            width="70%"
-            src="../../assets/images/about_3.jpg"></q-img>
-        </div>
-        <div class="card3">
-          <q-img
-            width="100%"
-            src="../../assets/images/about_2.jpg"></q-img>
-          <p class="q-my-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam doloremque quidem nesciunt optio laboriosam doloribus earum quam eaque quasi tenetur.</p>
-          <q-btn outline rounded to="/products">查看近期講座</q-btn>
-        </div>
+    <h5 class="field-title q-mb-xl col-12">品牌故事 OUR STORY</h5>
+      <div class="card1">
+        <h4>我是標題1我是標題1</h4>
+        <h5>我是標題1我是標題1我是標題1</h5>
+        <p class="q-my-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsum cupiditate nihil ea totam labore, aut fuga facilis rerum ducimus.</p>
+        <q-img
+          width="200px"
+          src="../../assets/images/about_1.jpg"></q-img>
+      </div>
+      <div class="card2">
+        <q-img
+          width="70%"
+          src="../../assets/images/about_3.jpg"></q-img>
+      </div>
+      <div class="card3">
+        <q-img
+          width="100%"
+          src="../../assets/images/about_2.jpg"></q-img>
+        <p class="q-my-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam doloremque quidem nesciunt optio laboriosam doloribus earum quam eaque quasi tenetur.</p>
+        <q-btn outline rounded to="/products">查看近期講座</q-btn>
+      </div>
     </q-scetion>
 
     <q-section class="section_timeline">

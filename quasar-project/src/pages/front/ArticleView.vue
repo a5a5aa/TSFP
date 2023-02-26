@@ -11,7 +11,6 @@
     </div>
   </q-sectoin>
   <section class="section_1 row flex-center q-gutter-sm" style="max-width:1920px;">
-    <h5 class="field-title q-mb-xl col-12">專欄好文 ARTICLES</h5>
     <div v-for="article in articles" :key="article._id">
       <ArticleCard class="card-scale" v-bind="article"></ArticleCard>
     </div>
