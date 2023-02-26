@@ -8,7 +8,7 @@
         >
         <div class="row flex-center justify-between">
           <q-input
-            class="col-xs-6"
+            class="col-xs-5"
             v-model="form.name"
             label="姓名 *"
             lazy-rules
@@ -20,8 +20,8 @@
           </q-input>
 
           <div class="col-sm-6">
-            <q-radio v-model="form.gender" val="M" label="先生" class="q-mr-md male"/>
-            <q-radio v-model="form.gender" val="F" label="女士" />
+            <q-radio v-model="form.gender" val="M" label="生理男" class="q-mr-md male"/>
+            <q-radio v-model="form.gender" val="F" label="生理女" />
           </div>
         </div>
 

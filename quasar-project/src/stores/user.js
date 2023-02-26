@@ -142,8 +142,7 @@ export const useUserStore = defineStore('user', () => {
     try {
       const { data } = await apiAuth.post('/orders/' + _id)
       console.log(data.result)
-      Swal.fire({
-        // 其他 Swal 待修改成下面的樣式 by 2/9
+      await Swal.fire({
         width: '18rem',
         icon: 'success',
         text: '報名成功',
