@@ -2,11 +2,11 @@
   <q-page>
     <q-sectoin class="banner row">
       <q-img
-        src="../../assets/images/brand_top.avif"
+        src="../../assets/images/banner_lectures.jpg"
         style="max-height:35vh; width:100vw;"
       />
       <div class="bg-mask mask-text col-12 column flex-center">
-        <p class="col-2 text-h4">EVENTS</p>
+        <p class="col-2 text-h3">EVENTS</p>
         <p class="col-2 text-h5">講座活動</p>
       </div>
     </q-sectoin>

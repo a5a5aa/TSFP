@@ -1,7 +1,7 @@
 <template>
 <q-page>
   <!-- banner -->
-  <sectoin class="banner q-mb-xl row flex-center">
+  <sectoin class="banner q-mb-xl row flex-center" style="position:relative; top:-50px">
     <video style="height:100vh; width:100vw; object-fit:cover;" src="../assets/video/專題_影片2.mp4"  autoplay="true" muted loop >
     </video>
     <div class="bg-mask col-12 row items-center">
@@ -9,6 +9,7 @@
         <p>享受片刻寧靜的美好<br>MAUNA COFFEE</p>
         <q-btn rounded outline to="/about" class="q-mt-xl">瞭解更多</q-btn>
       </div>
+      <q-btn round flat class="arrow_down" @click="anchor" ><q-icon name="keyboard_arrow_down" size="50px"></q-icon></q-btn>
     </div>
   </sectoin>
   <!-- section - 最新消息 -->
@@ -298,7 +299,14 @@ import 'swiper/css/pagination'
 import ProductCard from '@/components/ProductCard.vue'
 
 const modules = [Navigation, Pagination, Scrollbar, A11y, EffectCoverflow]
-const products = reactive([]);
+const products = reactive([])
+const anchor = () => {
+  const height = document.querySelector('.arrow_down').offsetTop + 700
+  window.scroll({
+    top: height,
+    behavior: 'smooth'
+  })
+};
 
 (async () => {
   try {

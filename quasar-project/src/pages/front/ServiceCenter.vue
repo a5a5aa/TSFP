@@ -1,13 +1,17 @@
 <template>
   <q-page>
-    <q-section class="banner">
+    <q-sectoin class="banner row">
       <q-img
-          src="../../assets/images/brand_top.avif"
-          :ratio="21/4"
-        />
-    </q-section>
+        src="../../assets/images/banner_service.jpg"
+        style="max-height:35vh; width:100vw;"
+      />
+      <div class="bg-mask mask-text col-12 column flex-center">
+        <p class="col-2 text-h3">SERVICE</p>
+        <p class="col-2 text-h5">客服資訊</p>
+      </div>
+    </q-sectoin>
     <section class="section_1">
-      <h5 class="field-title q-mb-xl">常見問題 Q & A</h5>
+      <h5 class="field-title q-mb-xl">常見問題 Q &#38; A</h5>
       <div class="q-pa-md q-gutter-md">
         <q-card class="card_qa" style="max-width:992px; margin:auto;" flat bordered>
           <q-card-section>

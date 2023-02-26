@@ -1,12 +1,17 @@
 <template>
   <q-page>
-    <q-sectoin class="banner2">
+    <q-sectoin class="banner row">
       <q-img
-          src="../../assets/images/brand_top.avif"
-          :ratio="21/4"
-        />
+        src="../../assets/images/banner_service.jpg"
+        style="max-height:35vh; width:100vw;"
+      />
+      <div class="bg-mask mask-text col-12 column flex-center">
+        <p class="col-2 text-h3">SERVICE</p>
+        <p class="col-2 text-h5">客服資訊</p>
+      </div>
     </q-sectoin>
     <section class="section_1 cloumn flex-center text-center q-pa-xl">
+      <!-- <h5 class="field-title q-mb-xl">聯絡我們 CONTACT US</h5> -->
       <h6 class="row flex-center field-title q-mb-lg">如有任何問題歡迎來信，或瀏覽&nbsp;
         <q-btn outline dense class="q-pr-sm" to="/service">
         <q-icon name="fa-regular fa-circle-question" size="1.2rem" class="q-mx-xs"></q-icon>

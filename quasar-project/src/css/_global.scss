@@ -66,6 +66,14 @@ body {
 .banner {
   position: relative;
   background: $dark;
+  .arrow_down{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    margin-bottom: 50px;
+  }
+
 }
 
 .bg-mask{
@@ -85,8 +93,11 @@ body {
 .mask-text{
   color: rgba(255,255,255,.8);
   font-size: 1.5rem;
-  letter-spacing: 5px;
   transition: 1s;
+  font-family: 'Staatliches','Noto Sans TC';
+  p{
+    letter-spacing: 1px;
+  }
   @media (min-width:768px) {
     font-size: 2rem;
   }

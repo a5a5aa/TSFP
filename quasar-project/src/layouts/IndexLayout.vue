@@ -1,9 +1,9 @@
 <template>
   <div>
     <q-layout view="1Hh lpr lFf" >
-      <q-header reveal elevated class="bg-dark">
+      <q-header reveal unelevated id="bgTrans" style="background:transparent">
         <q-toolbar class="topbar text-accent q-px-lg q-pa-xs">
-          <q-btn round class="burger" flat @click="drawer = !drawer" dense icon="menu" />
+          <q-btn round class="burger" id="burger2" flat @click="drawer = !drawer" dense icon="menu" />
           <router-link style="width:170px" to="/" class="topbar_logo">
             <img  style="width:100%" src="../assets/images/logo/logo_top.png">
           </router-link>
@@ -205,12 +205,42 @@
 <script setup>
 import { storeToRefs } from 'pinia'
 import { useUserStore } from 'src/stores/user'
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 
 const user = useUserStore()
 const { isLogin, isAdmin, nickname } = storeToRefs(user)
 const { logout } = user
 const drawer = ref(false)
+
+// const tab1 = document.querySelector('#tab1')
+// const menu1 = document.querySelector('#menu1')
+
+// tab1.addEventListener('mouseover', function () {
+//   menu1.style.display = 'block'
+// })
+
+onMounted(() => {
+  const bgTrans = document.getElementById('bgTrans')
+  window.addEventListener('scroll', () => {
+    bgTrans.style.backgroundColor = 'transparent'
+    if (document.documentElement.scrollTop >= 600) {
+      bgTrans.style.backgroundColor = '#2b2b2b'
+    }
+  })
+  // window.addEventListener('scroll', () => {
+  //   bgTrans.style.background = 'transparent'
+  //   if (document.documentElement.scrollTop >= 600) {
+  //     bgTrans.style.background = '#2b2b2b'
+  //   }
+  // })
+  // burger.addEventListener('click', () => {
+  //   window.addEventListener('scroll', () => {
+  //     if (document.documentElement.scrollTop >= 600) {
+  //       bgTrans.style.background = '#2b2b2b'
+  //     }
+  //   })
+  // })
+})
 
 </script>
 

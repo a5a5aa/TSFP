@@ -2,7 +2,7 @@
 <q-layout view="1Hh lpr lFf">
   <q-header reveal elevated>
     <q-toolbar class="topbar text-accent bg-dark shadow-2 q-px-lg q-pa-xs">
-      <q-btn class="burger" flat @click="drawer = !drawer" dense icon="menu" />
+      <q-btn round class="burger" flat @click="drawer = !drawer" dense icon="menu" />
       <router-link style="width:170px" to="/" class="topbar_logo">
         <img  style="width:100%" src="../assets/images/logo/logo_top.png">
       </router-link>
