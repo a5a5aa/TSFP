@@ -66,7 +66,6 @@ const columns = [
     align: 'center',
     field: row => row.p_id.date,
     sortable: true,
-    sort: (a, b) => parseInt(a, 10) - parseInt(b, 10),
     format: val => `${new Date(val).toLocaleDateString()}`
   },
   {
@@ -75,8 +74,7 @@ const columns = [
     label: '開始時間',
     align: 'center',
     field: row => row.p_id.starttime,
-    sortable: true,
-    sort: (a, b) => parseInt(a, 10) - parseInt(b, 10)
+    sortable: true
   }
 ]
 
@@ -88,7 +86,6 @@ const columns2 = [
     align: 'center',
     field: 'date',
     sortable: true,
-    sort: (a, b) => parseInt(a, 10) - parseInt(b, 10),
     format: val => `${new Date(val).toLocaleDateString()}`
   },
   {

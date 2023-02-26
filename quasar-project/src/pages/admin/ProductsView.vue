@@ -89,8 +89,7 @@ const columns = [
     label: '活動名稱',
     align: 'center',
     field: 'name',
-    sortable: true,
-    sort: (a, b) => parseInt(a, 10) - parseInt(b, 10)
+    sortable: true
   },
   {
     name: 'date',
@@ -99,7 +98,6 @@ const columns = [
     align: 'center',
     field: 'date',
     sortable: true,
-    sort: (a, b) => parseInt(a, 10) - parseInt(b, 10),
     format: val => `${new Date(val).toLocaleDateString()}`
   },
   {
@@ -108,8 +106,7 @@ const columns = [
     label: '開始時間',
     align: 'center',
     field: 'starttime',
-    sortable: true,
-    sort: (a, b) => parseInt(a, 10) - parseInt(b, 10)
+    sortable: true
   },
   {
     name: 'price',

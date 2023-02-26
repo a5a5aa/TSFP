@@ -76,7 +76,6 @@ const columns = [
     align: 'center',
     field: row => row.date,
     sortable: true,
-    sort: (a, b) => parseInt(a, 10) - parseInt(b, 10),
     format: val => `${new Date(val).toLocaleDateString()}`
   },
   {
@@ -92,8 +91,7 @@ const columns = [
     label: '文章標題',
     align: 'center',
     field: 'title',
-    sortable: true,
-    sort: (a, b) => parseInt(a, 10) - parseInt(b, 10)
+    sortable: true
   },
   {
     name: 'shortDesc',

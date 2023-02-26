@@ -36,7 +36,6 @@ const columns = [
     label: '訂單日期',
     align: 'center',
     field: row => row.date,
-    sort: (a, b) => parseInt(a, 10) - parseInt(b, 10),
     sortable: true,
     format: val => `${new Date(val).toLocaleDateString()}`
   },

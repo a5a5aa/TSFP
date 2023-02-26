@@ -8,6 +8,11 @@
     :columns="columns"
     class="text-center col-12 q-mt-md"
     >
+      <template v-slot:body-cell-photo='props'>
+        <q-td>
+          <q-img :src="`https://source.boringavatars.com/bauhaus/256/${props.row.email}?colors=2B2B2B,BFB4AA,B99555,E1BF77,636363`" width="50px" height="50px"></q-img>
+        </q-td>
+      </template>
     </q-table>
   </div>
 </q-page>
@@ -22,9 +27,15 @@ const users = reactive([])
 
 const columns = [
   {
+    name: 'photo',
+    required: true,
+    label: 'PHOTO',
+    align: 'center'
+  },
+  {
     name: 'username',
     required: true,
-    label: '會員姓名',
+    label: '姓名',
     align: 'center',
     field: row => row.name
   },
@@ -63,7 +74,6 @@ const columns = [
     align: 'center',
     field: row => row.date,
     sortable: true,
-    sort: (a, b) => parseInt(a, 10) - parseInt(b, 10),
     format: val => `${new Date(val).toLocaleDateString()}`
   }
 ];

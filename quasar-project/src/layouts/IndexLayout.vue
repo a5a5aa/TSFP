@@ -1,6 +1,6 @@
 <template>
   <div>
-    <q-layout view="1Hh lpr lFf" >
+    <q-layout view="1Hh lpr lFf">
       <q-header reveal unelevated id="bgTrans" style="background:transparent">
         <q-toolbar class="topbar text-accent q-px-lg q-pa-xs">
           <q-btn round class="burger" id="burger2" flat @click="drawer = !drawer" dense icon="menu" />
@@ -250,14 +250,14 @@ onMounted(() => {
     // console.log(scrollArea)
     if (document.documentElement.scrollTop >= 600) {
       scrollArea = document.documentElement.scrollTop
-      bgTrans.style.backgroundColor = '#2b2b2b'
+      bgTrans.style.backgroundColor = '#1d1d1d'
     } else if (scrollArea < 600 && scrollArea !== 0) {
       bgTrans.style.backgroundColor = 'transparent'
     }
   })
   burger.addEventListener('click', (e) => {
     if (scrollArea > 600) {
-      bgTrans.style.backgroundColor = '#2b2b2b'
+      bgTrans.style.backgroundColor = '#1d1d1d'
     }
   })
 })
