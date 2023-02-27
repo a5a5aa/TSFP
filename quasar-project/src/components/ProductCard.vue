@@ -74,5 +74,4 @@ defineProps({
 })
 // const user = useUserStore()
 // const { signup } = user
-
 </script>

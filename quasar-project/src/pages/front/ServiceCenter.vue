@@ -13,7 +13,34 @@
     <section class="section_1">
       <h5 class="field-title q-mb-xl">－ 常見問題 Q &#38; A －</h5>
       <div class="q-pa-md q-gutter-md">
-        <q-card class="card_qa" style="max-width:992px; margin:auto;" flat bordered>
+        <q-card class="question" flat bordered>
+          <q-card-section>
+            <div class="row items-center text-h5 q-mt-sm q-mb-xs">
+            <q-icon class="q-mr-md" name="fa-solid fa-circle-question"></q-icon>
+            如何成為 MAUNA 會員？</div>
+          </q-card-section>
+          <q-card-actions>
+            <q-space></q-space>
+            <q-btn
+              color="grey"
+              round
+              flat
+              dense
+              :icon="expanded1 ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
+              @click="expanded1 = !expanded1"
+            />
+          </q-card-actions>
+
+          <q-slide-transition>
+            <div v-show="expanded1">
+              <q-separator />
+              <q-card-section class="text-subitle">
+                1. 請於官方網站頁面右上角點選 【 會員登入 】 <br>2. 進入後點選【 立即註冊 】
+              </q-card-section>
+            </div>
+          </q-slide-transition>
+        </q-card>
+        <q-card class="question" flat bordered>
           <q-card-section>
             <div class="row items-center text-h5 q-mt-sm q-mb-xs">
             <q-icon class="q-mr-md" name="fa-solid fa-circle-question"></q-icon>
@@ -26,16 +53,16 @@
               round
               flat
               dense
-              :icon="expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
-              @click="expanded = !expanded"
+              :icon="expanded2 ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
+              @click="expanded2 = !expanded2"
             />
           </q-card-actions>
 
           <q-slide-transition>
-            <div v-show="expanded">
+            <div v-show="expanded2">
               <q-separator />
               <q-card-section class="text-subitle">
-                本次課程將邀請整聊師-謝琪琳帶大家學習如何讓空間做最有效的利用。 居家整聊室致力於透過「整聊」概念，讓台灣家庭都能擁有美好生活，全台灣300+整聊師幫助超過5000+家庭找回家的秩序。 讓懂你的整理收納專家，傾聽你理解你，幫助你找回家的歸屬感。
+                註冊會員至活動頁點選【 立即報名 】即報名完成，且系統會自動帶入會員資料，若要查看報名資料於官方網站頁面右上角點擊【 會員專區 】查看。
               </q-card-section>
             </div>
           </q-slide-transition>
@@ -48,6 +75,6 @@
 <script setup>
 import { ref } from 'vue'
 
-const expanded = ref(false)
-// const expanded2 = ref(false)
+const expanded1 = ref(false)
+const expanded2 = ref(false)
 </script>

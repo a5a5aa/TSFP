@@ -127,7 +127,7 @@
     </q-card>
   </section>
   <!-- section - 服務簡介 -->
-  <section class="section_1 home_section_11  row q-px-xl">
+  <!-- <section class="section_1 home_section_11  row q-px-xl">
     <div class="col col-12 col-sm-3 row justify-center">
       <q-card class="my-card column items-center">
         <img src="../assets/images/coffee-rounded.png">
@@ -165,7 +165,7 @@
         </q-card-section>
       </q-card>
     </div>
-  </section>
+  </section> -->
   <!-- section - 活動報名 carousel -->
   <section class="section_3 home_section_3">
     <h5 class="text-center q-mb-xl">－ 精選活動 FETURED EVENTS －</h5>
@@ -207,26 +207,26 @@
     <h5 class="text-center q-mb-lg col-md-12">－ MORE DETAILS －</h5>
     <div class="col-12 col-md-4">
       <div class="photo_box1 q-pb-md q-px-sm">
-        <q-img src="../assets/images/photo_4-3.jpg">
-        <div class="mask absolute-full flex flex-center">介紹1</div>
+        <q-img :src="p2[0]">
+        <div  class="mask absolute-full flex flex-center">介紹1</div>
         </q-img>
       </div>
       <div class="q-pb-md q-px-sm photo_box2">
-        <q-img src="../assets/images/photo_5-2.jpg"><div class="mask absolute-full flex flex-center">介紹1</div>
+        <q-img :src="p1[0]"><div class="mask absolute-full flex flex-center">介紹1</div>
         </q-img>
       </div>
     </div>
     <div class="col-12 col-md-4 photo_box3 q-pb-md q-px-sm">
-      <q-img class="col-md-6" src="../assets/images/lecture-room.jpg"><div class="mask absolute-full flex flex-center">介紹1</div>
+      <q-img class="col-md-6" :src="p2[1]"><div class="mask absolute-full flex flex-center">介紹1</div>
       </q-img>
     </div>
     <div class="col-12 col-md-4">
       <div class="photo_box2 q-pb-md q-px-sm">
-        <q-img src="../assets/images/photo_4-4.jpg"><div class="mask absolute-full flex flex-center">介紹1</div>
+        <q-img :src="p1[1]"><div class="mask absolute-full flex flex-center">介紹1</div>
         </q-img>
       </div>
       <div class="photo_box1 q-pb-md q-px-sm">
-        <q-img src="../assets/images/photo_5-3.jpg"><div class="mask absolute-full flex flex-center">介紹1</div>
+        <q-img :src="p2[2]"><div class="mask absolute-full flex flex-center">介紹1</div>
         </q-img>
       </div>
     </div>
@@ -288,7 +288,7 @@
 </template>
 
 <script setup>
-import { reactive } from 'vue'
+import { reactive, onMounted } from 'vue'
 import { api } from '../boot/axios'
 import Swal from 'sweetalert2'
 import { Swiper, SwiperSlide } from 'swiper/vue'
@@ -308,7 +308,42 @@ const anchor = () => {
     top: height,
     behavior: 'smooth'
   })
-};
+}
+
+const photos1 = reactive([
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485819/PHOTO/photo_3-2_usnirn.jpg',
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485816/PHOTO/photo_5_cw4rk6.jpg',
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485815/PHOTO/photo_4-3_wtnhhe.jpg',
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485822/PHOTO/photo_5-2_tseryz.jpg',
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485824/PHOTO/photo_4-4_gmhled.jpg',
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485823/PHOTO/photo_5-3_tguroh.jpg',
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492633/PHOTO/36ebb17a51038145934b654602c6066d_y7n8hl.jpg'
+])
+const photos2 = reactive([
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485814/PHOTO/photo_3_rbrlqp.jpg',
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485815/PHOTO/lecture-room_bor4h4.jpg',
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485821/PHOTO/rizky-subagja-1k7TnX5GAww-unsplash_hqgzgf.jpg',
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492446/PHOTO/zarak-khan-69ilqMz0p1s-unsplash_e0m3up.jpg',
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492546/PHOTO/b46eb6696802024e14c801314dd2a241_f0vcsm.jpg',
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492633/PHOTO/shopping-cart_u1prd2.jpg',
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492633/PHOTO/c816ff60b3e18a1ccd2ba0e10eaa5f9a_siazim.jpg',
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492633/PHOTO/cafe-7454951_1280_ng4fv4.jpg'
+])
+const p1 = reactive([])
+const p2 = reactive([])
+
+onMounted(() => {
+  for (let i = 0; i <= 6; i++) {
+    const pp = Math.floor(Math.random() * photos1.length)
+    p1.push(photos1[pp])
+    photos1.splice(pp, 1)
+  }
+  for (let i = 0; i <= 7; i++) {
+    const pp = Math.floor(Math.random() * photos2.length)
+    p2.push(photos2[pp])
+    photos2.splice(pp, 1)
+  }
+});
 
 (async () => {
   try {
