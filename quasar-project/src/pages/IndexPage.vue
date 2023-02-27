@@ -1,7 +1,7 @@
 <template>
 <q-page>
   <sectoin class="banner row flex-center" style="position:relative; top:-50px">
-    <video style="height:100vh; width:100vw; object-fit:cover;" src="../assets/video/專題_影片2.mp4"  autoplay="true" muted loop >
+    <video style="height:100vh; width:100vw; object-fit:cover;" src="../assets/video/專題_影片2.mp4" autoplay="true" muted loop >
     </video>
     <div class="bg-mask col-12 row items-center">
       <div class="index_title">
@@ -168,7 +168,7 @@
   </section>
   <!-- section - 活動報名 carousel -->
   <section class="section_3 home_section_3">
-    <h5 class="text-center q-mb-xl">－ 精選活動 Featured Events －</h5>
+    <h5 class="text-center q-mb-xl">－ 精選活動 FETURED EVENTS －</h5>
     <swiper
       loop=true
       :scrollbar="{ draggable: true }"
@@ -192,7 +192,7 @@
   </section>
   <!-- section - 手機版 活動報名 carousel -->
   <section class="phone_carousel" >
-    <h5 class="q-mb-xl field-title">精選活動</h5>
+    <h5 class="text-center q-mb-xl">－ 精選活動 FETURED EVENTS －</h5>
     <swiper
       navigation
       :modules="modules"
@@ -204,28 +204,30 @@
   </section>
   <!-- section - 形象照展示 -->
   <section class="section_4 home_section_4 q-my-xl row justify-center">
+    <h5 class="text-center q-mb-lg col-md-12">－ MORE DETAILS －</h5>
     <div class="col-12 col-md-4">
-      <div class="photo_box photo_box1">
-        <img src="../assets/images/photo_3-2.jpg">
-        <div class="mask text-center row flex-center">介紹1</div>
+      <div class="photo_box1 q-pb-md q-px-sm">
+        <q-img src="../assets/images/photo_4-3.jpg">
+        <div class="mask absolute-full flex flex-center">介紹1</div>
+        </q-img>
       </div>
-      <div class="photo_box photo_box2">
-        <img src="../assets/images/photo_5.jpg">
-        <div class="mask text-center row flex-center">介紹2</div>
+      <div class="q-pb-md q-px-sm photo_box2">
+        <q-img src="../assets/images/photo_5-2.jpg"><div class="mask absolute-full flex flex-center">介紹1</div>
+        </q-img>
       </div>
     </div>
-    <div class="col-12 photo_box col-md-4 photo_box3">
-      <img class="col-md-6 " src="../assets/images/lecture-room.jpg">
-      <div class="mask text-center row flex-center">介紹3</div>
+    <div class="col-12 col-md-4 photo_box3 q-pb-md q-px-sm">
+      <q-img class="col-md-6" src="../assets/images/lecture-room.jpg"><div class="mask absolute-full flex flex-center">介紹1</div>
+      </q-img>
     </div>
     <div class="col-12 col-md-4">
-      <div class="photo_box photo_box4">
-        <img src="../assets/images/photo_4.jpg">
-        <div class="mask text-center row flex-center">介紹4</div>
+      <div class="photo_box2 q-pb-md q-px-sm">
+        <q-img src="../assets/images/photo_4-4.jpg"><div class="mask absolute-full flex flex-center">介紹1</div>
+        </q-img>
       </div>
-      <div class="photo_box photo_box5">
-        <img src="../assets/images/photo_5.jpg">
-        <div class="mask text-center row flex-center">介紹5</div>
+      <div class="photo_box1 q-pb-md q-px-sm">
+        <q-img src="../assets/images/photo_5-3.jpg"><div class="mask absolute-full flex flex-center">介紹1</div>
+        </q-img>
       </div>
     </div>
   </section>
