@@ -1,6 +1,6 @@
 <template>
 <q-page>
-  <sectoin class="banner q-mb-xl row flex-center" style="position:relative; top:-50px">
+  <sectoin class="banner row flex-center" style="position:relative; top:-50px">
     <video style="height:100vh; width:100vw; object-fit:cover;" src="../assets/video/專題_影片2.mp4"  autoplay="true" muted loop >
     </video>
     <div class="bg-mask col-12 row items-center">
@@ -13,8 +13,9 @@
   </sectoin>
   <!-- section - 最新消息 -->
   <section class="section_1 home_section_1 row q-px-xl">
+    <h5 class="text-right q-mb-lg col-md-12">－ 最新消息 NEWS －</h5>
     <div class="news q-py-md col-10 col-md-6 shadow-2">
-      <h5 class="text-center q-mb-sm">最新消息 NEWS</h5>
+      <!-- <h5 class="text-center q-mb-sm">最新消息 NEWS</h5> -->
       <q-list class="q-pa-md" style="max-height:200px; overflow:scroll; ">
         <q-item clickable>
           <q-items-section class="q-mr-sm">
@@ -167,7 +168,7 @@
   </section>
   <!-- section - 活動報名 carousel -->
   <section class="section_3 home_section_3">
-    <h5 class="text-center q-mb-xl">精選活動 Featured Events</h5>
+    <h5 class="text-center q-mb-xl">－ 精選活動 Featured Events －</h5>
     <swiper
       loop=true
       :scrollbar="{ draggable: true }"
@@ -202,30 +203,29 @@
     </swiper>
   </section>
   <!-- section - 形象照展示 -->
-  <section class="section_4 home_section_4 q-my-xl column flex-center">
-    <div class="col-1">
-      <div class="photo_box">
-        <q-img class="rounded-borders" src="../assets/images/photo_1.avif">
+  <section class="section_4 home_section_4 q-my-xl row justify-center">
+    <div class="col-12 col-md-4">
+      <div class="photo_box photo_box1">
+        <img src="../assets/images/photo_3-2.jpg">
         <div class="mask text-center row flex-center">介紹1</div>
-        </q-img>
       </div>
-      <div class="photo_box">
-        <q-img class="rounded-borders" src="../assets/images/photo_2.avif">
-        <div class="mask text-center row flex-center">介紹2</div></q-img>
+      <div class="photo_box photo_box2">
+        <img src="../assets/images/photo_5.jpg">
+        <div class="mask text-center row flex-center">介紹2</div>
       </div>
     </div>
-    <div class="photo_box col-1">
-      <q-img class="col-md-6 rounded-borders" src="../assets/images/photo_3.avif">
-      <div class="mask text-center row flex-center">介紹3</div></q-img>
+    <div class="col-12 photo_box col-md-4 photo_box3">
+      <img class="col-md-6 " src="../assets/images/lecture-room.jpg">
+      <div class="mask text-center row flex-center">介紹3</div>
     </div>
-    <div class="col-1">
-      <div class="photo_box">
-        <q-img class="rounded-borders" src="../assets/images/photo_4.jpg">
-        <div class="mask text-center row flex-center">介紹4</div></q-img>
+    <div class="col-12 col-md-4">
+      <div class="photo_box photo_box4">
+        <img src="../assets/images/photo_4.jpg">
+        <div class="mask text-center row flex-center">介紹4</div>
       </div>
-      <div class="photo_box">
-        <q-img class="rounded-borders" src="../assets/images/photo_5.jpg">
-        <div class="mask text-center row flex-center">介紹5</div></q-img>
+      <div class="photo_box photo_box5">
+        <img src="../assets/images/photo_5.jpg">
+        <div class="mask text-center row flex-center">介紹5</div>
       </div>
     </div>
   </section>
@@ -280,7 +280,7 @@
     </div>
   </section>
   <section class="copyright row flex-center">
-    Copyright © 2023 Yu-zhen,Su. 泰山職訓局專題(僅供教學使用)
+    Copyright © 2023 YU-ZHEN,SU. 泰山職訓111-2期末專題(僅供學術使用)
   </section>
 </q-page>
 </template>

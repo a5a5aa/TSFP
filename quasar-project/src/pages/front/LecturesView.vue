@@ -11,7 +11,7 @@
       </div>
     </q-sectoin>
     <section class="section_1 row flex-center q-gutter-sm" style="max-width:1920px;">
-      <h5 class="field-title q-mb-xl col-12">所有活動 ALL EVENTS</h5>
+      <h5 class="field-title q-mb-xl col-12">－ 所有活動 ALL EVENTS －</h5>
       <div v-for="product in products" :key="product._id">
         <ProductCard class="card-scale card_events" v-bind="product"></ProductCard>
       </div>

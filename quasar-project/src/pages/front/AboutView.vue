@@ -12,7 +12,7 @@
     </q-sectoin>
 
     <q-scetion class="section_1 about_secion_1 row flex-center">
-    <h5 class="field-title q-mb-xl col-12">品牌故事 OUR STORY</h5>
+    <h5 class="field-title q-mb-xl col-12">－ 品牌故事 OUR STORY －</h5>
       <div class="card1">
         <h4>我是標題1我是標題1</h4>
         <h5>我是標題1我是標題1我是標題1</h5>

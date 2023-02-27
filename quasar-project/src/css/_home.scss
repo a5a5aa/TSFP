@@ -127,12 +127,14 @@
 
 // 4 - 照片展示區
 .home_section_4{
+  // height: 600px;
   padding: 80px 10px 50px 10px;
-  .col-1{
     width: 100%;
-    .q-img{
+    img{
+      object-fit: cover;
+      height: 100%;
       width: 100%;
-      margin: 1% 0;
+      // margin: 1% 0;
       .mask{
         background: rgba(0,0,0,.5);
         width: 100%;
@@ -147,10 +149,25 @@
         }
       }
     }
+  .photo_box3 {
+    height: 600px;
+    // padding: 5px 10px;
   }
-  .photo_box {
-    padding: 5px 10px;
+  .photo_box1{
+    height: 370px;
   }
+  .photo_box2{
+    height: 230px;
+  }
+  // .photo_box1,
+  // .photo_box2,
+  // .photo_box4,
+  // .photo_box5{
+  //   height: 350px;
+  // }
+  // .photo_box3{
+  //   height: 100%;
+  // }
   @media (min-width:1024px) {
     margin: auto;
     flex-direction: row;

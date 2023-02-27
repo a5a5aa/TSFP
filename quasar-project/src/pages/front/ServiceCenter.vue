@@ -11,7 +11,7 @@
       </div>
     </q-sectoin>
     <section class="section_1">
-      <h5 class="field-title q-mb-xl">常見問題 Q &#38; A</h5>
+      <h5 class="field-title q-mb-xl">－ 常見問題 Q &#38; A －</h5>
       <div class="q-pa-md q-gutter-md">
         <q-card class="card_qa" style="max-width:992px; margin:auto;" flat bordered>
           <q-card-section>

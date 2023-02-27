@@ -11,7 +11,7 @@
     </div>
   </q-sectoin>
   <section class="section_1 location_section_1">
-    <h5 class="field-title q-mb-xl">門市資訊 LOCATION</h5>
+    <h5 class="field-title q-mb-xl">－ 門市資訊 LOCATION －</h5>
     <div class="row justify-between q-px-xl">
       <div class="column justify-center col-5" style="width:400px">
         <h5 class="q-my-md">象山概念店</h5>
