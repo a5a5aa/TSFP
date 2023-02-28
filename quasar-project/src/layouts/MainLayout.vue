@@ -213,9 +213,3 @@ const { logout } = user
 const drawer = ref(false)
 
 </script>
-
-<style>
-* {
-  transition: none;
-}
-</style>

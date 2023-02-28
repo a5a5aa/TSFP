@@ -208,7 +208,7 @@
     <div class="col-12 col-md-4">
       <div class="photo_box1 q-pb-md q-px-sm">
         <q-img :src="p2[0]?.img">
-        <div  class="mask absolute-full flex flex-center">{{ p2[0]?.name }}</div>
+        <div class="mask absolute-full flex flex-center">{{ p2[0]?.name }}</div>
         </q-img>
       </div>
       <div class="q-pb-md q-px-sm photo_box2">
@@ -241,17 +241,18 @@
             <router-link class="col-6" to="/">回首頁</router-link>
             <router-link class="col-6" to="/menu">餐飲介紹</router-link>
             <router-link class="col-6" to="/about">品牌故事</router-link>
-            <router-link class="col-6" to="/about/location">線上MENU</router-link>
-            <router-link class="col-6" to="/products">所有活動</router-link>
+            <router-link class="col-6" to="/" >線上MENU</router-link>
+            <router-link class="col-6" to="/products">講座活動</router-link>
             <router-link class="col-6" to="/about/location">門市位址</router-link>
             <router-link class="col-6" to="/articles">專欄好文</router-link>
+            <router-link to="/myaccount/orders">會員專區</router-link>
           </div>
           <div class="col-6 q-pl-md">
             <p>支援服務</p>
             <router-link to="/myaccount/orders">報名查詢</router-link>
-            <router-link to="/servicce">常見問題</router-link>
+            <router-link to="/service">常見問題</router-link>
             <router-link to="/service/contactus">聯絡我們</router-link>
-            <router-link to="/privacy-policy">隱私權政策</router-link>
+            <router-link to="/">隱私權政策</router-link>
           </div>
         </div>
       </div>
@@ -273,16 +274,11 @@
             <q-icon name="send" class="cursor-pointer q-px-sm" />
           </template>
         </q-input>
-        <!-- <div class="q-gutter-sm q-mt-md" style="width:100%"  >
-          <q-icon name="fa-brands fa-instagram" size="1rem"></q-icon>
-          <q-icon name="fa-brands fa-facebook" size="1rem"></q-icon>
-          <q-icon name="fa-brands fa-twitter" size="1rem"></q-icon>
-        </div> -->
       </div>
     </div>
   </section>
   <section class="copyright row flex-center">
-    Copyright © 2023 YU-ZHEN,SU. 泰山職訓111-2期末專題(僅供學術使用)
+    泰山職訓前端網頁專題(僅作學術使用) by SU-YU-ZHEN
   </section>
 </q-page>
 </template>

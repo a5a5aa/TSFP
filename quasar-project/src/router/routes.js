@@ -190,6 +190,16 @@ const routes = [
           login: false,
           admin: false
         }
+      },
+      {
+        path: ':id',
+        name: 'EachArticle',
+        component: () => import('src/pages/front/EachArticle.vue'),
+        meta: {
+          title: 'MAUNA COFFEE - 專欄內容',
+          login: false,
+          admin: false
+        }
       }
     ]
   },

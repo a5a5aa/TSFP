@@ -233,9 +233,3 @@ onMounted(() => {
   })
 })
 </script>
-
-<style>
-* {
-  transition: none;
-}
-</style>

@@ -234,7 +234,7 @@
       </div>
     </q-scroll-area>
   </q-drawer>
-  <q-page-container class="q-px-xl container2" style="float:right; width:calc(100% - 300px); margin:auto;">
+  <q-page-container class="q-px-xl" style="float:right; width:calc(100% - 300px); margin:auto;">
     <router-view />
   </q-page-container>
 </q-layout>
@@ -251,11 +251,3 @@ const { logout } = user
 const drawer = ref(false)
 
 </script>
-
-<style lang="scss">
-
-* {
-  transition: none;
-}
-
-</style>
