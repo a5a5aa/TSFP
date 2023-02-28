@@ -5,7 +5,7 @@
     </video>
     <div class="bg-mask col-12 row items-center">
       <div class="index_title">
-        <p>享受片刻寧靜的美好<br>MAUNA COFFEE</p>
+        <p>一杯咖啡 一個座位<br>享受片刻寧靜的美好</p>
         <q-btn rounded outline to="/about" class="q-mt-xl">瞭解更多</q-btn>
       </div>
       <q-btn round flat class="arrow_down" @click="anchor" ><q-icon name="keyboard_arrow_down" size="50px"></q-icon></q-btn>
@@ -207,26 +207,26 @@
     <h5 class="text-center q-mb-lg col-md-12">－ MORE DETAILS －</h5>
     <div class="col-12 col-md-4">
       <div class="photo_box1 q-pb-md q-px-sm">
-        <q-img :src="p2[0]">
-        <div  class="mask absolute-full flex flex-center">介紹1</div>
+        <q-img :src="p2[0]?.img">
+        <div  class="mask absolute-full flex flex-center">{{ p2[0]?.name }}</div>
         </q-img>
       </div>
       <div class="q-pb-md q-px-sm photo_box2">
-        <q-img :src="p1[0]"><div class="mask absolute-full flex flex-center">介紹1</div>
+        <q-img :src="p1[0]?.img"><div class="mask absolute-full flex flex-center">{{ p1[0]?.name }}</div>
         </q-img>
       </div>
     </div>
     <div class="col-12 col-md-4 photo_box3 q-pb-md q-px-sm">
-      <q-img class="col-md-6" :src="p2[1]"><div class="mask absolute-full flex flex-center">介紹1</div>
+      <q-img class="col-md-6" :src="p2[1]?.img"><div class="mask absolute-full flex flex-center">{{ p2[1]?.name }}</div>
       </q-img>
     </div>
     <div class="col-12 col-md-4">
       <div class="photo_box2 q-pb-md q-px-sm">
-        <q-img :src="p1[1]"><div class="mask absolute-full flex flex-center">介紹1</div>
+        <q-img :src="p1[1]?.img"><div class="mask absolute-full flex flex-center">{{ p1[1]?.name }}</div>
         </q-img>
       </div>
       <div class="photo_box1 q-pb-md q-px-sm">
-        <q-img :src="p2[2]"><div class="mask absolute-full flex flex-center">介紹1</div>
+        <q-img :src="p2[2]?.img"><div class="mask absolute-full flex flex-center">{{ p2[2]?.name }}</div>
         </q-img>
       </div>
     </div>
@@ -311,28 +311,39 @@ const anchor = () => {
 }
 
 const photos1 = reactive([
-  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485819/PHOTO/photo_3-2_usnirn.jpg',
-  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485816/PHOTO/photo_5_cw4rk6.jpg',
-  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485815/PHOTO/photo_4-3_wtnhhe.jpg',
-  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485822/PHOTO/photo_5-2_tseryz.jpg',
-  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485824/PHOTO/photo_4-4_gmhled.jpg',
-  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485823/PHOTO/photo_5-3_tguroh.jpg',
-  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492633/PHOTO/36ebb17a51038145934b654602c6066d_y7n8hl.jpg'
+  { name: '1', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485819/PHOTO/photo_3-2_usnirn.jpg' },
+  { name: '2', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485816/PHOTO/photo_5_cw4rk6.jpg' },
+  { name: '3', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485815/PHOTO/photo_4-3_wtnhhe.jpg' },
+  { name: '4', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485822/PHOTO/photo_5-2_tseryz.jpg' },
+  { name: '5', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485824/PHOTO/photo_4-4_gmhled.jpg' },
+  { name: '6', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485823/PHOTO/photo_5-3_tguroh.jpg' },
+  { name: '7', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492633/PHOTO/36ebb17a51038145934b654602c6066d_y7n8hl.jpg' }
 ])
 const photos2 = reactive([
-  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485814/PHOTO/photo_3_rbrlqp.jpg',
-  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485815/PHOTO/lecture-room_bor4h4.jpg',
-  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485821/PHOTO/rizky-subagja-1k7TnX5GAww-unsplash_hqgzgf.jpg',
-  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492446/PHOTO/zarak-khan-69ilqMz0p1s-unsplash_e0m3up.jpg',
-  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492546/PHOTO/b46eb6696802024e14c801314dd2a241_f0vcsm.jpg',
-  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492633/PHOTO/shopping-cart_u1prd2.jpg',
-  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492633/PHOTO/c816ff60b3e18a1ccd2ba0e10eaa5f9a_siazim.jpg',
-  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492633/PHOTO/cafe-7454951_1280_ng4fv4.jpg'
+  { name: '8', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485814/PHOTO/photo_3_rbrlqp.jpg' },
+  { name: '9', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485815/PHOTO/lecture-room_bor4h4.jpg' },
+  { name: '10', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485821/PHOTO/rizky-subagja-1k7TnX5GAww-unsplash_hqgzgf.jpg' },
+  { name: '11', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492446/PHOTO/zarak-khan-69ilqMz0p1s-unsplash_e0m3up.jpg' },
+  { name: '12', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492546/PHOTO/b46eb6696802024e14c801314dd2a241_f0vcsm.jpg' },
+  { name: '13', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492633/PHOTO/shopping-cart_u1prd2.jpg' },
+  { name: '14', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492633/PHOTO/c816ff60b3e18a1ccd2ba0e10eaa5f9a_siazim.jpg' },
+  { name: '15', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492633/PHOTO/cafe-7454951_1280_ng4fv4.jpg ' }
 ])
 const p1 = reactive([])
 const p2 = reactive([])
 
 onMounted(() => {
+  change()
+  setInterval(() => {
+    photos1.push(...p1)
+    photos2.push(...p2)
+    p1.splice(0, p1.length)
+    p2.splice(0, p2.length)
+    change()
+  }, 15000)
+})
+
+const change = () => {
   for (let i = 0; i <= 6; i++) {
     const pp = Math.floor(Math.random() * photos1.length)
     p1.push(photos1[pp])
@@ -343,7 +354,7 @@ onMounted(() => {
     p2.push(photos2[pp])
     photos2.splice(pp, 1)
   }
-});
+};
 
 (async () => {
   try {
