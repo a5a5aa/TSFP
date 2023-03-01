@@ -19,7 +19,7 @@
         </q-btn>
       </h6>
       <div>
-        <p>服務信箱：service@singleseat.com</p>
+        <p>服務信箱：service@maunacoffee.com</p>
         <p>服務時間：週一至週五週&nbsp;&nbsp;9:30-18:30<br>(例假日/國定假日休息)</p>
       </div>
     </section>
@@ -135,9 +135,7 @@ import { ref, reactive } from 'vue'
 import validator from 'validator'
 // import { api } from '../boot/axios'
 import Swal from 'sweetalert2'
-import { useRouter } from 'vue-router'
 
-const router = useRouter()
 const valid = ref(false)
 const form = reactive({
   name: '',
@@ -167,7 +165,7 @@ const rules = {
 const onSubmit = async () => {
   if (!valid.value) return
   try {
-    await Swal.fire({
+    Swal.fire({
       width: '18rem',
       icon: 'success',
       text: '信件已送出，我們將儘速為您處理！',
@@ -175,7 +173,6 @@ const onSubmit = async () => {
       confirmButtonColor: '#2b2b2b',
       allowOutsideClick: false
     })
-    router.push('/')
   } catch (error) {
     Swal.fire({
       width: '18rem',

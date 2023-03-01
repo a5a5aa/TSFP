@@ -1,6 +1,6 @@
 <template>
 <q-item :to="'/products/' + _id" dense dark class="justify-center">
-  <q-card class="my-card items-start" style="width:350px;" flat bordered>
+  <q-card class="items-start" style="width:350px;" flat bordered>
     <q-img
       contain
       :src="image"

@@ -7,8 +7,8 @@
         <span class="bg-warning text-white q-px-sm rounded-borders" v-if="product.price === 0">免費</span>
         <h4 class="q-mb-xl q-mt-md">{{ product.name }}</h4>
         <p>{{ product.keyWord }}</p>
-        <p><q-icon name="fa-regular fa-clock" class="q-mr-xs"></q-icon>{{ new Date().toLocaleDateString() }} &nbsp; {{ product.starttime }}</p>
-        <p><q-icon name="fa-solid fa-location-dot" class="q-mr-xs"></q-icon>110台北市信義區信義路五段95號【Single Seat - 象山概念店】</p>
+        <p><q-icon name="fa-regular fa-clock" class="q-mr-xs"></q-icon>{{ new Date(product.date).toLocaleDateString()}} &nbsp; {{ product.starttime }}</p>
+        <p><q-icon name="fa-solid fa-location-dot" class="q-mr-xs"></q-icon>110台北市信義區信義路五段95號2F【MAUNA COFFEE - 象山概念店】</p>
         <p class="text-h6" v-if="product.price !== 0">活動費用：NT$ {{ product.price }}</p>
         <p class="text-h6" v-if="product.price === 0" >活動費用：免費</p>
         <q-form class="q-my-xl">

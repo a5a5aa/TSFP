@@ -34,7 +34,7 @@
             <q-input stack-label class="col-4" v-model="form.date"  label="活動日期" type="date" color="primary" :rules="[rules.required]"></q-input>
             <q-input stack-label class="col-3" v-model="form.starttime" label="開始時間" type="time" color="primary" :rules="[rules.required]"></q-input>
             <q-input stack-label class="col-3" v-model="form.endedtime" label="結束時間" type="time" color="primary" :rules="[rules.required]"></q-input>
-            <q-input stack-label class="col-3" v-model="form.price" label="報名費" type="text" prefix="$" color="primary" :rules="[rules.required, rules.price]"></q-input>
+            <q-input stack-label class="col-3" v-model="form.price" label="報名費" type="text" prefix="$" color="primary" :rules="[rules.price]"></q-input>
             <q-input stack-label class="col-3" v-model="form.keyWord" label="關鍵字" type="text" color="primary" :rules="[rules.required]"></q-input>
             <q-file
               stack-label
@@ -65,7 +65,7 @@ import { api, apiAuth } from '../../boot/axios'
 import { reactive } from 'vue'
 import Swal from 'sweetalert2'
 
-const categories = ['心靈勵志', '生活風格', '藝文', '名人講堂', '職涯', '體驗', '其他']
+const categories = ['心靈', '勵志', '自我成長', '藝文', '生活風格', '名人講堂', '體驗']
 const rules = {
   required (value) {
     return !!value || '欄位必填'
@@ -223,7 +223,7 @@ const submit = async () => {
       } else {
         Swal.fire({
           width: '18rem',
-          icon: 'error',
+          icon: 'info ',
           text: '請確認上架',
           iconColor: '#C5A768',
           confirmButtonColor: '#2b2b2b',
@@ -275,6 +275,10 @@ const submit = async () => {
 })()
 </script>
 
-<style>
+<style lang="scss">
+
+.swal2-container {
+  z-index: 10000;
+}
 
 </style>

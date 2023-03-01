@@ -14,24 +14,26 @@
     <q-scetion class="section_1 about_secion_1 row flex-center">
     <h5 class="field-title q-mb-xl col-12">－ 品牌故事 OUR STORY －</h5>
       <div class="card1">
-        <h4>我是標題1我是標題1</h4>
-        <h5>我是標題1我是標題1我是標題1</h5>
-        <p class="q-my-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsum cupiditate nihil ea totam labore, aut fuga facilis rerum ducimus.</p>
-        <q-img
+        <h4 class="fadeInUp-2 " >一口餘韻飽滿的咖啡香氣</h4>
+        <h5 class="fadeInUp-2" >一段與自我對話人的靜思之旅</h5>
+        <p class="fadeInUp-3 q-my-lg">MAUNA COFFEE 採用原生種阿拉比卡咖啡豆，新鮮烘焙， 有天然果香、香醇、微酸、無苦澀，回甘，喝完杯底帶有焦糖香氣，滿足您對 MAUNA 的每一分期待。</p>
+        <q-img class="zoomIn"
           width="200px"
-          src="../../assets/images/about_1.jpg"></q-img>
+          src="../../assets/images/alin-luna-lGl3spVIU0g-unsplash.jpg"></q-img>
       </div>
       <div class="card2">
         <q-img
+          class="zoomIn"
           width="70%"
-          src="../../assets/images/about_3.jpg"></q-img>
+          src="../../assets/images/about_2.jpg"></q-img>
       </div>
       <div class="card3">
         <q-img
+          class="zoomIn"
           width="100%"
-          src="../../assets/images/about_2.jpg"></q-img>
-        <p class="q-my-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam doloremque quidem nesciunt optio laboriosam doloribus earum quam eaque quasi tenetur.</p>
-        <q-btn outline rounded to="/products">查看近期講座</q-btn>
+          src="../../assets/images/lecture-room2.jpg"></q-img>
+        <p class="fadeInUp-3 q-my-lg">除了門市提供用餐空間，MAUNA 更致力舉辦知識含量豐富的講座活動，活動類型如：心靈成長、生活風格、名人講堂、手作DIY...提供每位喜愛 MAUNA 的朋友更多精進成長的機會。</p>
+        <q-btn class="fadeInUp-3" outline rounded to="/products">查看近期講座</q-btn>
       </div>
     </q-scetion>
 
@@ -41,49 +43,49 @@
 
           <q-timeline-entry
             title="初創茶飲事業"
-            subtitle="February 22, 2013"
+            subtitle="April 10, 2013"
             side="left"
           >
             <div>
-              <img src="../../assets/images/coffee-rounded.png">
+              <img style="width:80px" src="../../assets/images/timeline_1.png">
               <br>
-              Lorem ipsum dolor sit ametLorem ipsum dolor sit amet
+              第一家門市在台北中山開幕
             </div>
           </q-timeline-entry>
 
           <q-timeline-entry
-            title="Event Title"
+            title="加入複合式經營"
             subtitle="February 21, 2018"
             side="right"
           >
             <div>
-              <img src="../../assets/images/coffee-rounded.png">
+              <img style="width:80px" src="../../assets/images/timeline_2.png">
               <br>
-              Lorem ipsum dolor sit ametLorem ipsum dolor sit amet
+              加入實體講座資源，成功舉辦第一場講座活動
             </div>
           </q-timeline-entry>
 
           <q-timeline-entry
-            title="Event Title"
-            subtitle="February 22, 2020"
+            title="發展重心轉移"
+            subtitle="May 22, 2020"
             side="left"
           >
             <div>
-              <img src="../../assets/images/coffee-rounded.png">
+              <img style="width:80px" src="../../assets/images/timeline_3.png">
               <br>
-              Lorem ipsum dolor sit ametLorem ipsum dolor sit amet
+              因應疫情衝擊門市暫停營業，實體講座活動轉為線上進行，發展重心轉移
             </div>
           </q-timeline-entry>
 
           <q-timeline-entry
-            title="Event Title"
-            subtitle="February 22, 2022"
+            title="門市遷址重新開幕"
+            subtitle="July 5, 2021"
             side="right"
           >
             <div>
-              <img src="../../assets/images/coffee-rounded.png">
+              <img style="width:80px" src="../../assets/images/timeline_1-2.png">
               <br>
-              Lorem ipsum dolor sit ametLorem ipsum dolor sit amet
+              疫情趨緩門市遷址至台北信義重新開幕，並主力於為喜愛獨處族群量身打造舒心自在的靜思空間
             </div>
           </q-timeline-entry>
         </q-timeline>
@@ -144,6 +146,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import 'animate.css'
 
 const side = ref('right')
 const layout = ref('loose')

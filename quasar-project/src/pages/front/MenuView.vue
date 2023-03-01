@@ -76,10 +76,11 @@
           transition-next="scale"
           class="bg-transparent text-primary text-center"
         >
-          <q-tab-panel class="row row justify-center" name="drinks">
+
+          <q-tab-panel class="row justify-center" name="drinks">
             <q-card dense class="col-5 col-sm-3 q-px-sm bg-transparent shadow-0">
               <div>
-                <q-img :ratio="4/3" src="../../assets/images/menu/black.jpg">
+                <q-img :ratio="4/3" src="https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677699001/MENU/%E9%BB%91%E5%92%96%E5%95%A1_ofxoxd.jpg">
                 </q-img>
               </div>
               <q-card-section>
@@ -89,7 +90,7 @@
             </q-card>
             <q-card dense class="col-5 col-sm-3 q-px-sm bg-transparent shadow-0">
               <div>
-                <q-img :ratio="4/3" src="../../assets/images/menu/drink_1.jpg">
+                <q-img :ratio="4/3" src="https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677670502/MENU/americano_ztqjkp.jpg">
                 </q-img>
               </div>
               <q-card-section>
@@ -99,51 +100,188 @@
             </q-card>
             <q-card dense class="col-5 col-sm-3 q-px-sm bg-transparent shadow-0">
               <div>
-                <q-img :ratio="4/3" src="../../assets/images/menu/drink_1.jpg">
+                <q-img :ratio="4/3" src="https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677700105/MENU/Capuccino.jpg_shugah.jpg">
                 </q-img>
               </div>
               <q-card-section>
-                <div class="text-h6">拿鐵咖啡</div>
-                <div class="text-caption text-grey">LATTE</div>
+                <div class="text-h6">卡布奇諾</div>
+                <div class="text-caption text-grey">CAPPUCCINO</div>
               </q-card-section>
             </q-card>
             <q-card dense class="col-5 col-sm-3 q-px-sm bg-transparent shadow-0">
               <div>
-                <q-img :ratio="4/3" src="../../assets/images/menu/drink_1.jpg">
+                <q-img :ratio="4/3" src="https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677699275/MENU/Mocha-1fc71f7_vaynnz.png">
                 </q-img>
               </div>
               <q-card-section>
-                <div class="text-h6">拿鐵咖啡</div>
-                <div class="text-caption text-grey">LATTE</div>
+                <div class="text-h6">摩卡</div>
+                <div class="text-caption text-grey">MOCHA</div>
               </q-card-section>
             </q-card>
             <q-card dense class="col-5 col-sm-3 q-px-sm bg-transparent shadow-0">
               <div>
-                <q-img :ratio="4/3" src="../../assets/images/menu/drink_1.jpg">
+                <q-img :ratio="4/3" src="https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677699336/MENU/Espresso_xuvvvr.jpg">
                 </q-img>
               </div>
               <q-card-section>
-                <div class="text-h6">拿鐵咖啡</div>
-                <div class="text-caption text-grey">LATTE</div>
+                <div class="text-h6">義式濃縮</div>
+                <div class="text-caption text-grey">ESPRESSO</div>
               </q-card-section>
             </q-card>
-
+            <q-card dense class="col-5 col-sm-3 q-px-sm bg-transparent shadow-0">
+              <div>
+                <q-img :ratio="4/3" src="https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677699608/MENU/Milk_Tea_hnytwc.jpg">
+                </q-img>
+              </div>
+              <q-card-section>
+                <div class="text-h6">蜂蜜檸檬牛奶</div>
+                <div class="text-caption text-grey">HONEY LEMON MILK</div>
+              </q-card-section>
+            </q-card>
+            <q-card dense class="col-5 col-sm-3 q-px-sm bg-transparent shadow-0">
+              <div>
+                <q-img :ratio="4/3" src="https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677699913/MENU/Matcha-Tea-640-1-640x360_qesad3.jpg">
+                </q-img>
+              </div>
+              <q-card-section>
+                <div class="text-h6">靜岡抹茶鮮奶</div>
+                <div class="text-caption text-grey">SHIZUOKA MATCHA MILK</div>
+              </q-card-section>
+            </q-card>
+            <q-card dense class="col-5 col-sm-3 q-px-sm bg-transparent shadow-0">
+              <div>
+                <q-img :ratio="4/3" src="https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677670701/MENU/rosetea_xzz4he.jpg">
+                </q-img>
+              </div>
+              <q-card-section>
+                <div class="text-h6">玫瑰花茶</div>
+                <div class="text-caption text-grey">ROSE TEA</div>
+              </q-card-section>
+            </q-card>
           </q-tab-panel>
 
-          <q-tab-panel name="dessert">
-            <div class="text-h6">Alarms</div>
-            Ad molestiae non facere animi nobis, similique nemo velit reiciendis corporis impedit nam in.
-          </q-tab-panel>
-
-          <q-tab-panel class="row" name="main">
-            <q-card dense class="col-6 col-sm-3 bg-transparent shadow-0">
+          <q-tab-panel class="row justify-center" name="dessert">
+            <q-card dense class="col-5 col-sm-3 q-px-sm bg-transparent shadow-0">
               <div>
-                <q-img :ratio="4/3" src="../../assets/images/menu/pasta.jpg">
+                <q-img :ratio="4/3" src="https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677701193/MENU/chad-montano-gf9777gaYjs-unsplash_1_abcqa8.jpg">
                 </q-img>
               </div>
               <q-card-section>
-                <div class="text-h6">辣番茄蛤利義大利麵</div>
-                <div class="text-caption text-grey">LATTE</div>
+                <div class="text-h6">季節限定-草莓櫻桃鬆餅</div>
+                <div class="text-caption text-grey">STRAWBERRY CHERRY PANCAKE</div>
+              </q-card-section>
+            </q-card>
+            <q-card dense class="col-5 col-sm-3 q-px-sm bg-transparent shadow-0">
+              <div>
+                <q-img :ratio="4/3" src="https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677701432/MENU/monika-grabkowska-oeTBNwtIgDY-unsplash_iez3uv.jpg">
+                </q-img>
+              </div>
+              <q-card-section>
+                <div class="text-h6">季節限定-草莓塔</div>
+                <div class="text-caption text-grey">STRAWBERRY TART</div>
+              </q-card-section>
+            </q-card>
+            <q-card dense class="col-5 col-sm-3 q-px-sm bg-transparent shadow-0">
+              <div>
+                <q-img :ratio="4/3" src="https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677701577/MENU/e4be661f33bf92f7a0060004e9a0bf85_fkstj5.jpg">
+                </q-img>
+              </div>
+              <q-card-section>
+                <div class="text-h6">經典莓果</div>
+                <div class="text-caption text-grey">BERRY CAKE</div>
+              </q-card-section>
+            </q-card>
+            <q-card dense class="col-5 col-sm-3 q-px-sm bg-transparent shadow-0">
+              <div>
+                <q-img :ratio="4/3" src="https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677700727/MENU/%E6%B3%A2%E5%A3%AB%E9%A0%93%E6%B4%BE_v5qmyq.jpg">
+                </q-img>
+              </div>
+              <q-card-section>
+                <div class="text-h6">波士頓派</div>
+                <div class="text-caption text-grey">BOSTON CREAM PIE</div>
+              </q-card-section>
+            </q-card>
+            <q-card dense class="col-5 col-sm-3 q-px-sm bg-transparent shadow-0">
+              <div>
+                <q-img :ratio="4/3" src="https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677700828/MENU/%E8%98%8B%E6%9E%9C%E8%9B%8B%E7%B3%95_ujjx7p.jpg">
+                </q-img>
+              </div>
+              <q-card-section>
+                <div class="text-h6">蘋果派</div>
+                <div class="text-caption text-grey">APPLE PIE</div>
+              </q-card-section>
+            </q-card>
+            <q-card dense class="col-5 col-sm-3 q-px-sm bg-transparent shadow-0">
+              <div>
+                <q-img :ratio="4/3" src="https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677700963/MENU/%E6%8F%90%E6%8B%89%E7%B1%B3%E8%98%87_lrl9d7.jpg">
+                </q-img>
+              </div>
+              <q-card-section>
+                <div class="text-h6">提拉米蘇</div>
+                <div class="text-caption text-grey">TIRAMISU</div>
+              </q-card-section>
+            </q-card>
+            <q-card dense class="col-5 col-sm-3 q-px-sm bg-transparent shadow-0">
+              <div>
+                <q-img :ratio="4/3" src="https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677700407/MENU/%E5%92%96%E5%95%A1%E5%B7%A7%E5%85%8B%E5%8A%9B%E8%9B%8B%E7%B3%95_uh4pup.jpg">
+                </q-img>
+              </div>
+              <q-card-section>
+                <div class="text-h6">咖啡巧克力蛋糕</div>
+                <div class="text-caption text-grey">COFFEE CHOAOLATE CAKE</div>
+              </q-card-section>
+            </q-card>
+            <q-card dense class="col-5 col-sm-3 q-px-sm bg-transparent shadow-0">
+              <div>
+                <q-img :ratio="4/3" src="https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677701788/MENU/c2ca2234cd7db34deb74b1c355cc3eb5_j5aacm.jpg">
+                </q-img>
+              </div>
+              <q-card-section>
+                <div class="text-h6">經典可頌</div>
+                <div class="text-caption text-grey">CROISSANT</div>
+              </q-card-section>
+            </q-card>
+          </q-tab-panel>
+
+          <q-tab-panel class="row justify-center" name="main">
+            <q-card dense class="col-5 col-sm-3 q-px-sm bg-transparent shadow-0">
+              <div>
+                <q-img :ratio="4/3" src="https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677702558/MENU/pasta_ogitcf.jpg">
+                </q-img>
+              </div>
+              <q-card-section>
+                <div class="text-h6">香辣番茄義大利麵</div>
+                <div class="text-caption text-grey">SPICY TOMATO SPAGHETTI</div>
+              </q-card-section>
+            </q-card>
+            <q-card dense class="col-5 col-sm-3 q-px-sm bg-transparent shadow-0">
+              <div>
+                <q-img :ratio="4/3" src="https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677702279/MENU/artem-beliaikin-IpxzngYooAw-unsplash_hgy0td.jpg">
+                </q-img>
+              </div>
+              <q-card-section>
+                <div class="text-h6">野菇番茄螺旋麵</div>
+                <div class="text-caption text-grey">MUSHROOM TOMATO ROTINI</div>
+              </q-card-section>
+            </q-card>
+            <q-card dense class="col-5 col-sm-3 q-px-sm bg-transparent shadow-0">
+              <div>
+                <q-img :ratio="4/3" src="https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677703305/MENU/bruna-branco-t8hTmte4O_g-unsplash_1_eda4my.jpg">
+                </q-img>
+              </div>
+              <q-card-section>
+                <div class="text-h6">奶油蘑菇義大利麵</div>
+                <div class="text-caption text-grey">CREAMY MUSHROOM SPAGHETTI</div>
+              </q-card-section>
+            </q-card>
+            <q-card dense class="col-5 col-sm-3 q-px-sm bg-transparent shadow-0">
+              <div>
+                <q-img :ratio="4/3" src="https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677703475/MENU/d2555521_1_pr8tyy.jpg">
+                </q-img>
+              </div>
+              <q-card-section>
+                <div class="text-h6">炭烤牛排義大利麵</div>
+                <div class="text-caption text-grey">GRILLED STEAK SPAGHETTI</div>
               </q-card-section>
             </q-card>
           </q-tab-panel>

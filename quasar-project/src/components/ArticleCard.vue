@@ -3,7 +3,7 @@
   <q-card class="col-md-5" style="width:500px;" flat bordered>
     <q-card-section horizontal>
       <q-card-section class="q-py-md">
-        <span class="bg-accent text-white rounded-borders q-px-sm q-py-xs">品味</span>
+        <span class="bg-accent text-white rounded-borders q-pa-xs">{{ category }}</span>
         <div class="text-h5 q-mt-sm q-mb-xs text-overflow2">{{ title }}</div>
         <p class="text-h7 text-grey q-my-md text-overflow2">{{ shortDesc }}</p>
       </q-card-section>

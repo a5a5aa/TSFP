@@ -7,7 +7,7 @@
     :rows="articles"
     row-key="_id"
     :columns="columns"
-    class="text-center col-12">
+    class="article_table text-center col-12">
       <template v-slot:body-cell-image='props'>
         <q-td>
           <q-img :src="props.row.image" width="160px" height="90px"></q-img>
@@ -61,7 +61,7 @@ import { api, apiAuth } from '../../boot/axios'
 import { reactive } from 'vue'
 import Swal from 'sweetalert2'
 
-const categories = ['心靈勵志', '品味生活', '藝文', '其他']
+const categories = ['心靈', '自我成長', '品味生活', '藝文', '職場', '人際', '趨勢']
 const rules = {
   required (value) {
     return !!value || '欄位必填'
@@ -203,7 +203,7 @@ const submit = async () => {
       } else {
         Swal.fire({
           width: '18rem',
-          icon: 'error',
+          icon: 'info',
           text: '請確認發佈',
           iconColor: '#C5A768',
           confirmButtonColor: '#2b2b2b',
@@ -259,7 +259,11 @@ const submit = async () => {
 
 <style lang="scss">
 
-.q-table{
+.swal2-container {
+  z-index: 10000;
+}
+
+.article_table{
   td:nth-child(3),
   td:nth-child(4) {
     max-width: 300px;

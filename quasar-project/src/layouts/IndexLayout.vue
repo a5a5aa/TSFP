@@ -128,6 +128,14 @@
                   </q-item-section>
                 </q-item>
               </div>
+              <div class="title q-px-xl text-center bg-black q-py-xs">餐飲介紹</div>
+              <div class="row">
+                <q-item clickable v-ripple to="/menu" class="col-12 text-center">
+                  <q-item-section class="text-accent" flat>
+                    餐飲介紹
+                  </q-item-section>
+                </q-item>
+              </div>
               <div class="title q-px-xl text-center bg-black q-py-xs">專欄好文</div>
               <div class="row">
                 <q-item clickable v-ripple to="/articles" class="col-12 text-center">

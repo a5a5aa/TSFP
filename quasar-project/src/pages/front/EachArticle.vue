@@ -7,7 +7,7 @@
     <div class="column justify-between col-12 col-md-6 q-pa-md">
       <div class="row justify-between">
         <span class="bg-accent text-white q-px-sm rounded-borders q-mr-sm">{{ article.category }}</span>
-        <span>{{ new Date(article.date).toLocaleString() }}</span>
+        <span>{{ new Date(article.date).toLocaleString()}}</span>
         <h4 class="q-mb-xl q-mt-md">{{ article.title }}</h4>
         <p class="text-grey">{{ article.shortDesc }}</p>
       </div>

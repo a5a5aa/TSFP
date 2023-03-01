@@ -44,7 +44,7 @@
           <q-card-section>
             <div class="row items-center text-h5 q-mt-sm q-mb-xs">
             <q-icon class="q-mr-md" name="fa-solid fa-circle-question"></q-icon>
-            如何報名講座／工作坊？</div>
+            如何報名講座活動？</div>
           </q-card-section>
           <q-card-actions>
             <q-space></q-space>
@@ -62,7 +62,34 @@
             <div v-show="expanded2">
               <q-separator />
               <q-card-section class="text-subitle">
-                註冊會員至活動頁點選【 立即報名 】即報名完成，且系統會自動帶入會員資料，若要查看報名資料於官方網站頁面右上角點擊【 會員專區 】查看。
+                註冊會員至活動頁點選【 立即報名 】即報名完成，且系統會自動帶入會員資料，若要查看報名資訊請於官方網站頁面右上角點擊【 會員專區 】查看。
+              </q-card-section>
+            </div>
+          </q-slide-transition>
+        </q-card>
+        <q-card class="question" flat bordered>
+          <q-card-section>
+            <div class="row items-center text-h5 q-mt-sm q-mb-xs">
+            <q-icon class="q-mr-md" name="fa-solid fa-circle-question"></q-icon>
+            付費講座活動提供哪些付款方式？ 報名成功後要在多久之內付款？</div>
+          </q-card-section>
+          <q-card-actions>
+            <q-space></q-space>
+            <q-btn
+              color="grey"
+              round
+              flat
+              dense
+              :icon="expanded3 ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
+              @click="expanded3 = !expanded3"
+            />
+          </q-card-actions>
+
+          <q-slide-transition>
+            <div v-show="expanded3">
+              <q-separator />
+              <q-card-section class="text-subitle">
+                MAUNA 提供線上刷卡服務，VISA及MASTER信用卡皆可使用，並請於報名成功後的<u><b>72小時內</b></u>完成付款手續。
               </q-card-section>
             </div>
           </q-slide-transition>
@@ -126,4 +153,5 @@ import { ref } from 'vue'
 
 const expanded1 = ref(false)
 const expanded2 = ref(false)
+const expanded3 = ref(false)
 </script>

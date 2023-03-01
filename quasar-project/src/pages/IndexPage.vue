@@ -5,62 +5,62 @@
     </video>
     <div class="bg-mask col-12 row items-center">
       <div class="index_title">
-        <p>一杯咖啡 一個座位<br>享受片刻寧靜的美好</p>
-        <q-btn rounded outline to="/about" class="q-mt-xl">瞭解更多</q-btn>
+        <p class="fadeInUp-2">一杯咖啡 一個座位<br>享受片刻寧靜的美好</p>
+        <q-btn rounded outline to="/about" class="fadeInUp-2 q-mt-xl">瞭解更多</q-btn>
       </div>
       <q-btn round flat class="arrow_down" @click="anchor" ><q-icon name="keyboard_arrow_down" size="50px"></q-icon></q-btn>
     </div>
   </sectoin>
   <!-- section - 最新消息 -->
-  <section class="section_1 home_section_1 row q-px-xl">
+  <section class="section_1 home_section_1 row q-px-xl" >
     <h5 class="text-right q-mb-lg col-md-12">－ 最新消息 NEWS －</h5>
     <div class="news q-py-md col-10 col-md-6 shadow-2">
       <!-- <h5 class="text-center q-mb-sm">最新消息 NEWS</h5> -->
-      <q-list class="q-pa-md" style="max-height:200px; overflow:scroll; ">
+      <q-list class="q-pa-md" style="max-height:240px; overflow: scroll; ">
         <q-item clickable>
           <q-items-section class="q-mr-sm">
-          <span class="text-white bg-warning rounded-borders q-px-xs">新品上市</span>
+          <span class="text-white bg-warning rounded-borders q-px-xs">優惠好康</span>
           </q-items-section>
           <q-item-section>
-            <q-item-label >莓好時光風味果茶，一起享受春天的迷人風采！</q-item-label>
-            <q-item-label caption lines="1">在這個春天尋求片刻放縱？啜飲一口帶有酥脆草莓餅乾碎片的莓好時光果茶，盡情享受草莓果香的甜美口感，擠上奶油、撒上草莓碎片，在口中享受草莓派的迷人風味！</q-item-label>
+            <q-item-label >1+1 88折》連假後的上工，給你滿滿元氣！
+            </q-item-label>
+            <q-item-label caption lines="1">3/1~3/3連續3天至門市消費『任一餐食+任一飲品』享88折優惠</q-item-label>
           </q-item-section>
 
           <q-item-section side top>
-            <q-item-label caption>2023.01.10</q-item-label>
+            <q-item-label caption>2023.02.27</q-item-label>
           </q-item-section>
         </q-item>
-
         <q-separator spaced inset />
         <q-item clickable>
           <q-items-section class="q-mr-sm">
           <span class="text-white bg-warning rounded-borders q-px-xs">重要公告</span>
           </q-items-section>
           <q-item-section>
-            <q-item-label >莓好時光風味果茶，一起享受春天的迷人風采！</q-item-label>
-            <q-item-label caption lines="1">在這個春天尋求片刻放縱？啜飲一口帶有酥脆草莓餅乾碎片的莓好時光果茶，盡情享受草莓果香的甜美口感，擠上奶油、撒上草莓碎片，在口中享受草莓派的迷人風味！</q-item-label>
+            <q-item-label >最新防疫措施公告</q-item-label>
+            <q-item-label caption lines="1">因應衛生福利部112年2月20日衛授疾字第1120200079號公告修正「嚴重特殊傳染性肺炎（COVID-19）防疫措施裁罰規定」及衛授食字第1121300312號公告修正「餐飲業防疫管理措施」，已取消「餐飲從業人員應配戴口罩」、「發燒或有上呼吸道症狀之顧客，禁止進入，除飲食外，應配戴口罩」規定。</q-item-label>
           </q-item-section>
 
           <q-item-section side top>
-            <q-item-label caption>2023.01.10</q-item-label>
+            <q-item-label caption>2023.02.22</q-item-label>
           </q-item-section>
         </q-item>
 
         <q-separator spaced inset />
-
         <q-item clickable>
           <q-items-section class="q-mr-sm">
-          <span class="text-white bg-warning rounded-borders q-px-xs">新品上市</span>
+          <span class="text-white bg-warning rounded-borders q-px-xs">季節限定</span>
           </q-items-section>
           <q-item-section>
-            <q-item-label >莓好時光風味果茶，一起享受春天的迷人風采！</q-item-label>
-            <q-item-label caption lines="1">在這個春天尋求片刻放縱？啜飲一口帶有酥脆草莓餅乾碎片的莓好時光果茶，盡情享受草莓果香的甜美口感，擠上奶油、撒上草莓碎片，在口中享受草莓派的迷人風味！</q-item-label>
+            <q-item-label >2月限定》蜜香琥珀拿鐵－淡雅清香Ｘ蜂蜜甘甜一起迎接陽光燦爛的三月</q-item-label>
+            <q-item-label caption lines="1">綿密奶泡上撒上些許烏龍茶葉，一抹淡雅清香撲鼻而來，蜂蜜與接骨木花的香氣流動貫穿，炭焙烏龍的茶韻與經典拿鐵咖啡，交織出堅果甜感與回甘尾韻。</q-item-label>
           </q-item-section>
 
           <q-item-section side top>
-            <q-item-label caption>2023.01.10</q-item-label>
+            <q-item-label caption>2023.01.25</q-item-label>
           </q-item-section>
         </q-item>
+
         <q-separator spaced inset />
 
         <q-item clickable>
@@ -119,10 +119,9 @@
   <!-- section - 品牌簡介 -->
   <section class="home_section_2">
     <q-card class="my-card row flex-center q-mx-xl" style="max-width:1000px;">
-      <img class="col-md-6" src="../assets/images/單人座.png">
-      <q-card-section class="col-md-6">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut ipsa libero veniam nemo obcaecati excepturi neque sapiente laudantium quas unde.
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut ipsa libero veniam nemo obcaecati excepturi neque sapiente laudantium quas unde.
+      <img class="fadeInUp-2 col-md-6" src="../assets/images/單人座.png">
+      <q-card-section class="fadeInUp-2 col-md-6 " style="font-size:1rem; line-height:2rem;">
+        「MAUNA」一詞在梵文中有沈默、脫離感官之意。我們專注為喜愛獨處的您打造隱私單人座位，陽光灑落便是最美的裝飾。<br>我們也不定期舉辦提升自我的知識講座、手作體驗活動，為您創造高質感的舒心生活美學。在MAUNA COFFEE，您只需要沈浸在自己的時空間，享受一個人舒心寧靜的時刻！
       </q-card-section>
     </q-card>
   </section>
@@ -206,28 +205,22 @@
   <section class="section_4 home_section_4 q-my-xl row justify-center">
     <h5 class="text-center q-mb-lg col-md-12">－ MORE DETAILS －</h5>
     <div class="col-12 col-md-4">
-      <div class="photo_box1 q-pb-md q-px-sm">
-        <q-img :src="p2[0]?.img">
-        <div class="mask absolute-full flex flex-center">{{ p2[0]?.name }}</div>
-        </q-img>
+      <div class="q-pb-md q-px-sm" style="height:370px">
+        <q-img :src="p2[0]"></q-img>
       </div>
-      <div class="q-pb-md q-px-sm photo_box2">
-        <q-img :src="p1[0]?.img"><div class="mask absolute-full flex flex-center">{{ p1[0]?.name }}</div>
-        </q-img>
+      <div class="q-pb-md q-px-sm" style="height:230px">
+        <q-img :src="p1[0]"></q-img>
       </div>
     </div>
-    <div class="col-12 col-md-4 photo_box3 q-pb-md q-px-sm">
-      <q-img class="col-md-6" :src="p2[1]?.img"><div class="mask absolute-full flex flex-center">{{ p2[1]?.name }}</div>
-      </q-img>
+    <div class="col-12 col-md-4 q-pb-md q-px-sm" style="height:600px">
+      <q-img class="col-md-6" :src="p2[1]"></q-img>
     </div>
-    <div class="col-12 col-md-4">
-      <div class="photo_box2 q-pb-md q-px-sm">
-        <q-img :src="p1[1]?.img"><div class="mask absolute-full flex flex-center">{{ p1[1]?.name }}</div>
-        </q-img>
+    <div class=" col-12 col-md-4">
+      <div class="q-pb-md q-px-sm" style="height:230px">
+        <q-img :src="p1[1]"></q-img>
       </div>
-      <div class="photo_box1 q-pb-md q-px-sm">
-        <q-img :src="p2[2]?.img"><div class="mask absolute-full flex flex-center">{{ p2[2]?.name }}</div>
-        </q-img>
+      <div class="q-pb-md q-px-sm" style="height:370px">
+        <q-img :src="p2[2]"></q-img>
       </div>
     </div>
   </section>
@@ -299,7 +292,7 @@ const modules = [Navigation, Pagination, Scrollbar, A11y, EffectCoverflow]
 const products = reactive([])
 
 const anchor = () => {
-  const height = document.querySelector('.arrow_down').offsetTop + 700
+  const height = document.querySelector('.arrow_down').offsetTop + 570
   window.scroll({
     top: height,
     behavior: 'smooth'
@@ -307,23 +300,23 @@ const anchor = () => {
 }
 
 const photos1 = reactive([
-  { name: '1', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485819/PHOTO/photo_3-2_usnirn.jpg' },
-  { name: '2', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485816/PHOTO/photo_5_cw4rk6.jpg' },
-  { name: '3', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485815/PHOTO/photo_4-3_wtnhhe.jpg' },
-  { name: '4', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485822/PHOTO/photo_5-2_tseryz.jpg' },
-  { name: '5', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485824/PHOTO/photo_4-4_gmhled.jpg' },
-  { name: '6', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485823/PHOTO/photo_5-3_tguroh.jpg' },
-  { name: '7', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492633/PHOTO/36ebb17a51038145934b654602c6066d_y7n8hl.jpg' }
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485819/PHOTO/photo_3-2_usnirn.jpg',
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485816/PHOTO/photo_5_cw4rk6.jpg',
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485815/PHOTO/photo_4-3_wtnhhe.jpg',
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485822/PHOTO/photo_5-2_tseryz.jpg',
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485824/PHOTO/photo_4-4_gmhled.jpg',
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677668728/PHOTO/becca-tapert-nHLlgE6DDag-unsplash_wieieu.jpg'
+
 ])
 const photos2 = reactive([
-  { name: '8', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485814/PHOTO/photo_3_rbrlqp.jpg' },
-  { name: '9', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485815/PHOTO/lecture-room_bor4h4.jpg' },
-  { name: '10', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485821/PHOTO/rizky-subagja-1k7TnX5GAww-unsplash_hqgzgf.jpg' },
-  { name: '11', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492446/PHOTO/zarak-khan-69ilqMz0p1s-unsplash_e0m3up.jpg' },
-  { name: '12', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492546/PHOTO/b46eb6696802024e14c801314dd2a241_f0vcsm.jpg' },
-  { name: '13', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492633/PHOTO/shopping-cart_u1prd2.jpg' },
-  { name: '14', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492633/PHOTO/c816ff60b3e18a1ccd2ba0e10eaa5f9a_siazim.jpg' },
-  { name: '15', img: 'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492633/PHOTO/cafe-7454951_1280_ng4fv4.jpg ' }
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485814/PHOTO/photo_3_rbrlqp.jpg',
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485815/PHOTO/lecture-room_bor4h4.jpg',
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677485821/PHOTO/rizky-subagja-1k7TnX5GAww-unsplash_hqgzgf.jpg',
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492446/PHOTO/zarak-khan-69ilqMz0p1s-unsplash_e0m3up.jpg',
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492546/PHOTO/b46eb6696802024e14c801314dd2a241_f0vcsm.jpg',
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677668613/PHOTO/tyler-nix-3uSHEffsDXI-unsplash_qcyvpy.jpg',
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492633/PHOTO/c816ff60b3e18a1ccd2ba0e10eaa5f9a_siazim.jpg',
+  'https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677492633/PHOTO/cafe-7454951_1280_ng4fv4.jpg '
 ])
 const p1 = reactive([])
 const p2 = reactive([])
@@ -340,7 +333,7 @@ onMounted(() => {
 })
 
 const change = () => {
-  for (let i = 0; i <= 6; i++) {
+  for (let i = 0; i <= 5; i++) {
     const pp = Math.floor(Math.random() * photos1.length)
     p1.push(photos1[pp])
     photos1.splice(pp, 1)

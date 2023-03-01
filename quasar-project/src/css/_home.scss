@@ -1,13 +1,10 @@
-// 1 - 服務簡介
+// 最新消息
 .home_section_1{
   background: url(../assets//images/咖啡包.png) no-repeat;
   background-position: 10% -1%;
-  // background-size: contain;
   flex-wrap: wrap;
   justify-content: center;
   .news {
-    // border-radius: 10px;
-    // color: white;
     background: #fff;
     opacity: .9;
   }
@@ -18,42 +15,42 @@
     }
 
   }
-  .col{
-    border-radius: 0;
-    .my-card{
-      box-shadow: none;
-      background: none;
-      width: 200px;
-      img{
-        width: 60%;
-      }
-      .card-text{
-        padding: 0 40px;
-      }
-    }
-  }
+  // .col{
+  //   border-radius: 0;
+  //   .my-card{
+  //     box-shadow: none;
+  //     background: none;
+  //     width: 200px;
+  //     img{
+  //       width: 60%;
+  //     }
+  //     .card-text{
+  //       padding: 0 40px;
+  //     }
+  //   }
+  // }
 }
 
-.home_section_11{
-  flex-wrap: wrap;
-  justify-content: center;
-  .col{
-    border-radius: 0;
-    .my-card{
-      box-shadow: none;
-      background: none;
-      width: 200px;
-      img{
-        width: 60%;
-      }
-      .card-text{
-        padding: 0 40px;
-      }
-    }
-  }
-}
+// .home_section_11{
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   .col{
+//     border-radius: 0;
+//     .my-card{
+//       box-shadow: none;
+//       background: none;
+//       width: 200px;
+//       img{
+//         width: 60%;
+//       }
+//       .card-text{
+//         padding: 0 40px;
+//       }
+//     }
+//   }
+// }
 
-// 2 - 品牌介紹
+// 品牌介紹
 .home_section_2{
   background: #BFB4AA;
   margin:auto;
@@ -101,6 +98,7 @@
   }
 }
 
+// 講座活動 swiper
 .phone_carousel{
   padding: 50px 10px;
   .swiper-button-prev,
@@ -116,34 +114,8 @@
 .home_section_4{
   padding: 80px 30px 50px 30px;
   width: 100%;
-    .q-img{
-      height: 100%;
-      width: 100%;
-      .mask{
-        font-size: 1.5rem;
-        color: $accent;
-        opacity: 0;
-        transition: .3s;
-      }
-      &:hover {
-        .mask {
-          opacity: 1;
-          transition: .3s;
-        }
-      }
-  }
-
-  .photo_box1{
-    position: relative;
-    height: 370px;
-  }
-
-  .photo_box2{
-    position: relative;
-    height: 230px;
-  }
-  .photo_box3 {
-    position: relative;
-    height: 600px;
+  .q-img{
+    height: 100%;
+    width: 100%;
   }
 }
