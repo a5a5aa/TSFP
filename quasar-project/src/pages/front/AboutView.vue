@@ -16,7 +16,7 @@
       <div class="card1">
         <h4 class="fadeInUp-2 " >一口餘韻飽滿的咖啡香氣</h4>
         <h5 class="fadeInUp-2" >一段與自我對話人的靜思之旅</h5>
-        <p class="fadeInUp-3 q-my-lg">MAUNA COFFEE 採用原生種阿拉比卡咖啡豆，新鮮烘焙， 有天然果香、香醇、微酸、無苦澀，回甘，喝完杯底帶有焦糖香氣，滿足您對 MAUNA 的每一分期待。</p>
+        <p class="fadeInUp-3 q-my-lg text-justify">MAUNA COFFEE 採用原生種阿拉比卡咖啡豆，新鮮烘焙， 有天然果香、香醇、微酸、無苦澀，回甘，喝完杯底帶有焦糖香氣，滿足您對 MAUNA 的每一分期待。</p>
         <q-img class="zoomIn"
           width="200px"
           src="../../assets/images/alin-luna-lGl3spVIU0g-unsplash.jpg"></q-img>
@@ -32,7 +32,7 @@
           class="zoomIn"
           width="100%"
           src="../../assets/images/lecture-room2.jpg"></q-img>
-        <p class="fadeInUp-3 q-my-lg">除了門市提供用餐空間，MAUNA 更致力舉辦知識含量豐富的講座活動，活動類型如：心靈成長、生活風格、名人講堂、手作DIY...提供每位喜愛 MAUNA 的朋友更多精進成長的機會。</p>
+        <p class="fadeInUp-3 q-my-lg text-justify">除了門市提供用餐空間，MAUNA 更致力舉辦知識含量豐富的講座活動，活動類型如：心靈成長、生活風格、名人講堂、手作DIY...提供每位喜愛 MAUNA 的朋友更多精進成長的機會。</p>
         <q-btn class="fadeInUp-3" outline rounded to="/products">查看近期講座</q-btn>
       </div>
     </q-scetion>
