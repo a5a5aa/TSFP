@@ -10,3 +10,10 @@
   animation: zoomIn;
   animation-duration: 3s;
 }
+
+.heartBeat{
+  animation: heartBeat;
+  animation-duration: 3s;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
+}

@@ -8,7 +8,7 @@
         <p class="fadeInUp-2">一杯咖啡 一個座位<br>享受片刻寧靜的美好</p>
         <q-btn rounded outline to="/about" class="fadeInUp-2 q-mt-xl">瞭解更多</q-btn>
       </div>
-      <q-btn round flat class="arrow_down" @click="anchor" ><q-icon name="keyboard_arrow_down" size="50px"></q-icon></q-btn>
+      <q-btn round flat class="arrow_down" @click="anchor" ><q-icon class=" heartBeat" name="keyboard_arrow_down" size="50px"></q-icon></q-btn>
     </div>
   </sectoin>
   <!-- section - 最新消息 -->

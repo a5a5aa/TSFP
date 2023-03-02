@@ -120,7 +120,7 @@
             </q-card>
             <q-card dense class="col-5 col-sm-3 q-px-sm bg-transparent shadow-0">
               <div>
-                <q-img :ratio="4/3" src="https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677699336/MENU/Espresso_xuvvvr.jpg">
+                <q-img :ratio="4/3" src="https://res.cloudinary.com/dwcwzhv3w/image/upload/v1677717532/MENU/andres-vera-BewKTZMv7V0-unsplash_1_ddofre.jpg">
                 </q-img>
               </div>
               <q-card-section>
@@ -237,7 +237,7 @@
                 </q-img>
               </div>
               <q-card-section>
-                <div class="text-h6">經典可頌</div>
+                <div class="text-h6">法式可頌</div>
                 <div class="text-caption text-grey">CROISSANT</div>
               </q-card-section>
             </q-card>
