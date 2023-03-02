@@ -15,7 +15,7 @@
     <h5 class="field-title q-mb-xl col-12">－ 品牌故事 OUR STORY －</h5>
       <div class="card1">
         <h4 class="fadeInUp-2 " >一口餘韻飽滿的咖啡香氣</h4>
-        <h5 class="fadeInUp-2" >一段與自我對話人的靜思之旅</h5>
+        <h5 class="fadeInUp-2" >一段與自我對話的靜思之旅</h5>
         <p class="fadeInUp-3 q-my-lg text-justify">MAUNA COFFEE 採用原生種阿拉比卡咖啡豆，新鮮烘焙， 有天然果香、香醇、微酸、無苦澀，回甘，喝完杯底帶有焦糖香氣，滿足您對 MAUNA 的每一分期待。</p>
         <q-img class="zoomIn"
           width="200px"

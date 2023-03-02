@@ -121,7 +121,7 @@
     <q-card class="my-card row flex-center q-mx-xl" style="max-width:1000px;">
       <img class="fadeInUp-2 col-md-6" src="../assets/images/單人座.png">
       <q-card-section class="fadeInUp-2 col-md-6 " style="font-size:1rem; line-height:2rem;">
-        「MAUNA」一詞在梵文中有沈默、脫離感官之意。我們專注為喜愛獨處的您打造隱私單人座位，陽光灑落便是最美的裝飾。<br>我們也不定期舉辦提升自我的知識講座、手作體驗活動，為您創造高質感的舒心生活美學。在MAUNA COFFEE，您只需要沈浸在自己的時空間，享受一個人舒心寧靜的時刻！
+        「MAUNA」一詞在梵文中有沈默、脫離感官之意，我們專注為喜愛獨處的您打造隱私單人座位，陽光灑落便是最美的裝飾。<br>我們也不定期舉辦提升自我的知識講座、手作體驗活動，為您創造高質感的舒心生活美學。在 MAUNA COFFEE 您只需要沈浸在自己的時空間，享受一個人舒心寧靜的時刻！
       </q-card-section>
     </q-card>
   </section>
