@@ -11,9 +11,9 @@
         <p><q-icon name="fa-solid fa-location-dot" class="q-mr-xs"></q-icon>110台北市信義區信義路五段95號2F【MAUNA COFFEE - 象山概念店】</p>
         <p class="text-h6" v-if="product.price !== 0">活動費用：NT$ {{ product.price }}</p>
         <p class="text-h6" v-if="product.price === 0" >活動費用：免費</p>
-        <q-form class="q-my-xl">
-          <q-btn style="width:200px" type="submit" color="warning" @click="onSignupBtnClick">立即報名</q-btn>
-        </q-form>
+        <div class="q-my-xl">
+          <q-btn style="width:200px" type="button" color="warning" @click="onSignupBtnClick">立即報名</q-btn>
+        </div>
       </div>
       <q-item class="bg-accent rounded-borders q-pa-md">
         <q-icon name="fa-solid fa-circle-exclamation q-pt-xs q-mr-xs"></q-icon>
